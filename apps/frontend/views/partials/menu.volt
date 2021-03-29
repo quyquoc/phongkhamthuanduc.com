@@ -14,9 +14,6 @@
 			<li class="{{ menu_lv1 is defined and menu_lv1 == 'tin-thi-truong' ? 'active' : '' }}"><a href="{{ url('/tin-thi-truong') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Tin thị trường</a></li>
 		</ul>		
 	</li>
-	<li class="column{{ menu is defined and menu == 'san-pham' ? ' active' : '' }}"><a href="{{ url('/san-pham') }}">Sản phẩm</a>
-		{{ element.ShopMenuCategoryWithParents(0) }}
-	</li>
 	<li class="{{ menu is defined and menu == 'dao-tao' ? 'active' : '' }}"><a href="{{ url('/dao-tao') }}">Đào tạo</a></li>
 	<li class="{{ menu is defined and menu == 'tuyen-dung' ? 'active' : '' }}"><a href="{{ url('/tuyen-dung') }}">Tuyển dụng</a></li>
 	<li class="{{ menu is defined and menu == 'lien-he' ? 'active' : '' }}"><a href="{{ url('/lien-he') }}">Liên hệ</a></li>

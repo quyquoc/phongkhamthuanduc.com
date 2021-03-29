@@ -1,0 +1,145 @@
+
+<section class="content">
+	<div class="box box-info">
+		<div class="box-header with-border">
+			<h3 class="box-title">{{ language._('list') }} <small></small></h3>
+		</div>
+
+		<div class="box-body table-responsive" style="padding:10px 15px">
+			<table id="datatable1" class="display table table-bordered table-striped" style="width:100%">
+				<thead>
+					<tr>
+						{% for item in DatatableManage.init_data %}
+							{% if 'element' not in item %}
+								<th {% if item.width is defined %}width="{{item.width}}"{% endif %}>{{item.label|raw}}</th>
+							{% endif %}
+						{% endfor %}
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						{% for item in DatatableManage.init_data %}
+							{% if 'element' not in item %}
+								{% if item.filter == false %}
+									<th></th>
+								{% elseif item.filter.type == 'label' %}
+									<th>{{item.label}}</th>
+								{% elseif item.filter.type == 'text' %}
+									<th>
+										<input type="text" class="form-control" value="" placeholder="{{item.label}}">
+									</th>
+								{% elseif item.filter.type == 'select' %}
+									<th>
+										<select name="" id="" class="form-control">
+											<option value="">{{item.label}}</option>
+											{% for id,value in item.filter.value %}
+												<option value="{{id}}">{{value|raw}}</option>
+											{% endfor %}
+										</select>
+									</th>
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+</section>
+
+<script>
+	$(document).ready(function() {
+		// DataTable
+		var datatable1 = $('#datatable1').DataTable({
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: "{{ DatatableManage.data_url }}",
+				method: 'GET'
+			},
+			order: [[ "{{ col_order is defined and col_order is not empty ? col_order : 0}}", "{{ sort is defined and sort is not empty ? sort : 'desc'}}" ]],
+			columns: [
+				{% for item in DatatableManage.init_data %}
+					{% if 'element' in item %}
+						{
+							"className": "{{item.className}}",
+							"orderable": false,
+							"data": null,
+							"defaultContent": ''
+						},
+					{% else %}
+						{"data": "{{item.name}}"},
+					{% endif %}
+				{% endfor %}
+			],
+			pageLength: {{ page_length is defined and page_length is not empty ? page_length : 25 }},
+			language: {
+				'lengthMenu'    : 'Hiển thị _MENU_',
+				'zeroRecords'   : 'Dữ liệu rỗng',
+				'info'          : 'Trang _PAGE_/_PAGES_',
+				'infoEmpty'     : 'Dữ liệu rỗng',
+				'infoFiltered'  : '(lọc từ _MAX_ dòng)',
+				'search'        : 'Tìm kiếm',
+				"processing"    : 'Đang xử lý...',
+				'paginate'			: {
+					'first' : 'Đầu',
+					'last'  : 'Cuối',
+					'next'  : 'Tiếp',
+					'previous':'Trước'
+				}
+			}
+		});
+
+		$(datatable1.table().container()).removeClass('form-inline');
+
+		datatable1.columns().every( function () {
+			var that = this;
+			var loadTimeOut;
+			$( 'input', this.footer() ).on( 'keyup change', function () {
+				if(loadTimeOut) clearTimeout(loadTimeOut);
+				if ( that.search() !== this.value ) {
+					var isThis = this;
+					loadTimeOut = setTimeout(function(){
+						that
+							.search( isThis.value )
+							.draw();
+					},700);
+				}
+			});
+
+			$('select', this.footer() ).on('change', function () {
+				if ( that.search() !== this.value ) {
+					that.search(this.value).draw();
+				}
+			});
+		});
+
+		$('body').on( "click", "a.choose-delete", function() {
+			$('#modal-delete span.title').text($(this).parents('tr').find('td:eq(0)').text());
+			$('#modal-delete form').attr('action', $(this).attr('ref'));
+		});
+	});
+
+	function changeStatus(unit, get_url ) {
+		var url 	= ROOT_URL + '/admin/' + get_url + '/index/checkChangeStatus';
+				param = Object();
+				param.id 		= document.getElementById(unit).getAttribute('data-id');
+				param.field = document.getElementById(unit).getAttribute('data-field');
+				param.value = document.getElementById(unit).getAttribute('data-value');
+
+		$.get(url, param, function(data) {
+			alert(data.Msg);
+			if (data.Code === 1){
+				if(data.Data === 1) {
+					$('#'+param.field+param.id).removeClass('status-0').addClass('status-1');
+					$('#'+param.field+param.id).removeClass('ion-ios-close-outline').addClass('ion-ios-checkmark-outline');
+					document.getElementById(param.field+param.id).setAttribute('data-value','0');
+				} else {
+					$('#'+param.field+param.id).removeClass('status-1').addClass('status-0');
+					$('#'+param.field+param.id).removeClass('ion-ios-checkmark-outline').addClass('ion-ios-close-outline');
+					document.getElementById(param.field+param.id).setAttribute('data-value','1');
+				}
+			}
+		},'json');
+	}
+</script>

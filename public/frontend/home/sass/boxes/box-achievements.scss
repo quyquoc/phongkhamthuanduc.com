@@ -1,0 +1,66 @@
+.box-achievements{
+	background: url(../images/heading_bg.svg) no-repeat center/cover;
+	.box-header .box-title {color: #FFF;}
+	.box-body {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		.item {
+			color: #FFF;
+			width: 25%;
+			max-width: 330px;
+			padding: 20px 30px;
+			text-align: center;
+			.image {
+				width: 40%;
+				padding-top: 40%;
+				margin: auto;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+			span {
+				font-size: 40px;
+			}
+			h4 {
+				font-size: 18px;
+				line-height: 30px;
+			}
+			&:first-child {
+				.image {
+					background-image: url(../images/achi_1_white.svg);
+				}
+			}
+			&:nth-child(2) {
+				.image {
+					background-image: url(../images/achi_2_white.svg);
+				}
+			}
+			&:nth-child(3) {
+				.image {
+					background-image: url(../images/achi_3_white.svg);
+				}
+			}
+			&:last-child {
+				.image {
+					background-image: url(../images/achi_4_white.svg);
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.box-achievements .contentWrapper .item {
+		width: calc(100% / 2);
+	}
+}
+@media only screen and (max-width: 500px) {
+	.box-achievements .contentWrapper .item {
+		width: calc(100%);
+		.image {
+			width: 30%;
+			padding-top: 30%;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.box-slider {
+	.slick-track { display: flex; }
+	.slick-slider .slick-dots { bottom: 20px; }
+	.item {
+		min-height: 320px;
+		height: auto;
+		display: flex;
+		a {
+			display: block;
+			width: 100%;
+			height: auto;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			img {
+				visibility: hidden;
+				max-height: 100%;
+			}
+		}
+	}
+}

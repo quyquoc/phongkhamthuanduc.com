@@ -1,0 +1,117 @@
+.box-process-2 {
+	background-color: $color_page;
+	.container {overflow: hidden;}
+	.box-header .box-title {color: #FFF;}
+	.box-body {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -30px;
+		.item {
+			width: calc(100% / 5 - 60px);
+			max-width: 200px;
+			margin: 0 30px;
+			position: relative;
+			.inner {
+				border-radius: 50%;
+				display: flex;
+				flex-direction: row;
+				position: relative;
+				width: 100%;
+				padding-top: 100%;
+				overflow: hidden;
+				background: linear-gradient(to bottom, #c7ced2, #f8f8f8);
+				.step {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 65px;
+					height: 100%;
+					background: linear-gradient(to bottom, #faa931, #f48034);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: #FFF;
+					font-size: 46px;
+					font-family: $font_montserrat;
+				}
+				.desc {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: calc(100% - 65px);
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 0 10px 0 5px;
+				}
+			}
+			&:before, &:after {
+				position: absolute;
+				content: "";					
+				width: 30px;
+				height: 10px;
+				top: calc(50% - 5px);
+				background-color: #d7dbde;
+				right: -30px;
+			}
+			&:before {
+				left: -30px;
+			}
+			&._1{
+				&:before {display: none;}
+			}
+			&._2{
+				.inner .step {background: linear-gradient(to bottom, #e4599f, #b93692);}
+			}
+			&._3{
+				.inner .step {background: linear-gradient(to bottom, #956cad, #5d53a0);}
+			}
+			&._4{
+				.inner .step {background: linear-gradient(to bottom, #8bcfbc, #31aecd);}
+			}
+			&._5{
+				.inner .step {background: linear-gradient(to bottom, #d3dc49, #a2cd4d);}
+				&:after {display: none;}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	.box-process-2 .box-body {
+		.item {
+			margin: 0 -15px;
+			width: calc(100% / 5 - 30px);
+	    margin: 0 15px;
+		}
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.box-process-2 .box-body {
+		margin: 0 -10px;
+		.item {
+			width: calc(100% / 5 - 20px);
+	    margin: 0 10px;
+		}
+	}
+}
+@media only screen and (max-width: 800px) {
+	.box-process-2 .box-body {
+		justify-content: center;
+		.item {
+			width: calc(100% / 3 - 20px);
+	    margin: 0 10px 20px;
+	    &:before, &:after {display: none;}
+		}
+	}
+}
+@media only screen and (max-width: 500px) {
+	.box-process-2 .box-body {
+		justify-content: center;
+		.item {
+			width: calc(100% / 2 - 10px);
+	    margin: 0 5px 10px;
+		}
+	}
+}

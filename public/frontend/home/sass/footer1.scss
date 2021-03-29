@@ -1,0 +1,123 @@
+footer.footer1 {
+  background: $color_page_2;
+	border-top: 2px solid #e8eaea;
+	position: relative;
+	.footer-inner {
+		.container-wrapper {
+			padding-top: 30px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+		a { color: inherit; }
+		.title {
+			padding: 10px 0 12px;
+			margin-bottom: 10px;
+			position: relative;
+			text-transform: uppercase;
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;						
+				width: 25%;
+				height: 2px;
+				background-color: rgba($color_page,0.1);
+			}
+		}
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				width: 100%;
+				padding: 2px 0;
+				.fa {
+					width: 20px;
+					margin-right: 6px;
+				}
+			}
+		}
+		.footer-intro {
+			width: 56%;
+			max-width: 550px;
+			padding-right: 20px;
+			.footer-logo {
+				width: 250px;
+				margin-bottom: 20px;
+			}
+			.wrap { padding: 15px 0; }
+			.social {
+				padding: 10px 0;
+			  display: flex;
+			  flex-wrap: wrap;
+				.fa {
+					margin-right: 15px;
+					font-size: 20px;
+					border: 1px solid rgba($color_page,0.1);
+					padding: 10px;
+					border-radius: 10px;
+					height: 40px;
+					width: 40px;
+					display: flex;
+					justify-content: center;
+					&:hover { border-color: $color_page; }
+				}
+			}
+		}
+		.footer-contact {
+			width: 44%;
+			max-width: 500px;
+			.title {
+				padding: 40px 0 12px;
+				margin-bottom: 30px;
+			}
+			ul li { padding: 10px 0 0; }
+		}
+	}
+	.copyright{
+		margin-top: auto;
+		.container-wrapper {
+			border-top: 1px solid rgba($color_page,0.1);
+			margin-top: 15px;
+			padding: 15px 0;
+			text-align: center;
+			font-size: 18px;
+			.developer {
+				font-size: 14px;
+				a { 
+					color: inherit; 
+					&:hover { color: $color_page; }
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.footer1 .footer-inner {
+		.container-wrapper { 
+			padding: 10px 6px;
+			justify-content: center; 
+		}
+		.footer-intro {
+			width: 100%;
+			max-width: 400px;
+			padding: 0;
+		}
+		.footer-contact {
+			width: 100%;
+			max-width: 400px;
+			padding: 0;
+			.title {
+				padding-top: 30px;
+  			margin-bottom: 12px;
+			}
+			ul li {
+		    padding: 8px 0 0;
+		    font-size: 15px;
+		    .fa { width: 15px; }
+			}
+		}
+	}
+}

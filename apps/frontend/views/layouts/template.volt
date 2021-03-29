@@ -1,6 +1,4 @@
 
-{{ element.Cart() }}
-
 <div class="page{{ page is defined ? ' ' ~ page : '' }}">
 	{{ partial("partials/header1") }}
 

@@ -9,31 +9,27 @@
 				display: flex;
 				flex-wrap: wrap;
 				padding: 20px;
-				margin: 0 15px 15px;
-	    	height: auto;
-	    	align-content: flex-start;
-	    	transition: all .5s ease-in-out;
-				.image {
-					width: 100%;
-					padding: 0;
-	    		text-align: center;
-					img {max-width: 50%;}
-				}
+				margin: 0 15px 30px;
+				height: auto;
+				align-content: flex-start;
+				transition: all .5s ease-in-out;
+				box-shadow:  0 5px 20px rgba($color: #000000, $alpha: 0.05);
 				.content {
 					width: 100%;
-					text-align: center;
 					.title {
 						font-size: 22px;
-						padding-bottom: 8px;
 						color: $color_page;
-						font-family: $font_montserrat;
-						margin: 20px 0 10px;
+						margin: 5px 0;
 					}
+					.f-14{font-size: 14px;}
 					.description {
+						margin-top: 8px;
+						a{margin-right: 15px;}
 					}
+					
 				}
 				&:hover {
-					box-shadow: 0 10px 40px rgba(0,0,0,.1);
+					box-shadow: 0 5px 20px rgba($color_page,0.6);
 					transform: translate3d(0, -10px, 0);
 				}
 			}
@@ -41,30 +37,36 @@
 	}
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
 	.box-column-1x3 .box-body .inner .item {
-		padding: 0;
-		.content {
-			.title {font-size: 18px;padding-bottom: 0;}
-		}
+		width: calc(100% / 2 - 20px);
+		margin: 0 10px 20px;
 	}
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 580px) {
 	.box-column-1x3 .box-body .inner .item {
-		width: 100%;
-		margin: 0 0 15px;
-		.image {
-			width: 70px;
-			img {width: 100%;max-width: 100%;}
-		}
-		.content {
-			width: calc(100% - 70px);
-			padding: 0 10px;
-			text-align: left;
-			display: flex;
-	    flex-direction: column;
-	    justify-content: center;
-			.title {margin: 0;}
-		}
+		width: calc(100%);
+		max-width: 400px;
+		margin: 0 auto 15px;
+		text-align: center;
 	}
 }
+// @media only screen and (max-width: 700px) {
+// 	.box-column-1x3 .box-body .inner .item {
+// 		width: 100%;
+// 		margin: 0 0 15px;
+// 		.image {
+// 			width: 70px;
+// 			img {width: 100%;max-width: 100%;}
+// 		}
+// 		.content {
+// 			width: calc(100% - 70px);
+// 			padding: 0 10px;
+// 			text-align: left;
+// 			display: flex;
+// 	    flex-direction: column;
+// 	    justify-content: center;
+// 			.title {margin: 0;}
+// 		}
+// 	}
+// }

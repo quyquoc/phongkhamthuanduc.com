@@ -1,0 +1,81 @@
+.box-contact{
+    background-image: url('../images/img-contact.jpg');
+    position: relative;
+    padding: 10px 0;
+    background-color: $color_page;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    .box-body{
+        width: 100%;
+        .inner{
+            width: 100%;
+            .box-title{
+                color: $color_white;
+            }
+            .form{
+          
+
+                position: relative;
+                #appForm{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    .colum-2{
+                        width:100%;
+                        margin: 0 0px 15px;
+                        border: none;
+                        border-radius: 0;
+                        border-bottom: 1px solid #cacbd0 ;
+                        box-sizing: border-box;
+                        height: 40px;
+                        color: $color_white;
+                        &::placeholder {
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 16px;
+                            line-height: 26px;
+                            color: $color_white
+                        }
+                    }
+                    select {
+                        padding: 0px;
+                        border: none;
+                        border-radius: 0;
+                        width:100%;
+                        margin: 0 0px 15px;
+                        color: $color_text;
+                        background:transparent;
+                        border-bottom: 1px solid #cacbd0 ;
+                        box-sizing: border-box;
+                        box-sizing: border-box;
+                        height: 40px;
+                    }
+                }
+            }
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            .contact-form {
+                width: calc(50% - 30px);
+                margin-left: 0;
+            }   
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .box-contact{
+        background-image: none;
+      
+        .box-body{
+            .inner{
+                .contact-form {
+                    width: calc(100%);
+                    max-width: 500px;
+                    margin:auto;
+                }   
+            }
+        }
+    }
+}

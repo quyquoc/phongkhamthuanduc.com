@@ -9,6 +9,7 @@ use Modules\App\Models\ImageAlbumModel;
 use Modules\App\Models\ShopCategoryModel;
 use Modules\App\Models\ShopProductModel;
 use Modules\App\Models\GuestReviewModel;
+use Modules\App\Models\StaffModel;
 
 class Element extends Component{
 
@@ -149,18 +150,12 @@ class Element extends Component{
 
 	public function BoxStaff() {
 
-		$this->view->list_staff_1 = StaffModel::find(array(
-			"conditions"	=> "status = 1 AND type_id = 1",
-			"order"				=> "position ASC"
+		
+		$this->view->list_staff= StaffModel::find(array(
+			"conditions"	=> "status = 1",
+			"order"			=> "position ASC"
 		));
-		$this->view->list_staff_2 = StaffModel::find(array(
-			"conditions"	=> "status = 1 AND type_id = 2",
-			"order"				=> "position ASC"
-		));
-		$this->view->list_staff_3 = StaffModel::find(array(
-			"conditions"	=> "status = 1 AND type_id = 3",
-			"order"				=> "position ASC"
-		));
+	
 
 		$this->view->partial("elements/BoxStaff");	
 	}

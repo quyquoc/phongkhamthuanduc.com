@@ -1,121 +1,67 @@
-<section id="gallery" class="section-gallery">
-	{#<div class="breadcrumbs">
-		<div class="container">
-			<div class="content">
-				<span class="item"><a href="{{ url() }}" title="Trang chủ">Trang chủ</a></span>
-				<span class="item_sep"> / </span>
-				<span class="item"><a href="{{ url('/thu-vien') }}" title="Thư viện">Thư viện</a></span>
+<div id=" gallery" >
+	<div class="container">
+		<div class="section container-wrapper">
+			<div class="box-header">
+				<h1 class="box-title"><span>Thư viện</span> </h1>
 			</div>
-		</div>
-	</div>#}
-
-	<div class="gallery gallery-list">
-		<div class="container">
-			<div class="module">
-        <div class="box-filter">
-        	<div class="unit active" data-type="all">Tất cả</div>
-        	<div class="unit" data-type="image">Hình ảnh</div>
-        	<div class="unit" data-type="video">Video - Clip</div>
-        </div>
+			<div class=" gallery gallery-list">
 				<div class="modulecontent">
 					{% if gallery is defined and gallery is not empty %}
 						<ul id="da-thumbs" class="da-thumbs">
 							{% for item in gallery %}
-								{% if item.album_id == 2 %}
-									<li class="item wow zoomIn" data-type="image">
-										<a class="read_more" data-fancybox="group-image-{{ item.id }}" href="{{ url(item.image) }}" style="background-image: url('{{url(item.image)}}')">
-											{% if item.imgs is defined and item.imgs is not empty and item.imgs != '[]' %}
-												<div class="hidden">
-													<?php 
-														$imgs = json_decode($item->imgs);
-														if (count($imgs)>0){
-															foreach ($imgs as $key => $value) {
-																if ($value->default != 1) {
-																	echo '<p class="fancybox" data-fancybox="group-image-'.$item->id.'" href="'.$this->url->get($value->src).'" title="'.$item->title.'"></p>';
-																}
-															}
-														}
-													?>
-												</div>
-											{% endif %}
-											<div class="overlay"><span>Xem thêm</span><span><?= !empty($item->imgs) ? count($imgs) : 1 ?> hình ảnh</span></div>
+								<li class="item wow zoomIn" data-type="image">
+									<div class="image" style="background-image: url('{{url(item.image)}}')">
+										{% if item.imgs is not empty and item.imgs != '[]' %}
+										{% set images = item.imgs | json_decode %}
+										{% set count_image = images|length - 1 %}
+										<a class="overlay" data-fancybox="group-image-{{ item.id }}" href="{{ url(item.image) }}"> xem thêm {{count_image}} ảnh
+											<div class="hidden">
+												{% for item_1 in images %}
+													{% if item_1.default != 1 %}
+														<p class="fancybox" href="{{url(item_1.src)}}" data-fancybox="group-image-{{ item.id }}" data-fancybox 
+														data-width="1500" data-height="1000"
+														data-thumb="{{url(item_1.src)}}" >
+														</p>
+													{% endif %}
+												{% endfor %}
+											</div>
 										</a>
-										<div class="title">{{ item.title }}</div>
-									</li>
-								{% elseif item.album_id == 3 %}
-									<li class="item" data-type="video">
-										<a class="video-cover" data-fancybox href="{{ item.link }}" style="background-image: url('{{url(item.image)}}')">
-											<span class="icon"></span>
-											<div class="overlay"><span>Xem video</span></div>
-										</a>
-										<div class="title">{{ item.title }}</div>
-									</li>
-								{% endif %}
+										{% endif %}
+
+									</div>
+								</li>
 							{% endfor %}
 						</ul>
 					{% endif %}
 				</div>
-				{% if gallery is defined and gallery|length == 6 %}
-					<div class="more">
-						<div class="loading"><img src="{{ assets }}/images/loading.gif" /></div>
-						<div class="readmore"><a href="javascript:void(0);">Xem thêm</a></div>
-					</div>
+				{% if gallery is defined and gallery | length < gallery_count %}
+				<a href="javasceipt:void(0);" class="button">Xem thêm</a>
 				{% endif %}
 			</div>
 		</div>
 	</div>
-</section>
+</div>
+  <script>
+	$('#gallery a.button').click(function(){
 
-<script>
-	$(document).ready(function(){
-		$('[data-fancybox="group-image"]').fancybox({
-			loop    : true,
-			thumbs  : {
-					autoStart : true
-			},
-			buttons : ['zoom', 'close']
-		});
+		var count_item = "{{gallery_count}}";
+		var num_items 	= $('#gallery #da-thumbs .item').length;		
+		var uri 		= "{{ url('/add_image') }}";
+		$.ajax({
+			url:uri,
+			data:{ offset: num_items, },
+			success: resp => {
+				if(resp && resp.toString().trim() !==''){
+					$('#gallery #da-thumbs ').append(resp);
 
-		$('.box-filter .unit').on('click', function() {
-
-			$('.box-filter .unit').removeClass('active');
-			$(this).addClass('active');
-
-			var type = $(this).data('type');
-			if (type == 'video') {
-				$('.gallery-list .modulecontent .item').filter('[data-type="video"]').fadeIn();
-				$('.gallery-list .modulecontent .item').filter('[data-type="image"]').fadeOut();
-			}else if (type == 'image') {
-				$('.gallery-list .modulecontent .item').filter('[data-type="image"]').fadeIn();
-				$('.gallery-list .modulecontent .item').filter('[data-type="video"]').fadeOut();
-			}else {
-				$('.gallery-list .modulecontent .item').fadeIn();
-			}
-		});
-
-		$(function() {
-			$('#da-thumbs > li').each( function() { $(this).hoverdir(); } );
-		});
-	});
-
-	$('.gallery-list .more a').click(function(){
-
-		$(this).parent().prev().fadeIn('fast');
-		$('.more .readmore').fadeOut('fast');
-
-		var uri 					= "{{ url('/add_image') }}";
-		var num_items 		= $('#gallery .gallery-list .modulecontent ul .item').length;
-		$.get(uri, {num_items: num_items}, function(data){
-			$('.loading').fadeOut('fast');
-			$('#gallery .gallery-list .modulecontent ul').append(data);
-			$('#da-thumbs > li').each( function(){$(this).hoverdir();});
-
-			var num_items_new = $('#gallery .gallery-list .modulecontent ul .item').length;
-			if((num_items + 6) == num_items_new){
-				$('.more .readmore').fadeIn('fast');
-			}else{
-				$('#gallery .more').hide();
-			}
+					var num_items_new = $('#gallery #da-thumbs  .item').length;
+					if(num_items_new == count_item)  {
+						$('#gallery a.button ').hide();
+					}
+				} else {
+					$('#gallery a.button').hide();
+				}
+			}	
 		});
 	});
 </script>

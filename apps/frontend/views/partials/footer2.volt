@@ -3,27 +3,27 @@
 		<div class="container">
 			<div class="container-wrapper">
 				<div class="company wow fadeInUp">
-					<div class="logo"><img src="{{ url('/logo_v.png') }}" /></div>
+					<div class="logo"><img src="{{ url('/logo.svg') }}" /></div>
 					<div class="info">
-						<h3>Công ty TNHH Trực tuyến OHI</h3>
-						<p>Địa chỉ: 1/119 Hùng Vương, Huế</p>
-						<p>Hotline: <a href="tel:0911067111">0911.067.111</a></p>
-						<p>Email: <a href="mailto:info@ohi.vn">info@ohi.vn</a></p>
-						<p>Fanpage: <a href="https://www.facebook.com/ohi.vn" target="_blank">https://www.facebook.com/ohi.vn</a></p>
+						<h4>Giấy phép hoạt động</h4>
+						<p>07386/HCM-GPHĐ cấp ngày 25/01/2010 tại Sở Y tế TP. Huế.</p>
+						<h4>Người chịu trách nhiệm chuyên môn kỹ thuật:</h4>
+						<p>Bác sĩ Nguyễn Văn A <br>
+						Chuyên khoa Nội tổng quát.</p>
+						
+						
 					</div>
 				</div>
 				<div class="footer-menu wow fadeInUp">
-					<h3>Liên kết</h3>
+					<h3>Thông tin liên hệ</h3>
 					<ul class="ul">
-						<li><a href="{{ url('/gioi-thieu/ve-chung-toi') }}" title="Giới thiệu"><i class="fa fa-caret-right" aria-hidden="true"></i>Giới thiệu</a></li>
-						<li><a href="{{ url('/dich-vu') }}" title="Dịch vụ"><i class="fa fa-caret-right" aria-hidden="true"></i>Dịch vụ</a></li>
-						<li><a href="{{ url('/du-an') }}" title="Dịch vụ"><i class="fa fa-caret-right" aria-hidden="true"></i>Dự án</a></li>
-						<li><a href="{{ url('/tin-tuc') }}" title="Dịch vụ"><i class="fa fa-caret-right" aria-hidden="true"></i>Tin tức</a></li>
-						<li><a href="{{ url('/lien-he') }}" title="Dịch vụ"><i class="fa fa-caret-right" aria-hidden="true"></i>Liên hệ</a></li>
+						<li><img src="{{assets}}/images/pin.svg"> 85 Nguyễn Huệ, phường Vĩnh Ninh, thành phố Huế, Thừa Thiên Huế</li>
+						<li><img src="{{assets}}/images/telephone.svg"> <a href="tel:02343833888">0234 3833 888</a></li>
+						<li><img src="{{assets}}/images/email.svg"><a href="mailto:pkthuanduc@gmail.com">pkthuanduc@gmail.com</a></li>
 					</ul>
 				</div>
 				<div class="fan_page wow fadeInUp">
-					<h3>Fanpage</h3>
+					<h3>Liên kết chúng tôi</h3>
 						<div class="fb-page" 
 							data-href="https://www.facebook.com/ohi.vn"
 							data-height="220px" 
@@ -38,7 +38,7 @@
   <div class="copyright">
 		<div class="container">
 			<div class="container-wrapper">
-				<p>OHI Co.Ltd &copy; 2018 - {{date('Y', time())}}. All Rights Reserved</p>
+				<p>Phòng khám đa khoa Thuận Đức  |  Copyright @ 2021</p>
 				<p class="developer"><a href="https://ohi.vn" target="_blank">Website được xây dựng và phát triển bởi OHI</a></p>
 			</div>
 		</div>

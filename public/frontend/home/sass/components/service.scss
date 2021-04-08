@@ -1,0 +1,415 @@
+.service {
+    .box-body {
+		width: 100%;
+		.item {
+            overflow: hidden;
+			min-height: 300px;
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap-reverse;
+			margin-bottom: 30px;
+			.contentWrapper {padding: 20px 0}
+			.content{
+				padding-right: 30px;
+				margin-left: auto;
+				margin-right: 0;
+				.button{
+					position: relative;
+					margin-top: 20px;
+					margin-bottom: 20px;
+					margin-right: 0px;
+
+				}
+			}
+			&.reverse{
+				flex-wrap: wrap;
+				.content{
+                    padding-left: 30px;
+					padding-right: 0px;
+					margin-left: 0;
+					margin-right: auto;
+					// .button {
+					// 	position: relative;
+					// 	margin-right: auto;
+					// 	margin-left: 0px;
+					// }
+				}
+			}
+		}
+		
+		.image {
+			width: calc(50% - 15px);
+			text-align: center;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			img{visibility: hidden; display: none; height: 100%;}
+			
+			
+		}
+		.contentWrapper {
+			width: calc(50% + 15px);
+			.title {
+				color: $color_page;
+				font-weight: 600;
+				font-size: 20px;
+                margin-bottom: 20px;
+			}
+			p{
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+#clinic {
+    .box-header {
+        p {
+            max-width: 500px;
+            text-align: left;
+        }
+    }
+}
+.clinic{
+	.modulecontent {
+		ul.da-thumbs {
+			width: initial;
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				height: initial;
+				padding: 0;
+				margin: 0 15px 30px;
+				position: relative;    
+				width: calc(100% / 2 - 30px);
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				float: initial;
+				.image {
+					position: relative;
+					display: block;
+					width: 100%;
+					padding-top: calc(100% * 9/16);
+					border: 1px solid #f2f2f2;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
+					@extend %overlay;
+					.overlay {
+						opacity:1;
+						bottom: 0;
+						position: absolute;
+						display: flex;
+						flex-direction: row;
+						width: 100%;
+						height: fit-content;
+						min-height: 50px;
+						align-items: center;
+						text-align: center;
+						flex-direction: column;
+						justify-content: center;
+						background: rgba($color_page, 0.5);
+						color: #FFF;
+						padding: 5px 20px;
+						transition: all 0.3s ease-in-out;
+					}
+					&:hover{
+						.overlay {opacity: 1; height: 100%;
+							transition: all 0.3s ease-in-out;
+							background: rgba($color_page, 0.85);
+							min-height: 100%; }
+					}
+				}
+				.title { padding: 5px 0 0; }
+			}
+		}
+	}
+	&.clinic-detail {
+		.ablumn {
+			margin-top: 30px;
+			.name {
+				font-size: 20px;
+				font-weight: 600;
+				color: $color_page;
+				position: relative;
+				&:after{
+					position: absolute;
+					background-color: #768295;
+					content: '';
+					width: calc(100% - 250px);
+					height: 2px;
+					top: 15px;
+					right: 0;
+				}
+			}
+		}
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .list-item {
+                width: 250px;
+                ul li {
+                    height: 70px;
+                    background-color: $color_page;
+
+                    a{
+                        color: $color_white;
+                        display: flex;
+                        align-items: center;
+                    }
+                    padding: 5px 10px;
+                    img {margin-right: 10px;}
+                    &:active, &:hover {
+                        background-color: #309449;
+                    }
+                }
+                .color-page-3 {
+                    color: $color_white;
+                    display: flex;
+                    align-items: center;
+                    background-color: $color_page_3;
+                    &:hover {
+                        background-color: $color_page_3;
+                    }
+                }
+            }
+            .item {
+                margin-top: 20px;
+                width: calc(100% - 270px);
+               
+            }
+        }
+	}
+}
+
+@media only screen and (max-width: 550px) {
+
+    .service .box-body {
+        .item.reverse {background: #E7E9EC; .content {text-align: center;padding-right: 20px;}}
+        .image {
+            width: 100%;
+            padding-top: calc(100% * 9/16);
+        }
+        .contentWrapper {
+            width: 100%;
+            .content {
+                padding: 0 20px ;
+                text-align: center;
+                .button-3 {
+                    display: none;
+                    // margin: 10px auto!important;
+                }
+            } 
+        }
+    }
+	.clinic{
+		.modulecontent{
+			ul.da-thumbs li {
+				display: block;
+				width: calc(100%);
+				margin: 0 0 20px
+			}
+		}
+	}
+}
+.ablumn {
+    .modulecontent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        h2 {
+            width: 100%; 
+            margin-top: -25px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        .image-cus {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .slide-for {
+            width: 75%;
+            max-width: 790px;
+            margin: auto;
+        }
+        .slide-nav {
+            width: 25%;
+            max-width: 250px;
+            margin: auto;
+            height: 100%;
+            .slick-track {
+                transform: none;
+                display: block;
+            }
+        }
+        .slide-nav .slick-list .slick-track .slick-slide {height: fit-content;}
+        .item { 
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: block;
+            .item-wrap {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                padding: 10px;
+            }
+        }
+        .image{
+            height: 100%;
+            img{ visibility: hidden;}
+        }
+        .slick-slider  button {
+            top : calc(50% - 15px)!important;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            &.slick-prev{border-left: 1px;}
+            &.slick-next{border-right: 1px;}
+        }
+        .slide-nav > button{
+            background-color: rgba($color: $color_page, $alpha: 0.55);
+            &:hover , &:focus {
+                background-color: rgba($color: $color_page, $alpha: 1);
+
+            }
+        }
+        .slide-nav > button:before {color: $color_white}
+        .slide-nav > button:hover:before, .slide-nav > button:focus:before {color: $color_white
+        }
+        .slide-for .slick-list .slick-track .slick-slide a{
+            
+            max-width: 900px;
+            margin: auto;
+            padding-top: calc(100% * 10/11);
+            img{
+                display: none;
+            }
+        }
+        .slide-for .slick-list .slick-track .slick-slide .logo img {
+            display: block;
+        }
+        .slide-nav .item .item-wrap {
+            padding: 0;
+            .image {border: 0;
+                padding-top: calc(100% * 3/4);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                img{display: none;}
+            }
+        } 
+    }
+  
+        background-color: $color_white;
+        h2 {
+            margin-top: 20px!important;
+        }
+        .slide-for .item .img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .image{
+                width: 95%;
+                height: 95%;
+            }
+        }
+}
+@media only screen and (min-width: 800px) {
+    .ablumn .modulecontent .slide-for .item .item-wrap .image {
+        border-width: 4px;
+    }
+}
+@media only screen and (min-width: 500px) {
+    .ablumn .modulecontent .slide-for .item .item-wrap .image {
+        border-width: 3px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .ablumn .modulecontent {
+        .slide-for {
+            width: 73%;
+            max-width: 550px;
+            margin: auto;
+        }
+        .slide-nav {
+            width: 27%;
+            max-width: 230px;
+            margin: auto;
+            height: 100%;
+            .slick-track {
+                transform: none;
+                display: block;
+            }
+        }
+        .item{
+            width: calc(100%/3 - 10px);
+        }
+    }
+    .ablumn .modulecontent .slide-for .slick-list .slick-track .slick-slide a {
+        max-width: 550px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .clinic.clinic-detail .container {
+        .item {
+            width: calc(100% - 100px);
+        }
+        .list-item {
+            width: 82px;
+        }
+    }
+}
+@media only screen and (max-width: 700px) {
+    .ablumn .modulecontent .item{
+        width: calc(100%/2 - 10px);
+    }
+}
+@media only screen and (max-width: 600px) { 
+    .clinic.clinic-detail .container {
+        .item {
+            width: calc(100%);
+
+        }
+        .list-item {
+            width: 100%;
+            // ul {
+            //     li.color-page {
+            //         display: none;
+            //         &.hover {
+            //             display: block;
+            //         }
+            //     }
+            // }
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .ablumn .modulecontent {
+        h2{font-size: 20px; margin-top: -10px;}
+        .slide-for {
+            width: 100%;
+        }
+        .slide-nav {
+            width: 100%;
+            max-width: 100%;
+            height: 150px;
+            .slick-track {
+                transform: none;
+                display: block;
+            }
+        }
+        .item{
+            width: calc(100%);
+            margin-bottom: 10px;
+            &:last-child{margin-bottom: 0;}
+        }
+    }
+}

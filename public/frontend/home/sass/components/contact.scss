@@ -1,9 +1,9 @@
 .contact {
+
 	.module-content {
 	  display: flex;
 	  flex-wrap: wrap;
 	  width: 100%;
-	  padding: 50px 0;
 	}
 	.map { 
 		width: 50%; 
@@ -11,11 +11,12 @@
 		background: #f9f9f9;
 	}
 	.contact-form {
-		width: 50%;
+		width: 100%;
+		max-width: 700px;
+		margin: auto;
 		position: relative;
 	  .form {
-	  	background: #f9f9f9;
-			padding: 20px 40px;
+			padding: 10px;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -44,10 +45,16 @@
 				background-color: #FFF;
 				height: 42px;
 				border: 1px solid #dbdbdb;
+				margin-left: 0;
+				margin-right: 0;
 				margin-bottom: 20px;
 				border-radius: 5px;
 				padding: 20px;
 				&.mail{ width: 100% }
+				&#fullname {margin-left: -15px;}
+				&.error{
+					border-color: red;
+				}
 			}
 			textarea{
 				width: 100%;                    
@@ -56,6 +63,9 @@
 				margin-bottom: 20px;
 				border-radius: 5px;
 				padding: 20px;
+				&.error{
+					border-color: red;
+				}
 			}
 			.button {
 				padding: 15px 80px;

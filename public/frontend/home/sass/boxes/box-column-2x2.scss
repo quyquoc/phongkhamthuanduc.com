@@ -1,4 +1,5 @@
 .box-column-2x2 {
+	background-color: rgba($color: #768295, $alpha: 0.05);
 	.box-body {
 		.inner {
 			display: flex;
@@ -19,7 +20,6 @@
 						font-size: 22px;
 						padding-bottom: 8px;
 						color: $color_page;
-						font-family: $font_montserrat;
 						font-weight: 600;
 					}
 					.description {
@@ -63,6 +63,7 @@
 			width: 100%;
 			margin: 0 0 35px;
 			justify-content: center;
+			align-items: center;
 			.image {
 				padding: 0 15px 0 0;
 				width: 100px;

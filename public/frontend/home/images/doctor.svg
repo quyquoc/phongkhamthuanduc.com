@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <g id="doctor" transform="translate(-400 -2072)">
+    <g id="Rectangle_75" data-name="Rectangle 75" transform="translate(400 2072)" fill="#00ae57" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="160" height="160" stroke="none"/>
+      <rect x="0.5" y="0.5" width="159" height="159" fill="none"/>
+    </g>
+    <g id="Rectangle_76" data-name="Rectangle 76" transform="translate(420 2092)" fill="#00ae57" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="120" height="120" stroke="none"/>
+      <rect x="0.5" y="0.5" width="119" height="119" fill="none"/>
+    </g>
+    <g id="doctor-2" data-name="doctor" transform="translate(428.162 2092)">
+      <g id="Group_118" data-name="Group 118" transform="translate(28.391)">
+        <g id="Group_117" data-name="Group 117">
+          <path id="Path_444" data-name="Path 444" d="M175.751,0A23.474,23.474,0,0,0,152.3,23.45V35.6a23.447,23.447,0,1,0,46.894,0V23.45A23.473,23.473,0,0,0,175.751,0Z" transform="translate(-152.304)" fill="#00ae57"/>
+        </g>
+      </g>
+      <g id="Group_120" data-name="Group 120" transform="translate(0 62.854)">
+        <g id="Group_119" data-name="Group 119">
+          <path id="Path_445" data-name="Path 445" d="M137.554,288.648a59.473,59.473,0,0,0-33.792-26.71.934.934,0,0,0-.936.228,97.905,97.905,0,0,1-16.964,12.9c-2.2-1.408-11.483-7.457-17-12.9a.935.935,0,0,0-.936-.228,59.459,59.459,0,0,0-33.79,26.711.939.939,0,0,0,0,.949,60.128,60.128,0,0,0,103.418,0A.936.936,0,0,0,137.554,288.648Zm-19.82,6.995a.982.982,0,0,1-1.009.913h-6.35a1.093,1.093,0,0,0-1.082.963v6.567a.8.8,0,0,1-.794.911h-5.7a.977.977,0,0,1-1.005-.911v-6.567a.908.908,0,0,0-.873-.963H94.294a.925.925,0,0,1-.946-.913v-5.654a.943.943,0,0,1,.946-.935h6.624a.885.885,0,0,0,.871-.941v-6.575a.988.988,0,0,1,1.005-.925h5.642a.862.862,0,0,1,.856.925v6.594a1,1,0,0,0,1.02.921h6.414a1.017,1.017,0,0,1,1.009.955v5.635Z" transform="translate(-34.007 -261.896)" fill="#00ae57"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

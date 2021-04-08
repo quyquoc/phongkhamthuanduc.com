@@ -2,52 +2,60 @@ footer.footer2 {
 	background-color: $color_page_2;
 	border-top: 2px solid #e8eaea;
 	position: relative;
+	color: $color_white;
+	a {color: $color_white;;}
 	.footer-info {
 		.container-wrapper {
 			text-align: center;
-			padding: 30px 15px 0;
+			padding: 30px 0px 0;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: flex-start;
-	    text-align: left;
+			text-align: left;
 			margin: auto;
 		}
 		h3 {
-			font-size: 18px;
-			line-height: 1.5;
+			height: 140px;
+			font-weight: 600;
+			text-transform: uppercase;
 			margin-bottom: 15px;
 			position: relative;
-			font-family: $font_montserrat;
-			font-weight: 500;
+			display: flex;
+			align-items: flex-end;
+		}
+		h4 {
+			font-weight: 600;
+			margin-bottom:7px;
 		}
 		.company {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
+			width: calc(100%/3);
 			.logo {
-				width: 125px;
-				margin-right: 30px;
+				width: 100%;
+				margin-bottom: 20px;
 			}
 			.info {
-				width: calc(100% - 155px);
+				width: calc(100%);
 			}
-			p { margin-bottom: 15px; }
+			p { margin-bottom: 20px; }
 		}
 		.footer-menu {
 			text-align: left;
+			width: calc(100%/3);
 			ul li {
-				margin-bottom: 5px;
-				a i { margin-right: 8px;}
+				margin-bottom: 20px;
+				display: flex;
+				align-items: center;img {margin-right: 10px;}
 			}
 		}
-		.fan_page { width: 100%; max-width: 350px; }
+		.fan_page { width: calc(100%/3); max-width: 300px; }
 	}
 	.copyright { 
 		margin-top: 10px;
 		padding: 10px 0;
-		border-top: 1px solid #e6e6e6;
+		background: rgba(#29332E, 0.4);
 		text-align: center;
+		a:hover{color: $color_page;}
 	}
 }
 
@@ -58,51 +66,34 @@ footer.footer2 {
 				justify-content: center;
 			}
 			.company { 
-				width: 70%;
-				padding-left: 10%; 
+				width: 100%;
+				
 			}
+			h3{height: auto; margin: 20px 0 15px 0;} 
 			.footer-menu { 
-				width: 30%;
+				width: 55%;
+				padding-right: 5%; 
 			}
-			.fan_page { width: 100%; margin: 40px auto 0; }
+			.fan_page { width: 45%;  max-width: 100%;}
 		}
 	}
 }
-@media only screen and (max-width: 900px) {
-	footer.footer2 {
-		.footer-info {
-			.company { 
-				padding-left: 10px; 
-			}
-			.footer-menu { 
-				width: 160px;
-			}
-		}
-	}
-}
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 610px) {
 	footer.footer2 {
 		.footer-info {
 			.container-wrapper {
-				flex-direction: column;
-				> div {
-					width: 100%;
-					max-width: 300px;
-				}
+				justify-content: center;
 			}
 			.company { 
-				flex-direction: column;
-				padding: 0;
-				width: initial;
-				margin: auto;
-				.logo { margin: 0 auto 20px; }
-				.info { width: 100%; }
+				width: 100%;
+				
 			}
+			h3{height: auto; margin: 20px 0 15px 0;} 
 			.footer-menu { 
-				margin: 30px auto 0;
-				padding: 0;
+				width: 100%;
+				padding-right: 0; 
 			}
-			.fan_page { margin: 30px auto 0; }
+			.fan_page { width: 100%; }
 		}
-	}	
+	}
 }

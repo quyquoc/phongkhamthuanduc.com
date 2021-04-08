@@ -1,10 +1,7 @@
 
 <div class="page{{ page is defined ? ' ' ~ page : '' }}">
 	{{ partial("partials/header1") }}
-
 	<div class="main-body">{{ content() }}</div>
-
-	{{ partial("partials/footer1") }}
 	{{ partial("partials/footer2") }}
 </div>
 
@@ -28,5 +25,5 @@
     {#<a class="button" href="#register">Đăng ký</a>#}
   </div>
 </div>
-
+{{element.script(['slick']) }}
 {{ partial("partials/support_online") }}

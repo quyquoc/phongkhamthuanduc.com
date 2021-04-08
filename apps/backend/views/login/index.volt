@@ -18,7 +18,7 @@
 	<body class="hold-transition login-page">
 		<div class="login-box">
 			<div class="login-logo">
-				<a href="{{ url() }}" target="_blank"><b>OHI </b>Co.Ltd</a>
+				<a href="{{ url() }}" target="_blank">Phòng khám<b>Thuận Đức</b></a>
 			</div>
 			<div class="login-box-body">
 				<p class="login-box-msg">Đăng nhập hệ thống</p>

@@ -39,6 +39,7 @@ class NewsArticleModel extends DatatableManagerModel {
 	
 	public function initialize(){
 		$this->hasMany('id', '\Modules\App\Models\NewsArticleCategoryModel', 'news_id', ['alias' => 'news_to_newscategory']);
+		$this->belongsTo('category_id', '\Modules\App\Models\NewsCategoryModel', 'id', ['alias' => 'news_category']);
 	}
 	
 	private function getController() {

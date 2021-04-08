@@ -2,28 +2,36 @@
 	<div class="container">
 		<div class="container-wrapper">
 			<div class="box-header wow fadeInUp">
-				<h1 class="box-title">Chúng tôi thực hiện</h1>
+				<h1 class="box-title text-left text-color-page3">Thành tựu đạt được</h1>
 			</div>
 			<div class="box-body">
 				<div class="item wow fadeInUp">
-					<div class="image"></div>
-					+ <span class="counterup" data-count="50">0</span>
-					<h4>Website được xây dựng</h4>
+					<div class="inner">
+						<span class="counterup" data-count="50">0</span>
+						<h4><strong>Năm</strong><br>kinh nghiệm</h4>
+					</div>
+					
 				</div>
 				<div class="item wow fadeInUp">
-					<div class="image"></div>
-					+ <span class="counterup" data-count="20">0</span>
-					<h4>Chiến dịch Marketing</h4>
+					<div class="inner">
+						<span class="counterup" data-count="20">0</span>
+						<h4><strong>Bệnh nhân</strong><br>hài lòng</h4>
+					</div>
+					
 				</div>
 				<div class="item wow fadeInUp">
-					<div class="image"></div>
-					+ <span class="counterup" data-count="45">0</span>
-					<h4>Khách hàng hài lòng</h4>
+					<div class="inner">
+						<span class="counterup" data-count="45">0</span>
+						<h4><strong>Phòng chức năng</strong><br>hiện đại</h4>
+					</div>
+					
 				</div>
 				<div class="item wow fadeInUp">
-					<div class="image"></div>
-					+ <span class="counterup" data-count="3">0</span>
-					<h4>Quốc gia</h4>
+					<div class="inner">
+						<span class="counterup" data-count="3">0</span>
+						<h4><strong>Bác sĩ</strong><br>tay nghề cao</h4>
+					</div>
+					
 				</div>
 			</div>
 		</div>

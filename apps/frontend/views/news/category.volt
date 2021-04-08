@@ -1,26 +1,7 @@
 <div id="news-category" class="page-news category {{category.code}}">
-	<div class="breadcrumbs brb-header">
-	  <div class="container">
-			<div class="container-wrapper">
-				<div class="breadcrumbs-header">
-					{{ category.title }}
-				</div>
-				<div class="breadcrumbs-nav">
-					<span class="item"><a href="{{ url() }}" title="Trang chủ">Trang chủ</a></span>
-					{% if category_parent is defined and category_parent is not empty %}
-						<span class="item_sep"> / </span>
-						<span class="item"><a href="{{ url('/' ~ category_parent.code) }}" title="{{category_parent.title}}">{{category_parent.title}}</a></span>
-					{% endif %}
-					{% if category is defined and category is not empty %}
-						<span class="item_sep"> / </span>
-						<span class="item">{{category.title}}</span>
-					{% endif %}
-				</div>
-			</div>
-		</div>
-	</div>
 
-  <div class="main-content news news-list {{category.code}}">
+  <div class="section main-content news news-list {{category.code}}">
+	<div class="box-header"><div class="box-title">{{ category.title }}</div></div>
 		<div class="container">
 			<div class="module">
 				{#<div class="module-header">
@@ -33,7 +14,6 @@
 
 								{% set link 				= url('/' ~ category.code ~ '/' ~ item.code) %}
 								{% set link_img 		= item.image is not empty ? url(item.image) : assets ~ '/images/no-image.jpg' %}
-
 								{{ partial('news/item') }}
 							{% endif %}
 						{% endfor %}
@@ -43,7 +23,7 @@
 				{% if list_item is defined and list_item|length > 12 %}
 					<div class="more">
 						<div class="loading"><img src="{{ assets }}/images/loading.gif" ></div>
-						<div class="readmore"><a href="javascript:void(0);" class="button">Xem thêm</a></div>
+						<div class="readmore"><a href="javascript:void(0);" class="add">Xem thêm <img src="{{assets}}/images/icon-down-color.svg" alt=""></a></div>
 					</div>
 				{% endif %}
 			</div>
@@ -76,4 +56,4 @@
 		});
 	});
 </script>
-
+</div>

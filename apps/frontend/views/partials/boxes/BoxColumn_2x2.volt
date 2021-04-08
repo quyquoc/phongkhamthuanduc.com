@@ -2,36 +2,43 @@
 	<div class="container">
 		<div class="container-wrapper">
 			<div class="box-header" data-aos="fade-up">
-				<h1 class="box-title">Chúng tôi mang lại</h1>
+				<h1 class="box-title text-left">Định hướng phát triển bền vững</h1>
 			</div>
 			<div class="box-body">
 				<div class="inner">
 					<div class="item" data-aos="fade-up">
-						<div class="image"><img src="{{ assets }}/images/img_data.svg" /></div>
+						<div class="image"><img src="{{ assets }}/images/doctor.svg" /></div>
 						<div class="content">
-							<h3 class="title">Thiết kế hiện đại</h3>
-							<div class="description">Chúng tôi xây dựng Website với thiết kế hiện đại, chuẩn SEO, phù hợp với xu hướng người dùng</div>
+							<h3 class="title">Công nghệ tiên tiến và vượt trội</h3>
+							<div class="description">Chúng tôi coi trọng tìm tòi và triển khai các công nghệ kỹ thuật tiên tiến, đặc biệt là những công nghệ kiểm tra tinh vi mang tính quốc tế. Hiện nay phần lớn thiết bị và công nghệ chữa trị chúng tôi tin dùng đều đến từ các quốc gia có nền y học phát triển.</div>
 						</div>
 					</div>
 					<div class="item" data-aos="fade-up">
-						<div class="image"><img src="{{ assets }}/images/img_podium.svg" /></div>
+						<div class="image"><img src="{{ assets }}/images/config.svg" /></div>
 						<div class="content">
-							<h3 class="title">Hiệu quả 100%</h3>
-							<div class="description">Tăng hiệu quả của chiến dịch Marketing đạt 100%. Nhận biết, tiếp cận, phân loại khách hàng tăng tỷ lệ chuyển đổi trên mỗi khách hàng tiếp cận.</div>
+							<h3 class="title">Công nghệ tiên tiến và vượt trội</h3>
+							<div class="description">Chúng tôi coi trọng tìm tòi và triển khai các công nghệ kỹ thuật tiên tiến, đặc biệt là những công nghệ kiểm tra tinh vi mang tính quốc tế. Hiện nay phần lớn thiết bị và công nghệ chữa trị chúng tôi tin dùng đều đến từ các quốc gia có nền y học phát triển.</div>
 						</div>
 					</div>
 					<div class="item" data-aos="fade-up">
-						<div class="image"><img src="{{ assets }}/images/img_money.svg" /></div>
+						<div class="image"><img src="{{ assets }}/images/chat.svg" /></div>
 						<div class="content">
-							<h3 class="title">Tối ưu chi phí</h3>
-							<div class="description">Chúng tôi đưa ra các giải pháp giúp khách hàng tối ưu chi phí, đạt được hiệu quả cao.</div>
+							<h3 class="title">Môi trường thân thiện</h3>
+							<div class="description">Với mong muốn mang đến sự thuận tiện và tiết kiệm thời gian tối đa cho bệnh nhân. Phòng khám đã cho xây dựng hệ thống các dịch vụ từ tư vấn hướng dẫn, chẩn đoán điều trị tới chăm sóc sau điều trị.</div>
 						</div>
 					</div>
 					<div class="item" data-aos="fade-up">
-						<div class="image"><img src="{{ assets }}/images/img_support.svg" /></div>
+						<div class="image"><img src="{{ assets }}/images/hand.svg" /></div>
 						<div class="content">
-							<h3 class="title">Hỗ trợ 24/7</h3>
-							<div class="description">Hỗ trợ khách hàng mọi lúc, mọi nơi.</div>
+							<h3 class="title">Công nghệ tiên tiến và vượt trội</h3>
+							<div class="description">Chúng tôi coi trọng tìm tòi và triển khai các công nghệ kỹ thuật tiên tiến, đặc biệt là những công nghệ kiểm tra tinh vi mang tính quốc tế. Hiện nay phần lớn thiết bị và công nghệ chữa trị chúng tôi tin dùng đều đến từ các quốc gia có nền y học phát triển.</div>
+						</div>
+					</div>
+					<div class="item" data-aos="fade-up">
+						<div class="image"><img src="{{ assets }}/images/pig.svg" /></div>
+						<div class="content">
+							<h3 class="title">Chi phí tối ưu</h3>
+							<div class="description">100% chi phí của chúng tôi đều công khai, minh bạch và được nhập hệ thống cẩn thận. Bác sỹ sẽ đưa ra chi phí điều trị dự kiến cùng các liệu trình điều trị. Người bệnh có quyền lựa chọn liệu trình phù hợp nhất với điều kiện kinh tế và tính chất công việc củ</div>
 						</div>
 					</div>
 				</div>

@@ -1,11 +1,11 @@
-$color_page:        	#387cde;
-$color_page_1:   			#1e82c0;
-$color_page_2:   			#f5f8fa;
-$color_page_bg:   		#f2f3f9;
-$color_text:        	#2f3236;
-$color_text_1:      	#6a6f82;
+$color_page:        	#00AE57;
+$color_page_1:   		#E53549;
+$color_page_2:   		#768295;
+$color_page_3:   		#3854DF;
+$color_text:        	#29332E;
+$color_white:      		#ffffff;
 $color_a:           	$color_page;
-$color_a_hover:     	#000;
+$color_a_hover:    		$color_page;
 $color_menu:        	#E3E3E3;
 $color_menu_hover:  	$color_page_2;
 $color_menu_hover_1:	$color_page_2;
@@ -40,12 +40,12 @@ $highlight:           $color_page;
 		transform: scale(1, 0);
 	}
 	&:hover {
-		&:before, &:after {
-			opacity: 1;
-			-webkit-transform: scale(1);
-			transform: scale(1);
-			transition: opacity 0.5s, transform 0.5s;
-		}
+		// &:before, &:after {
+		// 	opacity: 1;
+		// 	-webkit-transform: scale(1);
+		// 	transform: scale(1);
+		// 	transition: opacity 0.5s, transform 0.5s;
+		// }
 	}
 }
 @mixin _transition {
@@ -66,8 +66,5 @@ $highlight:           $color_page;
 }
 $box_shadow: 0 0 15px 0px #e8e8e8;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
-$font_roboto: 'Roboto', sans-serif;
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
-$font_montserrat: 'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+$font_nunito_sans: 'Nunito Sans', sans-serif;

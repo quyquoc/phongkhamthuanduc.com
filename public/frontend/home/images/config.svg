@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <g id="config" transform="translate(-976 -2072)">
+    <g id="Rectangle_77" data-name="Rectangle 77" transform="translate(976 2072)" fill="#00ae57" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="160" height="160" stroke="none"/>
+      <rect x="0.5" y="0.5" width="159" height="159" fill="none"/>
+    </g>
+    <g id="Rectangle_78" data-name="Rectangle 78" transform="translate(996 2092)" fill="#00ae57" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="120" height="120" stroke="none"/>
+      <rect x="0.5" y="0.5" width="119" height="119" fill="none"/>
+    </g>
+    <g id="smartphone-adn" transform="translate(1019 2092)">
+      <path id="Path_450" data-name="Path 450" d="M225,156.759a34.2,34.2,0,0,0,9.49-12.093h-18.98A34.2,34.2,0,0,0,225,156.759Z" transform="translate(-187.733 -110.76)" fill="#00ae57"/>
+      <path id="Path_451" data-name="Path 451" d="M225,233.738a34.2,34.2,0,0,0-9.49,12.093h18.98A34.192,34.192,0,0,0,225,233.738Z" transform="translate(-187.733 -178.956)" fill="#00ae57"/>
+      <path id="Path_452" data-name="Path 452" d="M97,452.333v1.094a12.905,12.905,0,0,0,12.891,12.891H130.75v-7.5h7.031v7.5h20.859a12.905,12.905,0,0,0,12.891-12.891v-1.094Z" transform="translate(-97 -346.317)" fill="#00ae57"/>
+      <path id="Path_453" data-name="Path 453" d="M171.531,98.984V12.891A12.905,12.905,0,0,0,158.641,0h-48.75A12.905,12.905,0,0,0,97,12.891V98.984Zm-17.5-17.58H147a34.176,34.176,0,0,0-.835-7.5h-23.8a34.177,34.177,0,0,0-.835,7.5H114.5a41.244,41.244,0,0,1,14.065-31.014A41.243,41.243,0,0,1,114.5,19.376h7.031a34.177,34.177,0,0,0,.835,7.5h23.8a34.176,34.176,0,0,0,.835-7.5h7.031a41.245,41.245,0,0,1-14.065,31.014A41.244,41.244,0,0,1,154.031,81.4Z" transform="translate(-97)" fill="#00ae57"/>
+    </g>
+  </g>
+</svg>

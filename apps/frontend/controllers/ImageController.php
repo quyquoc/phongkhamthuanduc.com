@@ -11,34 +11,34 @@ class ImageController extends ControllerBase {
 		parent::onConstruct();
 	}
 
-	public function indexAction($group_code = null, $album_code = null, $code = null){
-
+	public function indexAction(){
 		// Gallery
-		$gallery 		= ImageModel::find(array(
-			"conditions"	=> "album_id = :album_id: AND status = 1",
-			"bind" 			=> array("album_id" => '2'),
-			"order"			=> "position ASC, created DESC",
-			"limit" 		=> 12
+		$album = ImageAlbumModel::findFirstByCode('gallery');
+		$this->view->gallery = ImageModel::find(array(
+			"conditions" => "status = 1 and album_id = {$album->id}",
+		 	"order" => "created DESC",
+			"limit" => 12));
+			
+		$gallery_count = ImageModel::find(array(
+			"conditions" => "status = 1 and album_id = {$album->id}",
+		 	"order" => "created DESC"
 		));
-		$this->view->gallery 	= $gallery;
-		$this->view->menu 		= 'thu-vien';
-
-		$this->assets->addCss('/library/DirectionAwareHoverEffect/css/style.css');
-		$this->assets->addJs('/library/DirectionAwareHoverEffect/js/jquery.hoverdir.js')
-								 ->addJs('/library/DirectionAwareHoverEffect/js/modernizr.custom.97074.js');
+		$this->view->gallery_count = $gallery_count->count();
 	}
 
-	public function add_imageAction(){
+
+	public function addImageAction(){
 
 		$this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_ACTION_VIEW);
 
 		if ($this->request->isAjax()) {
 
-			$offset				= $this->request->get('num_items');
+			$offset				= $this->request->get('offset');
+			$offset				= $this->request->get('limit');
 			$offset 			= (isset($offset) && $offset != "0") ? $offset : 0;
-			$limit 				= (isset($limit) && $limit != "0") ? $limit : 6;
+			$limit 				= (isset($limit) && $limit != "0") ? $limit : 12;
 
-			$conditions 	= "album_id = 2 AND status = 1 and created <= '".date('Y-m-d H:i:s')."' ";
+			$conditions 	= "status = 1";
 			$list 			= ImageModel::find(array(
 				'conditions'	=> $conditions,
 				'limit'			=> $limit,
@@ -46,7 +46,7 @@ class ImageController extends ControllerBase {
 				'order'			=> 'created DESC'
 			));
 			
-			$this->view->list = $list;
+			$this->view->gallery = $list;
 		}
 	}
 }

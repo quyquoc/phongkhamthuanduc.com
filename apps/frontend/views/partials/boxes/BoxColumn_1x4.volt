@@ -1,36 +1,36 @@
 	<div class="section box box-column-1x4">
-		<div class="box-header wow fadeInUp">
-			<h1 class="box-title">Tiêu chí đặt ra</h1>
-		</div>
 		<div class="container">
+			<div class="box-header wow fadeInUp">
+				<h1 class="box-title text-left text-color-page3">Dịch vụ của chúng tôi</h1>
+			</div>
 			<div class="box-body">
 				<div class="inner">
 					<div class="item wow fadeInUp">
-						<div class="image"><img src="{{ assets }}/images/img_data.svg" /></div>
+						<div class="image"><img src="{{ assets }}/images/ser1.svg" /></div>
 						<div class="content">
-							<h3 class="title">Thiết kế hiện đại</h3>
-							<div class="description">Chúng tôi xây dựng Website với thiết kế hiện đại, chuẩn SEO, phù hợp với xu hướng người dùng</div>
+							<h3 class="title">Sức khỏe sinh sản</h3>
+							<div class="description">Kế hoạch điều trị của bạn được thiết kế để đạt được tiến trình ổn định, với mọi giai đoạn được thực hiện kịp thời.</div>
 						</div>
 					</div>
 					<div class="item wow fadeInUp">
-						<div class="image"><img src="{{ assets }}/images/img_podium.svg" /></div>
+						<div class="image"><img src="{{ assets }}/images/ser2.svg" /></div>
 						<div class="content">
-							<h3 class="title">Hiệu quả 100%</h3>
-							<div class="description">Tăng hiệu quả của chiến dịch Marketing đạt 100%. Tiếp cận, tăng tỷ lệ chuyển đổi trên mỗi khách hàng tiếp cận.</div>
+							<h3 class="title">Khám chữa bệnh đa khoa</h3>
+							<div class="description">Tất cả các thành viên trong nhóm tại Trung tâm y tế đã được đào tạo kỹ lưỡng để hỗ trợ trong mọi tình huống.</div>
 						</div>
 					</div>
 					<div class="item wow fadeInUp">
-						<div class="image"><img src="{{ assets }}/images/img_money.svg" /></div>
+						<div class="image"><img src="{{ assets }}/images/ser3.svg" /></div>
 						<div class="content">
-							<h3 class="title">Tối ưu chi phí</h3>
-							<div class="description">Chúng tôi đưa ra các giải pháp giúp khách hàng tối ưu chi phí, đạt được hiệu quả cao.</div>
+							<h3 class="title">Xét nghiệm</h3>
+							<div class="description">Lựa chọn điều trị hoàn toàn phù hợp với mục tiêu của bạn về các biến chứng điều trị nhằm can thiệp sớm.</div>
 						</div>
 					</div>
 					<div class="item wow fadeInUp">
-						<div class="image"><img src="{{ assets }}/images/img_support.svg" /></div>
+						<div class="image"><img src="{{ assets }}/images/ser4.svg" /></div>
 						<div class="content">
-							<h3 class="title">Hỗ trợ 24/7</h3>
-							<div class="description">Hỗ trợ khách hàng mọi lúc, mọi nơi.</div>
+							<h3 class="title">Dịch vụ khác</h3>
+							<div class="description">Sức khỏe của bạn là tài sản quan trọng nhất của bạn. Bạn chỉ nên giao phó nó cho những chuyên gia giỏi nhất.</div>
 						</div>
 					</div>
 				</div>

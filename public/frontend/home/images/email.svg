@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Layer_2" data-name="Layer 2" transform="translate(0.085 0.085)">
+    <g id="email" transform="translate(-0.085 -0.085)">
+      <rect id="Rectangle_54" data-name="Rectangle 54" width="24" height="24" transform="translate(0 0)" fill="#fff" opacity="0"/>
+      <path id="Path_440" data-name="Path 440" d="M18.9,4H4.982A2.982,2.982,0,0,0,2,6.982v9.939A2.982,2.982,0,0,0,4.982,19.9H18.9a2.982,2.982,0,0,0,2.982-2.982V6.982A2.982,2.982,0,0,0,18.9,4Zm-.666,1.988-6.292,4.721L5.648,5.988ZM18.9,17.915H4.982a.994.994,0,0,1-.994-.994V7.23l7.355,5.516a.994.994,0,0,0,1.193,0L19.891,7.23v9.691A.994.994,0,0,1,18.9,17.915Z" transform="translate(0.06 0.048)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

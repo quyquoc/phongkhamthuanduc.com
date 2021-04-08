@@ -1,9 +1,15 @@
 <header class="{{ page is defined ? page : '' }}">
+	<div class="top-head">
+		<div class="container">
+			<p>Phòng khám đa khoa Thuận Đức</p>
+			<a href="tel:02343833888"><img src="{{assets}}/images/phone.svg" alt=""> 0234 3833 888</a>
+		</div>
+	</div>
 	<div class="header">
 		<div class="container">
 			<div class="container-wrapper">
 				<div class="logo">
-					<a href="{{ url() }}"><img src="{{ url('/logo_v.svg') }}" /></a>
+					<a href="{{ url() }}"><img src="{{ url('/logo.svg') }}" /></a>
 				</div>
 				<div class="main_menu">
 					{{ partial('partials/menu') }}
@@ -21,17 +27,8 @@
 	<button class="rd-panel_toggle"><span></span></button>
 	<div class="logo">
 		<a href="{{ url() }}">
-			<img src="{{ url() }}/logo.png" />
-			<img src="{{ url() }}/favicon.png" class="img_s"/>
+			<img src="{{ url() }}/logo.svg" />
+			<img src="{{ url() }}/logo.svg" class="img_s"/>
 		</a>
 	</div>
-	<div class="plugin-search">
-		<form class="form_search" method="get" action="{{url('/san-pham/tim-kiem')}}">
-			<label class="search_label">
-				<input type="text" name="keyword" class="search_input" placeholder="Tìm nhanh sản phẩm" value="{{ keyword is defined ? keyword : '' }}">
-				<input type="submit" class="button search_submit" value=""></input>
-    	</label>
-		</form>
-	</div>
-	<a class="plugin-cart" href="{{ url('/gio-hang') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 </div>

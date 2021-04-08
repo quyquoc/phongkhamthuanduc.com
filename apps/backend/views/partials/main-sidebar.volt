@@ -39,97 +39,24 @@
 				{% endif %}
 
 			<!-- Shop -->
-				{% if role=="full" or in_array('shop-category', role) or in_array('shop-product', role) or in_array('shop-brand', role) or in_array('shop-invoice', role) %}
-					<li class="treeview{{ (dispatcher.getControllerName() in ['shop-category', 'shop-product', 'shop-brand', 'shop-invoice']) ? ' active' : '' }}">
+				{% if role=="full" or in_array('service-category', role) or in_array('service', role)  %}
+					<li class="treeview{{ (dispatcher.getControllerName() in ['service-category', 'service']) ? ' active' : '' }}">
 						<a href="#">
-							<i class="fa fa-opencart"></i> <span>{{ language._('shop') }}</span>
+							<i class="fa fa-opencart"></i> <span>{{ language._('Dịch vụ - Chuyên khoa') }}</span>
 							<span class="pull-right-container">
 								<i class="fa fa-angle-left pull-right"></i>
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							{% if role=="full" or in_array('shop-invoice', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['shop-invoice']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/shop-invoice/index','<i class="fa fa-circle-o"></i>' ~ language._('invoice')) }}</li>
+							{% if role=="full" or in_array('service-category', role) %}
+								<li class="{{ (dispatcher.getControllerName() in ['service-category']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/service-category/index','<i class="fa fa-circle-o"></i>' ~ language._('Danh mục')) }}</li>
 							{% endif %}
-							{% if role=="full" or in_array('shop-product', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['shop-product']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/shop-product/index','<i class="fa fa-circle-o"></i>' ~ language._('product')) }}</li>
-							{% endif %}
-							{% if role=="full" or in_array('shop-category', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['shop-category']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/shop-category/index','<i class="fa fa-circle-o"></i>' ~ language._('category')) }}</li>
-							{% endif %}
-							{% if role=="full" or in_array('shop-brand', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['shop-brand']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/shop-brand/index','<i class="fa fa-circle-o"></i>' ~ language._('brand')) }}</li>
+							{% if role=="full" or in_array('service', role) %}
+								<li class="{{ (dispatcher.getControllerName() in ['service']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/service/index','<i class="fa fa-circle-o"></i>' ~ language._('Dich vụ và chuyên khoa')) }}</li>
 							{% endif %}
 						</ul>
 					</li>
 				{% endif %}
-
-			<!-- Tour -->
-				{% if role=="full" or in_array('tour', role) or in_array('tour-category', role) or in_array('tour-booking', role) %}
-					<li class="treeview{{ (dispatcher.getControllerName() in ['tour', 'tour-category', 'tour-booking']) ? ' active' : '' }}">
-						<a href="#">
-							<i class="fa fa-motorcycle"></i> <span>{{ language._('Tour') }}</span>
-							<span class="pull-right-container">
-								<i class="fa fa-angle-left pull-right"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							{% if role=="full" or in_array('tour-booking', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['tour-booking']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/tour-booking/index','<i class="fa fa-circle-o"></i>' ~ language._('Booking Tour')) }}</li>
-							{% endif %}
-							{% if role=="full" or in_array('tour', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['tour']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/tour/index','<i class="fa fa-circle-o"></i>' ~ language._('Tour')) }}</li>
-							{% endif %}
-							{% if role=="full" or in_array('tour-category', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['tour-category']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/tour-category/index','<i class="fa fa-circle-o"></i>' ~ language._('category')) }}</li>
-							{% endif %}
-						</ul>
-					</li>
-				{% endif %}
-
-			<!-- Hotel -->
-				{% if role=="full" or in_array('hotel-booking', role) or in_array('hotel-room', role) %}
-					<li class="treeview{{ (dispatcher.getControllerName() in ['hotel-booking', 'hotel-room']) ? ' active' : '' }}">
-						<a href="#">
-							<i class="fa fa-bed"></i> <span>Phòng nghỉ</span>
-							<span class="pull-right-container">
-								<i class="fa fa-angle-left pull-right"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							{% if role=="full" or in_array('hotel-booking', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['hotel-booking']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/hotel-booking/index','<i class="fa fa-circle-o"></i>' ~ language._('Đặt phòng')) }}</li>
-							{% endif %}
-							{% if role=="full" or in_array('hotel-room', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['hotel-room']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/hotel-room/index','<i class="fa fa-circle-o"></i>' ~ language._('Phòng nghỉ')) }}</li>
-							{% endif %}
-						</ul>
-					</li>
-				{% endif %}
-			
-			<!-- Recruitment -->
-				{% if role=="full" or in_array('recruitment-work', role) or in_array('recruitment', role) or in_array('recruitment-career', role) %}
-					<li class="treeview{{ (dispatcher.getControllerName() in ['recruitment', 'recruitment-career', 'recruitment-work']) ? ' active' : '' }}">
-						<a href="#">
-							<i class="fa fa-briefcase"></i> <span>Tuyển dụng</span>
-							<span class="pull-right-container">
-								<i class="fa fa-angle-left pull-right"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							{% if role=="full" or in_array('recruitment', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['recruitment']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/recruitment/index','<i class="fa fa-circle-o"></i>' ~ language._('Hồ sơ tuyển dụng')) }}</li>
-							{% endif %}
-							{% if role=="full" or in_array('recruitment-work', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['recruitment-work']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/recruitment-work/index','<i class="fa fa-circle-o"></i>' ~ language._('Công việc')) }}</li>
-							{% endif %}
-							{% if role=="full" or in_array('recruitment-career', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['recruitment-career']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/recruitment-career/index','<i class="fa fa-circle-o"></i>' ~ language._('Ngành nghề')) }}</li>
-							{% endif %}
-						</ul>
-					</li>
-				{% endif %}		
-
 			<!-- Images -->
 				{% if role=="full" or in_array('image', role) or in_array('image-album', role) or in_array('image-group', role) %}
 					<li class="treeview{{ (dispatcher.getControllerName() in ['image', 'image-album', 'image-group']) ? ' active' : '' }}">
@@ -152,28 +79,12 @@
 					  </ul>
 					</li>
 			  {% endif %}
-
-			<!-- Question Answer -->
-				{% if role=="full" or in_array('qa', role) %}
-					<li class="{{ (dispatcher.getControllerName() in ['qa']) ? ' active' : '' }}">
-						{{ link_to(define.backend ~ '/qa','<i class="fa fa-weixin"></i><span>' ~ language._('Tư vấn hỗ trợ KH-KT')) ~ '</span>' }}
-					</li>
-				{% endif %}
-
 			<!-- Contact -->
 				{% if role=="full" or in_array('contact', role) %}
 					<li class="{{ (dispatcher.getControllerName() in ['contact']) ? ' active' : '' }}">
 						{{ link_to(define.backend ~ '/contact','<i class="fa fa-comments-o"></i><span>' ~ language._('contact')) ~ '</span>' }}
 					</li>
 				{% endif %}
-
-			<!-- Newsletter -->
-				{% if role=="full" or in_array('newsletter', role) %}
-					<li class="{{ (dispatcher.getControllerName() in ['newsletter']) ? ' active' : '' }}">
-						{{ link_to(define.backend ~ '/newsletter','<i class="fa fa-envelope-o"></i><span>' ~ language._('newsletter')) ~ '</span>' }}
-					</li>
-				{% endif %}
-				
 		  <!-- Member -->
 				{% if role=="full" or in_array('member', role) or in_array('permission-group', role) or in_array('permission-privilege', role) or in_array('permission-group-privilege', role) %}
 					<li class="treeview{{ (dispatcher.getControllerName() in ['member', 'permission-group', 'permission-privilege', 'permission-group-privilege']) ? ' active' : '' }}">

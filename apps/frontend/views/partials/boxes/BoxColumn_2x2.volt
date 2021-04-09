@@ -9,8 +9,8 @@
 					<div class="item" data-aos="fade-up">
 						<div class="image"><img src="{{ assets }}/images/doctor.svg" /></div>
 						<div class="content">
-							<h3 class="title">Công nghệ tiên tiến và vượt trội</h3>
-							<div class="description">Chúng tôi coi trọng tìm tòi và triển khai các công nghệ kỹ thuật tiên tiến, đặc biệt là những công nghệ kiểm tra tinh vi mang tính quốc tế. Hiện nay phần lớn thiết bị và công nghệ chữa trị chúng tôi tin dùng đều đến từ các quốc gia có nền y học phát triển.</div>
+							<h3 class="title">Bác sĩ giỏi chuyên môn, giàu nhân ái</h3>
+							<div class="description">Đội ngũ y bác sĩ và điều dưỡng viên của phòng khám đều là những bậc lương y giỏi chuyên môn và giàu kinh nghiệm khám chữa ở lĩnh vực liên quan. Là những người tâm huyết với nghề, từng được đào tạo hoặc tác nghiệp tại nước ngoài.</div>
 						</div>
 					</div>
 					<div class="item" data-aos="fade-up">
@@ -30,8 +30,8 @@
 					<div class="item" data-aos="fade-up">
 						<div class="image"><img src="{{ assets }}/images/hand.svg" /></div>
 						<div class="content">
-							<h3 class="title">Công nghệ tiên tiến và vượt trội</h3>
-							<div class="description">Chúng tôi coi trọng tìm tòi và triển khai các công nghệ kỹ thuật tiên tiến, đặc biệt là những công nghệ kiểm tra tinh vi mang tính quốc tế. Hiện nay phần lớn thiết bị và công nghệ chữa trị chúng tôi tin dùng đều đến từ các quốc gia có nền y học phát triển.</div>
+							<h3 class="title">Dịch vụ tận tâm chu đáo</h3>
+							<div class="description">Phòng khám được thiết kế, bố trí tổng thể dựa trên các yêu cầu về tiêu chuẩn phòng khám tư được ban hành bởi bộ y tế.</div>
 						</div>
 					</div>
 					<div class="item" data-aos="fade-up">

@@ -25,5 +25,6 @@
     {#<a class="button" href="#register">Đăng ký</a>#}
   </div>
 </div>
+{{ element.PopupContact() }}
 {{element.script(['slick']) }}
 {{ partial("partials/support_online") }}

@@ -29,8 +29,16 @@
 					
 				}
 				&:hover {
+					background: $color_page;
 					box-shadow: 0 5px 20px rgba($color_page,0.6);
 					transform: translate3d(0, -10px, 0);
+					.content {
+						color: $color_white;
+						.title {
+							color: $color_white;
+						}
+						a{color: $color_white}
+					}
 				}
 			}
 		}

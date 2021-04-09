@@ -12,7 +12,11 @@
 						<div class="content">
 							<p>{{ item.title }}</p>
 							<h3 class="title">{{ item.fullname }}</h3>
-							<p classs="f-14">{{ item.staff_position }}</p>
+                            {% if item.type_id == '1' %}
+                                <p classs="f-14">Giám đốc trung tâm</p>
+                            {% else %}
+                                <p classs="f-14">{{item.manager=='1'? 'Trưởng khoa': 'Chuyên khoa'}} {{ item.depart.title }}</p>
+                            {% endif %}
 							<div class="description"> 
 								{% if item.phone is not empty %}
 									<a href="tel:{{item.phone}}"><i class="fa fa-phone"></i></a>

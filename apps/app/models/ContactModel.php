@@ -17,8 +17,9 @@ class ContactModel extends DatatableManagerModel {
 			'fullname'	=> 'fullname', 
 			'phone'   	=> 'phone',  
 			'email'   	=> 'email',         
+			'service'   => 'service',         
 			'content' 	=> 'content', 
-			'reply' 	  => 'reply', 
+			'reply' 	=> 'reply', 
 			'status'  	=> 'status', 
 			'editor_id' => 'editor_id', 
 			'created' 	=> 'created', 
@@ -35,12 +36,6 @@ class ContactModel extends DatatableManagerModel {
 		return $Ohi->baseAdminUrl($this->getController()."/index/{$_format}/{$id}");
 	}
 
-	/*public function beforeSave() {
-		if(!isset($this->id) || !($this->id >0)){
-			$this->created = date("Y-m-d H:i:s");
-		}
-	}*/	
-	
 	public function datatable_column(){
 		$init_data = array (
 			array (

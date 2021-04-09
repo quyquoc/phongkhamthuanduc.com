@@ -1,6 +1,7 @@
 <?php
 namespace Modules\Frontend\Controllers;
 use Phalcon\Mvc\Controller;
+use Modules\App\Models\DepartmentModel;
 use Modules\App\Models\NewsArticleModel;
 class IndexController extends ControllerBase {
 
@@ -11,6 +12,11 @@ class IndexController extends ControllerBase {
 
 	public function indexAction() {
 		$this->view->page = "home";
+		$depart = DepartmentModel::find(array(
+			"conditions" => "status",
+			"order"		 => "id ASC",
+		));
+		$this->view->list_depart = $depart;
 		$this->view->list_item = NewsArticleModel::find(array(
 			"conditions" => "status = 1 and code!= 'kham-bao-hiem-y-te' ",
 			"order"		 => " featured DESC, published DESC, created DESC",

@@ -40,7 +40,7 @@ body {
 a.button {
   display: block;
   width: fit-content;
-  padding: 10px 24px;
+  padding: 14px 32px;
   background-color: rgba($color_page_1, 1);
   text-decoration: none;
   font-weight: 400;
@@ -53,6 +53,13 @@ a.button {
   &:hover {
     color: #fff;
     background-color: rgba($color_page, 1);
+  }
+  &.transparent{
+    background-color: transparent;
+    border: 1px solid $color_white;
+    &:hover {
+      border-color: $color_page_1;
+    }
   }
 }
 .bg-page {
@@ -120,11 +127,10 @@ a.button {
 .box-title {
   position: relative;
   width: fit-content;
-  // padding: 0 0 10px 0;
   margin: auto;
   font-size: 32px;
   color: $color_page;
-  font-weight: 500;
+  font-weight: 700;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -191,6 +197,7 @@ a.button {
   .readmore {
     text-align: center;
     padding: 30px 0;
+    a {display: flex; align-items: center; justify-content: center;}
   }
 }
 #loading {
@@ -676,11 +683,6 @@ a.button {
 ** Components
 **------------------------------------------------*/
 @import "components/news";
-@import "components/staff";
-@import "components/shop";
-@import "components/recruitment";
-@import "components/event";
-@import "components/faqs";
 @import "components/media";
 @import "components/service";
 @import "components/contact";
@@ -729,7 +731,6 @@ a.button {
 /*------------------------------------------------
 ** FOOTER
 **------------------------------------------------*/
-@import "footer1";
 @import "footer2";
 
 /*------------------------------------------------
@@ -837,10 +838,10 @@ a.button {
 **------------------------------------------------*/
 .scroll-to-top {
   position: fixed;
-  bottom: 166px;
+  bottom: 100px;
   right: 29px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: none;
   align-items: center;
   justify-content: center;
@@ -868,13 +869,13 @@ a.button {
   }
 }
 .icon_zalo {
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   text-align: center;
   display: block;
   position: fixed;
-  bottom: 95px;
-  right: 18pt;
+  bottom: 72px;
+  left: 18px;
   z-index: 99;
   padding: 10px 0;
   border-radius: 50%;
@@ -885,7 +886,7 @@ a.button {
     align-items: center;
     justify-content: center;
     height: 100%;
-    img { height: 40px; }
+    img { height: 25px; }
   }
   &:hover {
     background: $color_page_1;
@@ -893,7 +894,7 @@ a.button {
 }
 .contact-fixed {
   position: fixed;
-  right: 18px;
+  left: 0;
   bottom: 10px;
   z-index: 999;
   .inner {
@@ -913,11 +914,11 @@ a.button {
         background: $color_page;
         border-radius: 50%;
         padding: 10px;
-        margin: 2px 0 0 19px;
+        margin: 2px 0 0 11px;
         animation: 1s ease-in-out 0s normal none infinite running ring;
-        font-size: 35px;
-        width: 50px;
-        height: 50px;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
         display: flex;
         align-items: center;
       }
@@ -928,14 +929,14 @@ a.button {
         animation: 1.2s ease-in-out 0s normal none infinite running ring-circle;
         background-color: $color_page;
         border-radius: 100%;
-        height: 85px;
-        left: 1px;
+        height: 60px;
+        left: 0px;
         opacity: 0.1;
         position: absolute;
-        top: -18px;
+        top: -10px;
         transform-origin: 50% 50% 0;
         transition: all 0.5s ease 0s;
-        width: 85px;
+        width: 60px;
       }
     }
     .button{
@@ -946,80 +947,143 @@ a.button {
     }
   }
 }
-.popup {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+.popup-contact {
+	width: 100%;
+	height: 100%;
+	top: 0;
   display: none;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.8);
   z-index: 9999;
-  overflow: auto;
-  .popup-inner {
-    background: #fff;
-    width: 95%;
-    max-width: 1100px;
-    max-height: 750px;
+  &.active {
     display: block;
-    position: absolute;
-    left: 50%;
-    top: 30px;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    margin-bottom: 30px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    .head {
-      padding: 30px 20px 0;
-      .head_title {
-        padding-bottom: 10px;
-        .title {
-          font-size: 20px;
-        }
-      }
-      .sub_title {
-        font-size: 18px;
-      }
-    }
-    span.close {
-      width: 60px;
-      height: 60px;
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      cursor: pointer;
-      background: url("../images/popup-close.png") no-repeat center;
-    }
-    .inner {
-      margin: auto;
-      padding: 30px 20px;
-      margin: 0 30px;
-      overflow-y: scroll;
-      border: 1px solid #cccccc;
-      .content {
-      }
-    }
-    .box-popup {
-      padding: 30px 0;
-      position: relative;
-      .box-inner {
-        display: flex;
-        flex-direction: column;
-        padding: 0 20px;
-        .text {
-          font-size: 20px;
-          text-transform: uppercase;
-          text-align: center;
-          color: $color_page;
-          font-weight: 600;
-          padding-bottom: 15px;
-        }
-      }
-    }
   }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+	.popup-form {
+    position: relative;
+		width: 100%;
+    max-width: 520px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    .close {
+      position: absolute;
+      right:  10px;
+      top: 10px;
+      z-index: 11;
+      cursor: pointer;
+    }
+	  .form {
+	  	background: #f9f9f9;
+			padding: 20px 40px;
+			display: flex;
+			flex-wrap: wrap;
+      justify-content: space-between;
+      form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+			h4 {
+				color: $color-page-1;
+				text-align: center;
+				font-size: 30px;
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+			p {
+				width: 100%;
+				text-align: center;
+				color: $color-text;
+				margin-top: 10px;
+				margin-bottom: 30px;
+			}
+			input {
+				width: calc(50% - 10px);
+				background-color: #FFF;
+				height: 42px;
+				border: 1px solid #dbdbdb;
+				margin-bottom: 20px;
+				border-radius: 5px;
+				padding: 20px;
+				&.mail{ width: 100% }
+      }
+      select {
+        width: calc(50% - 10px);
+				background-color: #FFF;
+				height: 42px;
+				border: 1px solid #dbdbdb;
+				margin-bottom: 20px;
+				border-radius: 5px;
+      }
+			textarea{
+        width: 100%;        
+        background-color: #FFF;            
+				border: 1px solid #dbdbdb;
+				margin-bottom: 20px;
+				border-radius: 5px;
+				padding: 20px;
+			}
+			.button {
+				padding: 15px 80px;
+				font-weight: 500;
+			}
+	  }
+	}
+	.work_name {
+		text-align: center;
+		font-size: 15pt;
+		color: $color_page_2;
+	}
+	.notice {
+		display: none;
+		text-align: center;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		&.success {
+			width: 100%;
+			padding: 10px 0 10px 45px;
+			border-top: 2px solid #49B452;
+			border-bottom: 2px solid #49B452;
+			margin: 10px 0 0 0;
+			background: #D7EED9;
+			font-size: 10pt;
+			color: #49B452;
+		}
+		&.error {
+			width: 100%;
+			padding: 10px 0 10px 45px;
+			border-top: 2px solid #BF0000;
+			border-bottom: 2px solid #BF0000;
+			margin: 10px 0 0 0;
+			background: #FFEAEA;
+			font-size: 10pt;
+			color: #BF0000;
+		}
+	}
+	#loading {
+		display: none;
+		background: rgba(0, 0, 0, 0.5);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		z-index: 10;
+		img {
+			position: relative;
+			margin: 0 auto;
+			top: 40%;
+		}
+	}
 }
 .overlay-bg {
   background: rgba(0, 0, 0, 0.5);

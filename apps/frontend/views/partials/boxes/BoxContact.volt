@@ -1,4 +1,4 @@
-<div class="box box-contact" id="lien-he" >
+<div class="box box-contact">
 	<div class="container">
 		<div class="container-wrapper">
 			<div class="box-body">
@@ -31,20 +31,21 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		$(".contact-form .form a.send").click(function() {
+			var param = new Object();
+			
+			form 			  = ".contact-form .form";
+			param.page_id    = $(form+ ' input[name="page_id"]').val();
+			param.fullname    = $(form+ ' input[name="fullname"]').val();
+			param.phone 	  = $(form+ ' input[name="phone"]').val();
+			param.from_email  = $(form+ ' input[name="from_email"]').val();
+			param.service  	  = $(form+ ' input[name="service"]').val();
+			param.content  	  = $(form+ ' textarea[name="content"]').val();
+			register(form, param);
+		});
+		
+	</script>
 </div>
 
-<script type="text/javascript">
-	$(".contact-form .form a.send").click(function() {
-		var param = new Object();
-		
-		form 			  = ".contact-form .form";
-		param.page_id    = $(form+ ' input[name="page_id"]').val();
-		param.fullname    = $(form+ ' input[name="fullname"]').val();
-		param.phone 	  = $(form+ ' input[name="phone"]').val();
-		param.from_email  = $(form+ ' input[name="from_email"]').val();
-		param.service  	  = $(form+ ' input[name="service"]').val();
-		param.content  	  = $(form+ ' textarea[name="content"]').val();
-		register(form, param);
-	});
-	
-</script>
+

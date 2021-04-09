@@ -15,7 +15,6 @@
                                             <div class="title">{{item.title}}</div>
                                             <div class="description">{{item.description}}</div>
                                             <a  onclick="getOption('{{item.title}}');popRegis()" href="javascript:void(0)" class="button">Liên hệ tư vấn</a>
-
                                         </div>
                                     </div>
                                 </div>

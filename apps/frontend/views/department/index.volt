@@ -3,13 +3,13 @@
 		<div class="section container-wrapper">
 			<div class="box-header">
 				<h1 class="box-title text-left"><span>Chuyên khoa</span> </h1>
-				<p>{{category.description}}</p>
+				<p>Các khoa của bệnh viện chúng tôi</p>
 			</div>
 			<div class=" clinic clinic-list">
 				<div class="modulecontent">
-					{% if clinic is defined and clinic is not empty %}
+					{% if list_depart is defined and list_depart is not empty %}
 						<ul id="da-thumbs" class="da-thumbs">
-							{% for item in clinic %}
+							{% for item in list_depart %}
 								<li class="item wow zoomIn" data-type="image">
 									<div class="image" style="background-image: url('{{url(item.image)}}')">
 										<a class="overlay"href="{{ url('/chuyen-khoa/'~item.code) }}"> {{item.title}}

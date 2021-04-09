@@ -34,7 +34,7 @@
 		$router->add('/', array(
 			'module' 		=> 'frontend',
 			'controller'=> 'index',
-			'action' 		=> 'index',
+			'action' 	=> 'index',
 			'segment' 	=> 'home',
 		));
 		$router->add('/401', array(
@@ -55,25 +55,17 @@
 			'action' 		=> 'addItem'
 		));
 
-		// Service
-		$router->add('/chuyen-khoa', array(
+		$router->add('/chuyen-khoa/:params', array(
 			'module' 		=> 'frontend',
-			'controller'	=> 'service',
-			'action' 		=> 'clinic',
-			'page' 			=> 'chuyen-khoa',
+			'controller'	=> 'department',
+			'action' 		=> 'index',
+			'params' 		=> 1
 		));
-		$router->add('/chuyen-khoa/{code}', array(
-			'module' 		=> 'frontend',
-			'controller'	=> 'service',
-			'action' 		=> 'detail',
-			'page' 			=> 'chuyen-khoa',
-			'params'		=> 1
-		));
+		
 		$router->add('/dich-vu', array(
 			'module' 		=> 'frontend',
 			'controller'	=> 'service',
-			'action' 		=> 'service',
-			'page' 			=> 'dich-vu'
+			'action' 		=> 'index',
 		));
 
 		// Multimedia
@@ -89,17 +81,20 @@
 			'action' 		=> 'addImage'
 		));
 
-
-
 		// Contact
 		$router->add('/lien-he', array(
 			'module' 		=> 'frontend',
 			'controller'=> 'contact',
 			'action' 		=> 'index'
 		));
+		$router->add('/dat-hen', array(
+			'module' 		=> 'frontend',
+			'controller'	=> 'contact',
+			'action' 		=> 'book'
+		));
 		$router->add('/gui-lien-he', array(
 			'module' 		=> 'frontend',
-			'controller'=> 'contact',
+			'controller'	=> 'contact',
 			'action' 		=> 'send'
 		));
 

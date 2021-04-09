@@ -3,18 +3,17 @@
 		<div class="box box-head">
 			<div class="inner-image">
 				<div class="img">
-					<div class="slide-banner" style="background-image: url('{{ assets }}/images/bg_clinic.jpg');">
+					<div class="slide-banner" style="background-image: url('{{ url(article.banner) }}');">
 					</div>
 				</div>
-			
 			</div>
 			<div class="inner-content">
-					<div class="container-wrapper">
-						<div class="box-body" data-aos="fade-up">
-							<h2 class="title">{{ article.title }}</h2>
-						</div>
+				<div class="container-wrapper">
+					<div class="box-body" data-aos="fade-up">
+						<h2 class="title">{{ article.title }}</h2>
 					</div>
 				</div>
+			</div>
 		</div>
 	</div> 
 
@@ -25,16 +24,11 @@
 					<div class="list-item">
 						<ul>
 							<li class="color-page-3">Chuyên khoa</li>
-							<li class="color-page {{article.code == 'khoa-dong-y' ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/khoa-dong-y')}}"><img src="{{assets}}/images/w-noi.svg"> Nội khoa</a></li>
-							<li class="color-page {{article.code == 'khoa-dong-y' ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/khoa-dong-y')}}"><img src="{{assets}}/images/w-ngoai.svg"> Ngoại khoa</a></li>
-							<li class="color-page {{article.code == 'khoa-dong-y' ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/khoa-dong-y')}}"><img src="{{assets}}/images/w-nhi.svg"> Nhi khoa</a></li>
-							<li class="color-page {{article.code == 'khoa-dong-y' ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/khoa-dong-y')}}"><img src="{{assets}}/images/w-dongy.svg"> Khoa đông y</a></li>
-							<li class="color-page {{article.code == 'khoa-dong-y' ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/khoa-dong-y')}}"><img src="{{assets}}/images/w-san.svg"> Phụ khoa</a></li>
-							<li class="color-page {{article.code == 'khoa-dong-y' ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/khoa-dong-y')}}"><img src="{{assets}}/images/w-rang-ham-mat.svg"> Răng-hàm-mặt</a></li>
-							<li class="color-page {{article.code == 'khoa-dong-y' ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/khoa-dong-y')}}"><img src="{{assets}}/images/w-tai-mui-hong.svg" alt=""> Tai-mũi-họng</a></li>
-							<li class="color-page {{article.code == 'khoa-dong-y' ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/khoa-dong-y')}}"><img src="{{assets}}/images/w-sieu-am.svg"> Phòng siêu âm</a></li>
-							<li class="color-page {{article.code == 'khoa-dong-y' ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/khoa-dong-y')}}"><img src="{{assets}}/images/w-xet-nghiem.svg"> Phòng xét nghiệm</a></li>
-							<li class="color-page {{article.code == 'khoa-dong-y' ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/khoa-dong-y')}}"><img src="{{assets}}/images/w-x-quang.svg"> Phòng X-quang</a></li>
+							{% if list_depart is defined and list_depart is not empty %}
+								{% for item in list_depart %}
+									<li class="color-page {{ item.code == article.code  ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/'~item.code)}}"><img src="{{ url(item.logo_white)}}"> {{ item.title }}</a></li>
+								{% endfor %}
+							{% endif %}
 						</ul>
 					</div>
 					<div class="item">

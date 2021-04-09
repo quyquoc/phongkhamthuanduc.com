@@ -13,6 +13,7 @@ class ImageController extends ControllerBase {
 
 	public function indexAction(){
 		// Gallery
+		$this->view->menu 	= 'thu-vien';
 		$album = ImageAlbumModel::findFirstByCode('gallery');
 		$this->view->gallery = ImageModel::find(array(
 			"conditions" => "status = 1 and album_id = {$album->id}",
@@ -23,6 +24,7 @@ class ImageController extends ControllerBase {
 			"conditions" => "status = 1 and album_id = {$album->id}",
 		 	"order" => "created DESC"
 		));
+		$this->view->album = $album;
 		$this->view->gallery_count = $gallery_count->count();
 	}
 
@@ -33,12 +35,11 @@ class ImageController extends ControllerBase {
 
 		if ($this->request->isAjax()) {
 
-			$offset				= $this->request->get('offset');
-			$offset				= $this->request->get('limit');
-			$offset 			= (isset($offset) && $offset != "0") ? $offset : 0;
-			$limit 				= (isset($limit) && $limit != "0") ? $limit : 12;
+			$album_id 	= !empty($this->request->get('album_id')) ? $this->request->get('album_id') : '';
+			$limit			= !empty($this->request->get('limit')) ? $this->request->get('limit') : 6;
+			$offset			= !empty($this->request->get('offset')) ? $this->request->get('offset') : 0;
 
-			$conditions 	= "status = 1";
+			$conditions 	= "status = 1 and album_id = $album_id ";
 			$list 			= ImageModel::find(array(
 				'conditions'	=> $conditions,
 				'limit'			=> $limit,

@@ -20,5 +20,5 @@
 			</div>
 		</div>
 	</div>
-	{{ partial('partials/boxes/BoxContact') }}
+	{{ element.BoxContact() }}
 </div>

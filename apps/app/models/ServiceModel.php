@@ -18,7 +18,6 @@ class ServiceModel extends DatatableManagerModel {
 			'category_id'       => 'category_id', 
 			'code'      		=> 'code', 
 			'description'   	=> 'description',
-			'content'       	=> 'content',
 			'featured'      	=> 'featured',
 			'image'         	=> 'image',
 			'imgs'         		=> 'imgs',
@@ -39,7 +38,6 @@ class ServiceModel extends DatatableManagerModel {
 	}
 	
 	public function initialize(){
-		$this->belongsTo('category_id', '\Modules\App\Models\ServiceCategoryModel', 'id', ['alias' => 'service_category']);
 	}
 	
 	private function getController() {

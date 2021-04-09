@@ -7,7 +7,7 @@ use Modules\App\Models\ImageModel;
 use Modules\App\Models\ImageAlbumModel;
 use Modules\App\Models\NewsCategoryModel;
 use Modules\App\Models\NewsArticleCategoryModel;
-
+use Modules\App\Models\StaffModel;
 class NewsController extends ControllerBase {
 
 	protected function onConstruct(){
@@ -16,8 +16,21 @@ class NewsController extends ControllerBase {
 
 	public function indexAction($category_code = null, $code = null) {
 		if($category_code == 'gioi-thieu') {
-		
-			$this->about();
+			$this->view->menu = 'gioi-thieu';
+			if(!empty($code)) {
+				$this->view->menu_lv1 = $code;
+				if($code=='nhan-luc-phong-kham'){
+					$this->view->list_staff= StaffModel::find(array(
+						"conditions"	=> "status = 1",
+						"order"			=> "type_id ASC, position ASC, id ASC"
+					));
+					$this->view->pick('news/staff');
+				}else{
+					$this->detail($code);
+				}
+			}else{
+				$this->about();
+			}
 		}
 		elseif($category_code == 'kham-bao-hiem-y-te') {
 			$this->view->menu =  'kham-bao-hiem-y-te';
@@ -34,16 +47,22 @@ class NewsController extends ControllerBase {
 		if(!empty($code)){// hien thi chi tiet
 			$this->detail($code);
 		}else{
-			// $category_code = $category_code ? $category_code : 'tin-tuc';
 			$category = NewsCategoryModel::findFirst(array(
 				'conditions'	=> 'code = :code: and status = 1',
 				'bind'				=> array('code'=>$category_code)
 			));
 			$this->view->category = $category;
-			$this->view->menu = $this->view->category_code = $category->code;
-
+			$this->view->menu_lv1 = $this->view->category_code = $category->code;
 			if(!empty($category)){
-				$list_item = NewsArticleModel::init()->newsWithCategory($category->code, ['limit'=>12]);
+				$list_item = NewsArticleModel::find(array(
+					'conditions'	=> "status = 1 and category_id = $category->id",
+					"order"			=> "published DESC",
+					"limit"			=> 12
+				));
+				$count_item = NewsArticleModel::find(array(
+					'conditions'	=> "status = 1 and category_id = $category->id",
+					"order"			=> "published DESC"
+				));
 				if($list_item && count($list_item) > 0) {
 					$head = array(
 						'title'			=> $category->title,
@@ -54,6 +73,7 @@ class NewsController extends ControllerBase {
 
 					$this->view->setVar('head', $head);
 					$this->view->setVar('list_item', $list_item);
+					$this->view->setVar('count_item', $count_item->count());
 					$this->view->pick('news/category');
 				}else {$this->response->redirect();}
 			}else {$this->response->redirect();}
@@ -61,7 +81,6 @@ class NewsController extends ControllerBase {
 	}
 
 	private function about() {
-		$this->view->menu = 'gioi-thieu';
 		$album = ImageAlbumModel::findFirstByCode('chung-chi');
 		$this->view->certificate = ImageModel::find(array(
 			"conditions" => "status = 1 and album_id = {$album->id}",
@@ -77,27 +96,30 @@ class NewsController extends ControllerBase {
 			$article = NewsArticleModel::findFirstByCode($item->code);
 			$article->hits++;
 			$article->save();
-
+			$category = NewsCategoryModel::findFirstById($article->category_id);
 			// tin cung loai
-			$list_relative = NewsArticleModel::init()->newsWithCategory($item->category_code, ['limit'=>12]);
+			$list_relative = NewsArticleModel::find(array(
+				'conditions'	=> "status = 1 and category_id = $category->id and id!= $article->id",
+				"order"			=> "published DESC",
+				"limit"			=> 12
+			));
+			$count_item = NewsArticleModel::find(array(
+				'conditions'	=> "status = 1 and category_id = $category->id and id!= $article->id",
+				"order"			=> "published DESC"
+			));
 			$this->view->list_relative = $list_relative;
-
+		
 			$this->view->head = array(
-				'title'				=> !empty($article->seo_title) ? $article->seo_title : $article->title,
+				'title'			=> !empty($article->seo_title) ? $article->seo_title : $article->title,
 				'description'	=> !empty($article->seo_description) ? $article->seo_description : $article->description,
-				'image'		 		=> !empty($article->seo_image) ? $article->seo_image : $article->image,
-				'url'		 			=> $this->url->get("/".$item->category_code."/".$item->code)
+				'image'		 	=> !empty($article->seo_image) ? $article->seo_image : $article->image,
+				'url'		 	=> $this->url->get("/".$category->code."/".$article->code)
 			);
 
-			$category = NewsCategoryModel::findFirst(array(
-				'conditions'	=> 'code = :code: and status = 1',
-				'bind'				=> array('code'=>$item->category_code)
-			));
-
 			$this->view->article 	= $item;
+			$this->view->count_item 	= $count_item->count();
 			$this->view->category = $category;
-			$this->view->menu_lv1 	= $this->view->category_code = $item->category_code;
-			// $this->view->category_title = $item->category_title;
+			$this->view->menu_lv1 = $category->code;
 			$this->view->pick("news/detail");
 		}
 		else { $this->response->redirect(); }
@@ -108,12 +130,31 @@ class NewsController extends ControllerBase {
 
 		if ($this->request->isAjax()) {
 			
-			$category_code 	= !empty($this->request->get('category_code')) ? $this->request->get('category_code') : '';
-			$limit					= !empty($this->request->get('limit')) ? $this->request->get('limit') : 12;
-			$offset					= !empty($this->request->get('offset')) ? $this->request->get('offset') : 0;
+			$detail_id 	    = !empty($this->request->get('detail_id')) ? $this->request->get('detail_id') : '';
+			$category_id 	= !empty($this->request->get('category_id')) ? $this->request->get('category_id') : '';
+			$limit			= !empty($this->request->get('limit')) ? $this->request->get('limit') : 6;
+			$offset			= !empty($this->request->get('offset')) ? $this->request->get('offset') : 0;
 			
-			$list_item = NewsArticleModel::init()->newsWithCategory($category_code, ['limit'=>$limit, 'offset'=>$offset]);
-			$this->view->list_item = $list_item;
+			$category = NewsCategoryModel::findFirstById($category_id);
+			$this->view->category = $category;
+
+			if (!empty($detail_id)) {
+				$list_item = NewsArticleModel::find(array(
+					'conditions'	=> "status = 1 and category_id = $category_id and id!= $article->id",
+					"order"			=> "published DESC",
+					"offset" 	=> 	$offset	,
+					"limit" 	=> $limit
+				));
+			}else{
+				$list_item = NewsArticleModel::find(array(
+					'conditions'	=> "status = 1 and category_id = $category_id",
+					"order"			=> "published DESC",
+					"offset" 	=> 	$offset	,
+					"limit" 	=> $limit
+				));
+			}
+			
+			$this->view->appload = $list_item;
 		}
 	}
 }

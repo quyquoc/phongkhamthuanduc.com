@@ -14,8 +14,6 @@
                 color: $color_white;
             }
             .form{
-          
-
                 position: relative;
                 #appForm{
                     display: flex;
@@ -26,7 +24,7 @@
                         margin: 0 0px 15px;
                         border: none;
                         border-radius: 0;
-                        border-bottom: 1px solid #cacbd0 ;
+                        border-bottom:  1px solid rgba($color_white, 0.5);
                         box-sizing: border-box;
                         height: 40px;
                         color: $color_white;
@@ -37,6 +35,9 @@
                             line-height: 26px;
                             color: $color_white
                         }
+                        &.error {
+                            border-color: $color_page_1;
+                        }
                     }
                     select {
                         padding: 0px;
@@ -44,14 +45,23 @@
                         border-radius: 0;
                         width:100%;
                         margin: 0 0px 15px;
-                        color: $color_text;
+                        color: $color_white;
                         background:transparent;
-                        border-bottom: 1px solid #cacbd0 ;
+                        border-bottom: 1px solid rgba($color_white, 0.5) ;
                         box-sizing: border-box;
                         box-sizing: border-box;
                         height: 40px;
+                        &.error {
+                            border-color: $color_page_1;
+                        }
+                        option {
+                            background: $color_white;
+                            color: $color_page;
+                           
+                        }
                     }
                 }
+                a:hover{background: $color_page_3;}
             }
             display: flex;
             flex-wrap: wrap;

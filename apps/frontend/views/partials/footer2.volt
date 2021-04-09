@@ -25,7 +25,7 @@
 				<div class="fan_page wow fadeInUp">
 					<h3>Liên kết chúng tôi</h3>
 						<div class="fb-page" 
-							data-href="https://www.facebook.com/ohi.vn"
+							data-href="https://www.facebook.com/PhongKhamThuanDucHue"
 							data-height="220px" 
 							data-hide-cover="false"
 							data-show-facepile="false"

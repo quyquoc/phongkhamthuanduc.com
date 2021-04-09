@@ -160,9 +160,12 @@
                     }
                     padding: 5px 10px;
                     img {margin-right: 10px;}
-                    &:active, &:hover {
-                        background-color: #309449;
+                    &:hover {
+                        background-color: rgba(54, 122, 54, 1)!important;
                     }
+                }
+                .color-page.active{
+                    background-color: rgba(54, 122, 54, 1)!important;
                 }
                 .color-page-3 {
                     color: $color_white;

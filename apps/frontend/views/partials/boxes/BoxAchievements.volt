@@ -7,28 +7,28 @@
 			<div class="box-body">
 				<div class="item wow fadeInUp">
 					<div class="inner">
-						<span class="counterup" data-count="50">0</span>
+						<span class="counterup" data-count="15">0</span>
 						<h4><strong>Năm</strong><br>kinh nghiệm</h4>
 					</div>
 					
 				</div>
 				<div class="item wow fadeInUp">
 					<div class="inner">
-						<span class="counterup" data-count="20">0</span>
+						<span class="counterup" data-count="5186">0</span>
 						<h4><strong>Bệnh nhân</strong><br>hài lòng</h4>
 					</div>
 					
 				</div>
 				<div class="item wow fadeInUp">
 					<div class="inner">
-						<span class="counterup" data-count="45">0</span>
+						<span class="counterup" data-count="10">0</span>
 						<h4><strong>Phòng chức năng</strong><br>hiện đại</h4>
 					</div>
 					
 				</div>
 				<div class="item wow fadeInUp">
 					<div class="inner">
-						<span class="counterup" data-count="3">0</span>
+						<span class="counterup" data-count="22">0</span>
 						<h4><strong>Bác sĩ</strong><br>tay nghề cao</h4>
 					</div>
 					

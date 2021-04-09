@@ -14,11 +14,11 @@ class StaffModel extends DatatableManagerModel {
 	public function columnMap() {
 		return array(
 			'id'                => 'id', 
-			'type_id'     			=> 'type_id', 
+			'type_id'     		=> 'type_id', 
 			'fullname'          => 'fullname', 
 			'title'             => 'title', 
-			'subject'           => 'subject', 
-			'staff_position'    => 'staff_position',
+			'manager'           => 'manager', 
+			'department_id'     => 'department_id',
 			'code'              => 'code', 
 			'image'             => 'image', 
 			'phone'             => 'phone', 
@@ -31,20 +31,16 @@ class StaffModel extends DatatableManagerModel {
 			'updated'           => 'updated', 
 			'creator_id'        => 'creator_id', 
 			'editor_id'         => 'editor_id',
-			'position'  				=> 'position'
+			'position'  		=> 'position'
 		);
 	}
-
-	/*public function beforeSave(){
-		if(!isset($this->id) || !($this->id >0)){
-			$this->created = date("Y-m-d H:i:s");
-		}
-	}*/
-	
 	private function getController() {
 		return "staff";
 	}
-
+	public function initialize(){
+		$this->belongsTo('department_id', '\Modules\App\Models\DepartmentModel', 'id', ['alias' => 'depart']);
+	}
+	
 	public function my_url($_format, $id = null){
 		$Ohi = new \Modules\Library\Oh\Ohi();
 		return $Ohi->baseAdminUrl($this->getController()."/index/{$_format}/{$id}");

@@ -10,6 +10,8 @@ use Modules\App\Models\ShopCategoryModel;
 use Modules\App\Models\ShopProductModel;
 use Modules\App\Models\GuestReviewModel;
 use Modules\App\Models\StaffModel;
+use Modules\App\Models\ServiceModel;
+use Modules\App\Models\DepartmentModel;
 
 class Element extends Component{
 
@@ -145,17 +147,27 @@ class Element extends Component{
 
 	public function BoxContact($title = null) {
 		$this->view->title = $title;
+		$this->view->list_option= DepartmentModel::find(array(
+			"conditions"	=> "status = 1",
+			"order"			=> "position ASC"
+		));
 		$this->view->partial("elements/BoxContact");		
+	}
+	public function PopupContact() {
+		$this->view->list_options= ServiceModel::find(array(
+			"conditions"	=> "status = 1",
+			"order"			=> "position ASC"
+		));
+		$this->view->partial("elements/PopupContact");		
 	}
 
 	public function BoxStaff() {
 
 		
 		$this->view->list_staff= StaffModel::find(array(
-			"conditions"	=> "status = 1",
+			"conditions"	=> "status = 1 and manager = 1",
 			"order"			=> "position ASC"
 		));
-	
 
 		$this->view->partial("elements/BoxStaff");	
 	}

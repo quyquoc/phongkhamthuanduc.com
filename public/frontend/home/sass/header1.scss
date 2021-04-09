@@ -49,6 +49,14 @@ header {
       transition: all 0.3s ease-in-out;
       background-color: rgba(255, 255, 255, 0.98);
       box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+      .menunav li {&:hover, &.active {
+        position: relative;
+        a { &::before{
+           bottom: 0px; 
+           transition: all 0.3s ease-in-out;
+        } }
+      }
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 footer.footer2 {
-	background-color: $color_page_2;
+	background-color: #303030;
 	border-top: 2px solid #e8eaea;
 	position: relative;
 	color: $color_white;
@@ -16,13 +16,13 @@ footer.footer2 {
 			margin: auto;
 		}
 		h3 {
-			height: 140px;
+			height: 40px;
 			font-weight: 600;
 			text-transform: uppercase;
 			margin-bottom: 15px;
 			position: relative;
 			display: flex;
-			align-items: flex-end;
+			align-items: flex-start;
 		}
 		h4 {
 			font-weight: 600;
@@ -30,12 +30,18 @@ footer.footer2 {
 		}
 		.company {
 			width: calc(100%/3);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 			.logo {
-				width: 100%;
+				width: 70px;
 				margin-bottom: 20px;
 			}
+			.paper {
+				width: calc(100% - 90px);
+			}
 			.info {
-				width: calc(100%);
+				width: 100%;
 			}
 			p { margin-bottom: 20px; }
 		}
@@ -53,9 +59,10 @@ footer.footer2 {
 	.copyright { 
 		margin-top: 10px;
 		padding: 10px 0;
-		background: rgba(#29332E, 0.4);
+		background:#000000;
 		text-align: center;
 		.developer {
+			margin-top: 5px;
 			font-size: 14px;
 			a {color:$color_page_2;}
 		}

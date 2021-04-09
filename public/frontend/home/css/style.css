@@ -1468,6 +1468,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   position: relative;
   width: 100%;
   height: calc(100vh * 2/3);
+  min-height: 300px;
   display: flex;
   text-align: center;
   align-items: center;
@@ -1475,6 +1476,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 .box-head .inner-content .container-wrapper.home {
   height: calc(100vh - 100px);
+  min-height: 600px;
   justify-content: flex-start;
   text-align: left;
 }
@@ -1483,8 +1485,8 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   font-style: normal;
   font-weight: 800;
   font-size: 88px;
+  line-height: 1.1;
   color: #ffffff;
-  margin: 10px 0;
   text-shadow: 1px 1px 1px #262626;
 }
 .box-head .box-body .content {
@@ -1529,6 +1531,10 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   }
   .box-head .box-body .content p {
     font-size: 25px;
+  }
+
+  .box-head .inner-content .container-wrapper.home {
+    min-height: 400px;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -1641,7 +1647,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 
 .box-about-2 {
-  background-color: rgba(56, 84, 223, 0.05);
+  background-image: linear-gradient(to bottom, transparent, rgba(56, 84, 223, 0.05));
   margin-top: -150px;
   background-position: center;
   background-repeat: no-repeat;
@@ -2702,7 +2708,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   max-height: 100px;
   padding: 0;
   margin: auto;
-  text-align: center;
+  text-align: left;
 }
 .box-column-1x4 .box-body .inner .item .image img {
   max-height: 100px;
@@ -2716,7 +2722,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   color: #3854DF;
   font-weight: 700;
   margin: 20px 0 10px;
-  text-align: center;
+  text-align: left;
 }
 .box-column-1x4 .box-body .inner .item .content .description {
   padding: 0;
@@ -4204,7 +4210,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 ** FOOTER
 **------------------------------------------------*/
 footer.footer2 {
-  background-color: #768295;
+  background-color: #303030;
   border-top: 2px solid #e8eaea;
   position: relative;
   color: #ffffff;
@@ -4223,13 +4229,13 @@ footer.footer2 .footer-info .container-wrapper {
   margin: auto;
 }
 footer.footer2 .footer-info h3 {
-  height: 140px;
+  height: 40px;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 15px;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 footer.footer2 .footer-info h4 {
   font-weight: 600;
@@ -4237,13 +4243,19 @@ footer.footer2 .footer-info h4 {
 }
 footer.footer2 .footer-info .company {
   width: calc(100%/3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 footer.footer2 .footer-info .company .logo {
-  width: 100%;
+  width: 70px;
   margin-bottom: 20px;
 }
+footer.footer2 .footer-info .company .paper {
+  width: calc(100% - 90px);
+}
 footer.footer2 .footer-info .company .info {
-  width: calc(100%);
+  width: 100%;
 }
 footer.footer2 .footer-info .company p {
   margin-bottom: 20px;
@@ -4267,10 +4279,11 @@ footer.footer2 .footer-info .fan_page {
 footer.footer2 .copyright {
   margin-top: 10px;
   padding: 10px 0;
-  background: rgba(41, 51, 46, 0.4);
+  background: #000000;
   text-align: center;
 }
 footer.footer2 .copyright .developer {
+  margin-top: 5px;
   font-size: 14px;
 }
 footer.footer2 .copyright .developer a {

@@ -5,7 +5,7 @@
 				<div class="inner">
 					<div class="section contact-form" data-aos="fade-left">
                         <div class="box-header" data-aos="fade-up">
-                            <h1 class="box-title text-left">Đặt lịch hẹn khám</h1>
+                            <h1 class="box-title text-left">Đặt lịch hẹn khám - tư vấn</h1>
                         </div>
 						<div class="form">
 							<div id="loading"><img src="{{ url('/frontend/home/images/loading.gif') }}" /></div>

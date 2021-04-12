@@ -18,13 +18,15 @@ class StaffForm extends Form {
 		
 		$this->add(new Text("code"));
 		$this->add(new Text("image"));
-		$this->add(new Text("staff_position"));
+		$department_id = new Select('department_id', \Modules\App\Models\DepartmentModel::find(),array('using' => array('id', 'title')));
+		$this->add($department_id);
 		$this->add(new Text("phone"));
 		$this->add(new Text("subject"));
 		$this->add(new Text("email"));
 		$this->add(new Text("facebook"));
 		$this->add(new TextArea("education"));
 		$this->add(new TextArea("experience"));
+		$this->add(new Select('manager', array('0'=>$this->language->_('Chuyên viên'), '1'=>$this->language->_('Trưởng khoa')), array("value" =>'1')));
 		$this->add(new Select('status', array('0'=>$this->language->_('no'), '1'=>$this->language->_('yes')), array("value" =>'1')));
 
 		$type_id = new Select('type_id', \Modules\App\Models\StaffTypeModel::find(),array('using' => array('id', 'name')));

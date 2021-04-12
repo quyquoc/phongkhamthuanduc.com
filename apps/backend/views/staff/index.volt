@@ -12,7 +12,7 @@
 							<div class="form-group">
 								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="name">{{ language._('name') }} <span class="required">*</span></label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
-									{{ form.render('name',(['class':'form-control','placeholder':'Tên','required':'required'])) }}
+									{{ form.render('fullname',(['class':'form-control','placeholder':'Tên','required':'required'])) }}
 								</div>
 							</div>
 							<div class="form-group">
@@ -24,13 +24,19 @@
 							<div class="form-group">
 								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="staff_type_id">{{ language._('Vị trí') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
-									{{ form.render('staff_type_id',(['class':'form-control select2','data-placeholder':language._('Vị trí')])) }}
+									{{ form.render('type_id',(['class':'form-control select2','data-placeholder':language._('Vị trí')])) }}
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="staff_position">{{ language._('Chức danh') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="staff_type_id">{{ language._('Chuyên khoa') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
-									{{ form.render('staff_position',(['class':'form-control'])) }}
+									{{ form.render('department_id',(['class':'form-control select2','data-placeholder':language._('Chuyên khoa')])) }}
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-2 col-sm-2 col-xs-12">{{ language._('Quản lý') }}</label>
+								<div class="col-md-10 col-sm-10 col-xs-12">
+									{{ form.render('manager',(['class':'form-control select2','data-placeholder':language._('Quản lý')])) }}
 								</div>
 							</div>
 							<div class="form-group">
@@ -69,7 +75,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="name">{{ language._('order') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="name">{{ language._('position') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
 									{{ form.render('position',(['class':'form-control'])) }}
 								</div>

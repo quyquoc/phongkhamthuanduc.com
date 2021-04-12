@@ -13,15 +13,15 @@ class NewsArticleModel extends DatatableManagerModel {
 
 	public function columnMap() {
 		return array(
-			'id'        			=> 'id', 
+			'id'        		=> 'id', 
 			'title'        	 	=> 'title', 
-			'code'      			=> 'code', 
+			'code'      		=> 'code', 
 			'description'   	=> 'description',
 			'content'       	=> 'content',
 			'category_id'   	=> 'category_id',
 			'featured'      	=> 'featured',
 			'image'         	=> 'image',
-			'link'						=> 'link',
+			'link'				=> 'link',
 			'url_target'    	=> 'url_target',
 			'status'        	=> 'status',
 			'seo_title'     	=> 'seo_title',

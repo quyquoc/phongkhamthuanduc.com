@@ -56,7 +56,7 @@ class StaffModel extends DatatableManagerModel {
 				)
 			),
 			array (
-				'name'  	=> 's@staff_position',
+				'name'  	=> 'depart',
 				'label' 	=> 'Chức vụ',
 				'filter'	=> array(
 					'type' 	=> 'text'
@@ -98,10 +98,11 @@ class StaffModel extends DatatableManagerModel {
 
 	public function datatable_json_data(){
 		$result = $this->datatable_find([
-			'select' 		=> ['s.fullname','s.staff_position','s.status','m.username as creator', 's.created', 's.id'],
+			'select' 		=> ['s.fullname','d.title as depart','s.status','m.username as creator', 's.created', 's.id'],
 			'from' 			=> ['s' => 'Modules\App\Models\StaffModel'],
 			'innerJoin' => [
-				'Modules\App\Models\MemberModel' => ['alias' => 'm','on' => 's.creator_id=m.id']
+				'Modules\App\Models\MemberModel' => ['alias' => 'm','on' => 's.creator_id=m.id'],
+				'Modules\App\Models\DepartmentModel' => ['alias' => 'd','on' => 's.department_id=d.id']
 			]
 		]);
 
@@ -114,12 +115,12 @@ class StaffModel extends DatatableManagerModel {
 			);
 
 			$result->json_data[] = array(
-				's@fullname' 		  => $item->fullname,
-				's@staff_position'=> $item->staff_position,
-				's@status'  			=> $this->changeValue('status', $item->id, $item->status, $this->getController()),
-				'creator' 				=> $item->creator,
-				's@created' 			=> $item->created,
-				's@id'						=> $this->renderHtmlButton($action)
+				's@fullname' 		=> $item->fullname,
+				'depart'			=> $item->depart,
+				's@status'  	    => $this->changeValue('status', $item->id, $item->status, $this->getController()),
+				'creator' 			=> $item->creator,
+				's@created' 		=> $item->created,
+				's@id'				=> $this->renderHtmlButton($action)
 			);
 		}
 		return $result;

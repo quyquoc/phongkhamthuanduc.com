@@ -15,14 +15,12 @@
 
 <div class="contact-fixed">
   <div class="inner">
-    <a href="tel:0903955515" onclick="atag('send', 'conversion')">
+    <a href="tel:02343833888" onclick="atag('send', 'conversion')">
       <div class="phone">
         <div class="ring"></div>
         <i class="fa fa-phone"></i>
-        {#<a href="tel:028 39979899" class="number">028 39.97.98.99</a>#}
       </div>
     </a>
-    {#<a class="button" href="#register">Đăng ký</a>#}
   </div>
 </div>
 {{ element.PopupContact() }}

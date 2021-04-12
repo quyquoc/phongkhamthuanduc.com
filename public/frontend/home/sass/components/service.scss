@@ -64,6 +64,7 @@
 #clinic {
     .box-header {
         p {
+            margin-top: 10px;
             max-width: 500px;
             text-align: left;
         }
@@ -218,147 +219,44 @@
 }
 .ablumn {
     .modulecontent {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
         h2 {
             width: 100%; 
             margin-top: -25px;
             margin-bottom: 40px;
             text-transform: uppercase;
         }
-        .image-cus {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .slide-for {
-            width: 75%;
-            max-width: 790px;
-            margin: auto;
-        }
-        .slide-nav {
-            width: 25%;
-            max-width: 250px;
-            margin: auto;
-            height: 100%;
-            .slick-track {
-                transform: none;
-                display: block;
-            }
-        }
-        .slide-nav .slick-list .slick-track .slick-slide {height: fit-content;}
-        .item { 
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            display: block;
-            .item-wrap {
-                width: 100%;
-                height: 100%;
-                position: relative;
-                padding: 10px;
-            }
-        }
-        .image{
-            height: 100%;
-            img{ visibility: hidden;}
-        }
-        .slick-slider  button {
-            top : calc(50% - 15px)!important;
-            width: 40px;
-            height: 40px;
-            border-radius: 5px;
-            &.slick-prev{border-left: 1px;}
-            &.slick-next{border-right: 1px;}
-        }
-        .slide-nav > button{
-            background-color: rgba($color: $color_page, $alpha: 0.55);
-            &:hover , &:focus {
-                background-color: rgba($color: $color_page, $alpha: 1);
-
-            }
-        }
-        .slide-nav > button:before {color: $color_white}
-        .slide-nav > button:hover:before, .slide-nav > button:focus:before {color: $color_white
-        }
-        .slide-for .slick-list .slick-track .slick-slide a{
-            
-            max-width: 900px;
-            margin: auto;
-            padding-top: calc(100% * 10/11);
-            img{
-                display: none;
-            }
-        }
-        .slide-for .slick-list .slick-track .slick-slide .logo img {
-            display: block;
-        }
-        .slide-nav .item .item-wrap {
-            padding: 0;
-            .image {border: 0;
-                padding-top: calc(100% * 3/4);
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                img{display: none;}
-            }
-        } 
+       
     }
-  
-        background-color: $color_white;
+        // background-color: $color_white;
         h2 {
             margin-top: 20px!important;
         }
-        .slide-for .item .img {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .image{
-                width: 95%;
-                height: 95%;
+        .main_content.list_project .grid li {
+            padding: 0 5px 10px;
+            overflow: hidden;
+            .project .image {
+                width: 100%;
+                height: 100%;
+                border-radius: 2px;
+                img {
+                    width: 100%;
+                }
+                
+                
             }
         }
 }
-@media only screen and (min-width: 800px) {
-    .ablumn .modulecontent .slide-for .item .item-wrap .image {
-        border-width: 4px;
-    }
-}
-@media only screen and (min-width: 500px) {
-    .ablumn .modulecontent .slide-for .item .item-wrap .image {
-        border-width: 3px;
-    }
-}
+
 @media only screen and (max-width: 1000px) {
     .ablumn .modulecontent {
-        .slide-for {
-            width: 73%;
-            max-width: 550px;
-            margin: auto;
-        }
-        .slide-nav {
-            width: 27%;
-            max-width: 230px;
-            margin: auto;
-            height: 100%;
-            .slick-track {
-                transform: none;
-                display: block;
-            }
-        }
         .item{
             width: calc(100%/3 - 10px);
         }
     }
-    .ablumn .modulecontent .slide-for .slick-list .slick-track .slick-slide a {
-        max-width: 550px;
-    }
+  
 }
 @media only screen and (max-width: 800px) {
     .clinic.clinic-detail .container {
@@ -383,32 +281,12 @@
         }
         .list-item {
             width: 100%;
-            // ul {
-            //     li.color-page {
-            //         display: none;
-            //         &.hover {
-            //             display: block;
-            //         }
-            //     }
-            // }
         }
     }
 }
 @media only screen and (max-width: 500px) {
     .ablumn .modulecontent {
         h2{font-size: 20px; margin-top: -10px;}
-        .slide-for {
-            width: 100%;
-        }
-        .slide-nav {
-            width: 100%;
-            max-width: 100%;
-            height: 150px;
-            .slick-track {
-                transform: none;
-                display: block;
-            }
-        }
         .item{
             width: calc(100%);
             margin-bottom: 10px;

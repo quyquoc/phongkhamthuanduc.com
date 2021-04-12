@@ -37,26 +37,15 @@
 						</ul>
 					</li>
 				{% endif %}
-
-			<!-- Shop -->
-				{% if role=="full" or in_array('service-category', role) or in_array('service', role)  %}
-					<li class="treeview{{ (dispatcher.getControllerName() in ['service-category', 'service']) ? ' active' : '' }}">
-						<a href="#">
-							<i class="fa fa-opencart"></i> <span>{{ language._('Dịch vụ - Chuyên khoa') }}</span>
-							<span class="pull-right-container">
-								<i class="fa fa-angle-left pull-right"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							{% if role=="full" or in_array('service-category', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['service-category']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/service-category/index','<i class="fa fa-circle-o"></i>' ~ language._('Danh mục')) }}</li>
-							{% endif %}
-							{% if role=="full" or in_array('service', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['service']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/service/index','<i class="fa fa-circle-o"></i>' ~ language._('Dich vụ và chuyên khoa')) }}</li>
-							{% endif %}
-						</ul>
-					</li>
-				{% endif %}
+			{% if role=="full" or in_array('service', role) %}
+				<li class="{{ (dispatcher.getControllerName() in ['service']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/service/index','<i class="fa fa-clipboard"></i>' ~ language._('Dich vụ')) }}</li>
+			{% endif %}
+			{% if role=="full" or in_array('department', role) %}
+				<li class="{{ (dispatcher.getControllerName() in ['department']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/department/index','<i class="fa fa-hospital-o"></i>' ~ language._('Chuyên khoa')) }}</li>
+			{% endif %}
+			{% if role=="full" or in_array('booking', role) %}
+				<li class="{{ (dispatcher.getControllerName() in ['booking']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/booking/index','<i class="fa fa-calendar"></i>' ~ language._('Đặt lịch khám')) }}</li>
+			{% endif %}
 			<!-- Images -->
 				{% if role=="full" or in_array('image', role) or in_array('image-album', role) or in_array('image-group', role) %}
 					<li class="treeview{{ (dispatcher.getControllerName() in ['image', 'image-album', 'image-group']) ? ' active' : '' }}">

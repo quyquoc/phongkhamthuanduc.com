@@ -3,7 +3,7 @@
 		<div class="section container-wrapper">
 			<div class="box-header">
 				<h1 class="box-title text-left"><span>Chuyên khoa</span> </h1>
-				<p>Các khoa của bệnh viện chúng tôi</p>
+				<p>{{Ohi.sysConfig('introduction',true)}}</p>
 			</div>
 			<div class=" clinic clinic-list">
 				<div class="modulecontent">
@@ -13,7 +13,6 @@
 								<li class="item wow zoomIn" data-type="image">
 									<div class="image" style="background-image: url('{{url(item.image)}}')">
 										<a class="overlay"href="{{ url('/chuyen-khoa/'~item.code) }}"> {{item.title}}
-											
 										</a>
 									</div>
 								</li>

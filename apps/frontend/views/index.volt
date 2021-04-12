@@ -29,6 +29,7 @@
 	{{ stylesheet_link("/library/fancybox-master/dist/jquery.fancybox.css") }}
 	{{ stylesheet_link("/library/bootstrap-4.3.1/css/bootstrap.min.css") }}
 	{{ stylesheet_link("/library/animate/animate.css") }}
+	{{ stylesheet_link(assets_dir ~ "/css/component.css") }}
 	{{ stylesheet_link(assets_dir ~ "/css/style.css") }}
 	<script type="text/javascript">var url = "{{ url() }}";</script>
 	{{ javascript_include("/library/jQuery/jquery-3.4.1.min.js") }}
@@ -36,6 +37,11 @@
 	{{ javascript_include("/library/timepicker/bootstrap-timepicker.js") }}
 	{{ javascript_include("/library/fancybox-master/dist/jquery.fancybox.js") }}
 	{{ javascript_include("/library/bootstrap-4.3.1/js/bootstrap.min.js") }}
+	{{ javascript_include("/frontend/home/js/modernizr.custom.js") -}}
+	{{ javascript_include("/frontend/home/js/masonry.pkgd.min.js") -}}
+	{{ javascript_include("/frontend/home/js/imagesloaded.js") -}}
+	{{ javascript_include("/frontend/home/js/classie.js") -}}
+	{{ javascript_include("/frontend/home/js/AnimOnScroll.js") -}}
 	{{ javascript_include("/library/wow/wow.min.js") }}
 	{{ assets.outputJs() }}
 	{{ javascript_include(assets_dir ~ "/js/main.js") }}

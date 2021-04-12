@@ -3,13 +3,13 @@
 		<div class="container">
 			<div class="container-wrapper">
 				<div class="company wow fadeInUp">
-					<div class="logo"><img src="{{ url('/logo.svg') }}" /></div>
+					<h3 class="logo">Phòng Khám Thuận Đức</h3>
 					<div class="paper">
-						<h4>Giấy phép hoạt động</h4>
+						<h4>Giấy phép hoạt động:</h4>
 						<p>07386/HCM-GPHĐ cấp ngày 25/01/2010 tại Sở Y tế TP. Huế.</p>
 					</div>
 					<div class="info">
-						<h4>Người chịu trách nhiệm chuyên môn kỹ thuật:</h4>
+						<h4>Người chịu trách nhiệm chuyên môn:</h4>
 						<p>Bác sĩ Nguyễn Văn A <br>
 						Chuyên khoa Nội tổng quát.</p>
 						

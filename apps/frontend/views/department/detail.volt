@@ -35,87 +35,30 @@
 						<div class="content-detail">
 							<div class="description">{{ article.description }}</div>
 							<div class="content">{{ article.content }}</div>
-							{% if article.imgs is not empty %}
-							<div class="ablumn">
-								<div class="name">Hình ảnh về phòng khám</div>
-								<div class="modulecontent">
-									<div class="slide-for">
-										{% set imgs = article.imgs | json_decode %}
-										{% for item_1 in imgs %}
-											<div class="item"  >
-												<a class="item-wrap" style="background-image:url('{{url(item_1.src)}}')" href="{{ url(item_1.src) }}"data-fancybox="group-image"  >
-													<div class="img">
-														<div class="image">
-															<img src="{{ url(item_1.src) }}">
-														</div>
-													</div>
-												</a>
-											</div>
-										{% endfor %}
-									</div>
-									<div class="slide-nav">
-										{% for item_1 in imgs %}
-										<div class="item" >
-											<a class="item-wrap" >
-												<div class="image" style="background-image:url('{{url(item_1.src)}}')" >
-													<img src="{{ url(item_1.src) }}">
-												</div>
-											</a>
-										</div>
-										{% endfor %}
-									</div>
-								</div>
-							</div>
-							{% endif %}
+							
 						</div>
-						<script type="text/javascript">
-							$(document).ready(function(){
-								$('[data-fancybox="group-image"]').fancybox({
-									loop    : true,
-									thumbs  : {
-											autoStart : true
-									},
-									buttons : ['zoom', 'close']
-								});
-								$(' .slide-for').slick({
-									slidesToShow: 1,
-									slidesToScroll: 1,
-									arrows: false,
-									autoplay: true,
-									fade: true,
-									asNavFor: '.slide-nav'
-								});
-								$('.slide-nav').slick({
-									asNavFor: '.slide-for',
-									arrows: true,
-									slidesToShow: 3,
-									slidesToScroll: 2,
-									vertical:true,
-									centerMode: true,
-									verticalSwiping: true,
-									focusOnSelect: true,
-									responsive: [
-									{
-										breakpoint: 1000,
-										settings: {
-											slidesToShow: 2,
-											slidesToScroll: 1,
-										}
-									},
-									{
-										breakpoint: 500,
-										settings: {
-											vertical:false,
-											centerMode: false,
-											verticalSwiping: false,
-											slidesToShow: 2,
-											slidesToScroll: 1,
-										}
-									},
-								]
-								});
-							});
-						</script>
+						{% if article.imgs is not empty %}
+							<section id="album" class="ablumn portfolio">
+								<div class="main_content list_project">
+									<ul class="grid effect-2" id="grid">
+										{% set imgs = article.imgs | json_decode %}
+										{% for item in imgs %}
+											{% if item.src is not empty %}
+												<li>
+													<a class="project fancybox" href="{{ url(item.src) }}" rel="gallery" data-fancybox="group-image" data-fancybox 
+													data-width="1500" data-height="1000"
+													data-thumb="{{url(item.src) }}">
+														<div class="image">
+															<img src="{{ url(item.src) }}">
+														</div>
+													</a>
+												</li>
+											{% endif %}
+										{% endfor %}
+									</ul>
+								</div>
+							</section>
+							{% endif %}
 						</div>
 					</div>
 				</div>
@@ -123,3 +66,37 @@
 		</div>
   </div>
 </div>
+<script type="text/javascript">
+			
+	$(document).ready(function() {
+		new AnimOnScroll( document.getElementById('grid'), {
+			minDuration : 0.4,
+			maxDuration : 0.7,
+			viewportFactor : 0.2
+		});
+
+		$(".fancybox").fancybox({
+			padding     : 10,
+			width       : '99%',
+			height      : '99%',
+			maxWidth    : '99%',
+			maxHeight   : '99%',
+			openEffect  : 'elastic',
+			closeEffect : 'elastic',
+			closeBtn    : false,
+			loop        : true,
+
+			helpers : {
+				title   : {
+					type : 'inside'
+				},
+				overlay : {
+					closeClick : true,
+					locked     : false
+				}
+			}
+		});
+	});
+
+	
+</script> 

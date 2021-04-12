@@ -1,57 +1,55 @@
 .box-testimonial {
-	.container-wrapper {max-width: 810px; margin: auto}
-	.item {
-		figure {
-			height: calc(100% - 40px);
-			.avatar {
-				width: 160px;
-				height: 160px;
-				overflow: hidden;
-		    display: block;
-		    margin: 0 auto;
-		    position: relative;
-		    z-index: 1;
-		    border-radius: 50%;
-		    background-size: cover;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    img {width: 100%;visibility: hidden;}
+	background-color: $color_white;
+	.slick-slider  button {
+		top : calc(20% - 15px)!important;
+		width: 40px;
+		height: 40px;
+		border-radius: 5px;
+	}
+	.review-slide {
+		max-width: 900px;
+		margin: auto;
+		text-align: center;
+		.img{
+			width: 160px;
+			border: 1px solid $color_page_1;
+			border-radius: 50%;
+			overflow: hidden;
+			margin: 0 auto 20px;
+			padding: 20px
+
+		}
+		.avatar {
+			width: 120px;
+			border-radius: 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			overflow: hidden;
+			padding-top: 120px;
+			img{
+				visibility: hidden;
+				display: none;
+				border-radius: 50%;
 			}
-			blockquote{
-		    font-weight: 400;
-		    color: #1f1f1f;
-		    padding: 0;
-		    text-align: center;
-		    .name {
-			    font-size: 26px;
-			    color: $color_page_1;
-		    }
-		    p.quote {
-		    	max-width: 800px;
-			    font-size: 18px;
-			    line-height: 1.5;
-			    margin: 28px auto 0;
-			    margin-bottom: 20px;
-				}
-				.fa-quote-right {
-					margin: 10px auto;
-					font-size: 60px;
-					color: #e6e6e6;
-				}
-		    p.customer {
-		    	max-width: 800px;
-		    	margin: auto;
-					color: #4c4c4c;
-			    span {
-			    	display: block;
-						font-size: 16px;
-			    }
-			    .name {
-						font-size: 20px;
-			    	color: $color_page;
-			    }
-				}
-			}
+		}
+		.title {
+			font-size: 22px;
+			padding-bottom: 8px;
+			color: $color_page;
+			font-weight: 600;
+		}
+		.description {
+			padding: 20px 10px 30px;
+		}
+		.name {
+			color: $color_page;
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+		.pos {
+			color: $color_page;
+			font-weight: 400;
 		}
 	}
 }

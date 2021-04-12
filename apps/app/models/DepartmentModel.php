@@ -44,7 +44,7 @@ class DepartmentModel extends DatatableManagerModel {
 	}
 	
 	private function getController() {
-		return "service";
+		return "department";
 	}
 
 	public function my_url($_format, $id = null){
@@ -109,9 +109,9 @@ class DepartmentModel extends DatatableManagerModel {
 	public function datatable_json_data(){
 		$result = $this->datatable_find([
 			'select' 		=> ['de.title', 'de.featured',  'de.status','m.username as creator','de.created', 'de.published', 'de.id'],
-			'from' 			=> ['na' => 'Modules\App\Models\ServiceModel'],
+			'from' 			=> ['de' => 'Modules\App\Models\DepartmentModel'],
 			'innerJoin' => [
-				'Modules\App\Models\MemberModel' 				=> ['alias' => 'm','on' => 'de.creator_id=m.id'],
+				'Modules\App\Models\MemberModel' => ['alias' => 'm','on' => 'de.creator_id=m.id'],
 			],
 			'group_by' 	=> array('de.id')
 		]);
@@ -134,18 +134,4 @@ class DepartmentModel extends DatatableManagerModel {
 		return $result;
 	}
 
-	public function statistic($month = 1){
-		$sql = "SELECT COUNT(id) as total
-						FROM \Modules\App\Models\ServiceModel 
-						WHERE YEAR(created) = YEAR(CURDATE()) AND MONTH(created) = ".$month." 
-						GROUP BY MONTH(created) 
-						ORDER BY MONTH(created)
-					";
-
-		$query  = new Query($sql, $this->getDI());
-		$robots = $query->execute();
-		return $robots;
-	}
-
-	
 }

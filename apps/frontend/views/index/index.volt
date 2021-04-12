@@ -52,11 +52,11 @@
 			<div class="box-body">
 				<div class="contentWrapper wow fadeInUp">
 					<div class="box-header">
-						<h1 class="box-title text-left">Về chúng tôi</h1>
+						<h1 class="box-title text-left">Phòng khám Thuận Đức</h1>
 					</div>
 					<div class="content pleft">
-						<p>Phòng khám Đa khoa Việt Nhật được Sở y tế Thừa Thiên Huế cấp giấy phép hoạt động số: 620/TTH_GPHĐ ngày 1/11/2016 và Giấy phép khám sức khỏe định kỳ cho cán bộ công nhân viên các cơ quan xí nghiệp theo Công văn số: 1685/SYT-NVY ngày 5/7/2019.</p>
-						<p>Ngoài ra, Phòng khám Đa khoa Việt Nhật còn được Bảo Hiểm xã Hội tỉnh Thừa Thiên Huế cho phép khám Bảo hiểm y tế ban đầu theo hợp đồng số: 07/HĐKCB BHYT-2020 ngày 30 tháng 12 năm 2109 với các dịch vụ về Nội khoa, Ngoại khoa, Sản khoa, Nhi khoa, Răng Hàm Mặt, Tai Mũi Họng, Da Liễu, Mắt, Giải phẫu bệnh, Xét nghiệm, X-Quang, Siêu âm, Y học cổ truyền, KHHGĐ và dịch vụ Chăm sóc Mẹ và Bé tại nhà.</p>
+						<p>Phòng khám Đa khoa Thuận Đức được Sở y tế Thừa Thiên Huế cấp giấy phép hoạt động số: 620/TTH_GPHĐ ngày 1/11/2016 và Giấy phép khám sức khỏe định kỳ cho cán bộ công nhân viên các cơ quan xí nghiệp theo Công văn số: 1685/SYT-NVY ngày 5/7/2019.</p>
+						<p>Ngoài ra, Phòng khám Đa khoa Thuận Đức còn được Bảo Hiểm xã Hội tỉnh Thừa Thiên Huế cho phép khám Bảo hiểm y tế ban đầu theo hợp đồng số: 07/HĐKCB BHYT-2020 ngày 30 tháng 12 năm 2109 với các dịch vụ về Nội khoa, Ngoại khoa, Sản khoa, Nhi khoa, Răng Hàm Mặt, Tai Mũi Họng, Da Liễu, Mắt, Giải phẫu bệnh, Xét nghiệm, X-Quang, Siêu âm, Y học cổ truyền, KHHGĐ và dịch vụ Chăm sóc Mẹ và Bé tại nhà.</p>
 					</div>
 				</div>
 				<div class="image wow fadeInUp" style="background-image: url('{{ assets }}/images/hospital.jpg');">
@@ -75,9 +75,7 @@
             <div class="box-body">
                 <div class="inner">
                     <div class="item wow fadeInUp">
-                        <p>We offer extensive medical procedures to outbound and inbound patients.
-                            Our major areas of specialization include oncology, orthopedics, cardiology, IVF Treatment, urology, neurosurgery, gastroenterology, plastic surgery and many other departments.</p>
-                        <a href="javasript:void(0);" onclick="popRegis()" class="button">Đặt lịch tư vấn</a>
+                        <p>{{Ohi.sysConfig('introduction',true)}}</p>
                     </div>
                     {% for item in list_depart %}
                     <a href="{{url('/chuyen-khoa/'~item.code)}}" class="item wow fadeInUp">
@@ -87,60 +85,6 @@
                         </div>
                     </a>
                     {% endfor %}
-                  {#  <!-- <div class="item wow fadeInUp">
-                        <div class="image"><img src="{{ assets }}/images/khoa-ngoai.svg" /></div>
-                        <div class="content">
-                            <h3 class="title">Khoa ngoại</h3>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInUp">
-                        <div class="image"><img src="{{ assets }}/images/khoa-nhi.svg" /></div>
-                        <div class="content">
-                            <h3 class="title">Khoa nhi</h3>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInUp">
-                        <div class="image"><img src="{{ assets }}/images/dong-y.svg" /></div>
-                        <div class="content">
-                            <h3 class="title">Khoa đông y</h3>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInUp">
-                        <div class="image"><img src="{{ assets }}/images/phu-khoa.svg" /></div>
-                        <div class="content">
-                            <h3 class="title">Phụ khoa</h3>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInUp">
-                        <div class="image"><img src="{{ assets }}/images/rang-ham-mat.svg" /></div>
-                        <div class="content">
-                            <h3 class="title">Răng - Hàm - Mặt</h3>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInUp">
-                        <div class="image"><img src="{{ assets }}/images/tai-mui-hong.svg" /></div>
-                        <div class="content">
-                            <h3 class="title">Tai - Mũi - Họng</h3>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInUp">
-                        <div class="image"><img src="{{ assets }}/images/phong-sieu-am.svg" /></div>
-                        <div class="content">
-                            <h3 class="title">Phòng siêu âmc</h3>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInUp">
-                        <div class="image"><img src="{{ assets }}/images/xet-nghiem.svg" /></div>
-                        <div class="content">
-                            <h3 class="title">Phòng xét nghiệm</h3>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInUp">
-                        <div class="image"><img src="{{ assets }}/images/x-quang.svg" /></div>
-                        <div class="content">
-                            <h3 class="title">Phòng X quang</h3>
-                        </div>
-                    </div> --> #}
                 </div>
             </div>
         </div>
@@ -150,9 +94,6 @@
 	<div class="container">
 		<div class="container-wrapper">
 			<div class="box-body">
-                <div class="image wow fadeInUp" style="background-image: url('{{ assets }}/images/img-reason.svg');">
-					<img src=" {{ assets }}/images/img-reason.svg" />
-				</div>
 				<div class="contentWrapper wow fadeInUp">
 					<div class="box-header">
 						<h1 class="box-title text-left text-color-page1">Vì sao nên chọn chúng tôi</h1>
@@ -174,10 +115,10 @@
 	</div>
 </div>
 
-{{ element.BoxStaff() }}
+{{ element.BoxGuestReview() }}
 {{ partial('partials/boxes/BoxAchievements') }}
 {{ element.BoxContact() }}
-{% if list_item is defined and list_item|length > 0 %}
+{# if list_item is defined and list_item|length > 0 %}
     <div class="section main-content news news-list {{category.code}}">
             <div class="container">
             <div class="box-header"><div class="box-title text-left">Tin tức</div></div>
@@ -192,7 +133,7 @@
             </div>
         </div>
     </div>
-{% endif %}
+{% endif #}
 
 {{element.script(['slick']) }}
 

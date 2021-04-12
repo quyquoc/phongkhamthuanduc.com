@@ -19,11 +19,6 @@ class ServiceForm extends Form {
 		
 		$this->add(new Text("image"));
 		$this->add(new TextArea("description"));
-		$this->add(new Numeric("price"));
-		$this->add(new TextArea("content"));
-		
-		$category_id = new Select('category_id', \Modules\App\Models\ServiceCategoryModel::find(),array('using' => array('id', 'title')));
-		$this->add($category_id);
 
 		// Config tab
 		$this->add(new Text("code"));

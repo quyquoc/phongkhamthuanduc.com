@@ -8,7 +8,7 @@ use Modules\App\Models\ImageModel;
 use Modules\App\Models\ImageAlbumModel;
 use Modules\App\Models\ShopCategoryModel;
 use Modules\App\Models\ShopProductModel;
-use Modules\App\Models\GuestReviewModel;
+use Modules\App\Models\TestimonialModel;
 use Modules\App\Models\StaffModel;
 use Modules\App\Models\ServiceModel;
 use Modules\App\Models\DepartmentModel;
@@ -136,7 +136,7 @@ class Element extends Component{
 	}
 
 	public function BoxGuestReview() {
-		$list_review		= GuestReviewModel::find(array(
+		$list_review		= TestimonialModel::find(array(
 			"conditions"	=> "status = 1",
 			"order"				=> "position ASC, created DESC"
 		));

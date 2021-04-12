@@ -40,8 +40,14 @@ header {
   &.home {
     position: fixed;
   }
+  .menunav ul.level1 { 
+    top: 80px;
+  }
   &.stick {
     height: 60px;
+    .menunav ul.level1{
+      top: 60px;
+    }
     .top-head{display: none;}
     .header {
       position: fixed;
@@ -56,6 +62,8 @@ header {
            transition: all 0.3s ease-in-out;
         } }
       }
+     
+      
       }
     }
   }

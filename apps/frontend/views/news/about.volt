@@ -1,8 +1,6 @@
 <div id="news-detail" class="detail-about">
 	{{ partial("partials/boxes/BoxAbout") }}
-	{{ partial("partials/boxes/BoxColumn_1x4") }}
 	{{ partial('partials/boxes/BoxColumn_2x2') }}
-	{{ element.BoxStaff() }}
 	<div class="section gallery gallery-list">
 		<div class="container">
 			<div class="box-header"><div class="box-title text-left">Văn bằng và chứng chỉ</div></div>

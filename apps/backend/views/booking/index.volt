@@ -8,46 +8,42 @@
 					  <li class="active"><a href="#tab_1" data-toggle="tab">{{ language._('info_main') }}</a></li>
 					</ul>
 					<div class="tab-content">
-						<div id="tab_1" class="tab-pane active">
+						<div class="tab-pane active" id="tab_1">
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="title">{{ language._('title') }} <span class="required">*</span></label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12">{{ language._('fullname') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
-									{{ form.render('title',(['class':'form-control','data-validate-length-range':'2','placeholder':language._('title'),'required':'required'])) }}
+									{{ form.render('fullname',(['class':'form-control','placeholder':language._('fullname')])) }}
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="control-label col-md-2 col-sm-2 col-xs-12">{{ language._('phone') }}</label>
+								<div class="col-md-10 col-sm-10 col-xs-12">
+									{{ form.render('phone',(['class':'form-control'])) }}
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="code">{{ language._('code') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12">{{ language._('email') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
-									{{ form.render('code',(['class':'form-control','placeholder':language._('code')])) }}
+									{{ form.render('email',(['class':'form-control','placeholder':language._('email')])) }}
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('active') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12">{{ language._('Khoa') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
-									{{ form.render('status',(['class':'form-control select2'])) }}
+									{{ form.render('department_title',(['class':'form-control'])) }}
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="image">{{ language._('image') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12">{{ language._('Ngày hẹn') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
-									<div class="input-group">
-										{{ form.render('image',(['class':'form-control','placeholder':language._('image'),'ondblclick':'imageManager($(this))'])) }}
-										<div class="input-group-btn">
-											<button type="button" class="btn btn-danger" onclick="imageManager($('input[name=image]'));" data-target="image" data-view="view-img">Chọn ảnh</button>
-										</div>
-									</div>
+									{{ form.render('from_date',(['class':'form-control','placeholder':language._('Ngày hẹn')])) }}
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="position">{{ language._('position') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12">{{ language._('Giờ hẹn') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
-									{{ form.render('position',(['class':'form-control','placeholder': language._('input_number')])) }}
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="description">{{ language._('description') }}</label>
-								<div class="col-md-10 col-sm-10 col-xs-12">
-									{{ form.render('description',(['class':'form-control','rows':'5'])) }}
+									{{ form.render('from_time',(['class':'form-control','placeholder':language._('Giờ hẹn')])) }}
 								</div>
 							</div>
 						</div>
@@ -67,7 +63,8 @@
 </section>
 
 <script>
-	CKEDITOR.replace('description',
+	
+	CKEDITOR.replace('content',
 	{
 		filebrowserBrowseUrl        : "{{url('/library/ckfinder/ckfinder.html')}}",
 		filebrowserUploadUrl        : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",

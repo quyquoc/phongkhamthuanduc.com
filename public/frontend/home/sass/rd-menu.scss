@@ -131,7 +131,7 @@
 	transition: 0.3s all ease;
 	.menunav {
 		display: block;
-		li {height: auto; a{text-align: left;}}
+		li {height: auto; display: block; a{text-align: left;}}
 	}
 	ul {
 		position: fixed;
@@ -202,11 +202,11 @@
 				}
 			}
 			&:hover, &.active {
-				a { color: $color_page_2; }
+				a { color: $color_page;  &::before{width: 0;}}
 				ul.level1 {
-					a { color: $color_text; }
+					a { color: $color_text; padding: 0 0 5px 0; }
 					li.active {
-						a { color: $color_page_2; }
+						a { color: $color_page_1; }
 					}
 				}
 			}
@@ -218,6 +218,7 @@
 		opacity: initial;
 		background: transparent;
 		box-shadow: none;
+		padding: 0;
 		li a { padding: 0 0 5px 0; background: transparent; line-height: 30px;}
 	}
 	&.active{

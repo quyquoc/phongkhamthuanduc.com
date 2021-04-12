@@ -41,7 +41,6 @@ class BookingModel extends DatatableManagerModel {
 	}
 	
 	public function datatable_column(){
-		$room = HotelRoomModel::init()->list_item();
 		$init_data = array (
 			array (
 				'name'  	=> 'b@fullname',
@@ -68,7 +67,7 @@ class BookingModel extends DatatableManagerModel {
 				)
 			),
 			array (
-				'name'		=> 'b@from_time',
+				'name'		=> 'b@department_title',
 				'label' 	=> 'Ngày đi',
 				'width'		=> '100px',
 				'filter'	=> array(
@@ -94,7 +93,7 @@ class BookingModel extends DatatableManagerModel {
 
 	public function datatable_json_data(){
 		$result = $this->datatable_find([
-			'select' 		=> ['b.fullname', 'b.status', 'b.from_date', 'b.from_time', 'b.created', 'b.id'],
+			'select' 		=> ['b.fullname', 'b.status', 'b.from_date', 'b.department_title', 'b.created', 'b.id'],
 			'from' 			=> ['b' => 'Modules\App\Models\BookingModel'],
 	
 		]);
@@ -109,7 +108,7 @@ class BookingModel extends DatatableManagerModel {
 				'b@fullname' 			=> $item->fullname,
 				'b@status'   			=> $this->changeValue('status', $item->id, $item->status, $this->getController()),
 				'b@from_date' 			=> $item->from_date,
-				'b@fromt_time' 			=> $item->to_date,
+				'b@department_title' 			=> $item->department_title,
 				'b@created' 			=> $item->created,
 				'b@id'					=> $this->renderHtmlButton($action)
 			);

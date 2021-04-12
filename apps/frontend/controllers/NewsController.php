@@ -8,6 +8,7 @@ use Modules\App\Models\ImageAlbumModel;
 use Modules\App\Models\NewsCategoryModel;
 use Modules\App\Models\NewsArticleCategoryModel;
 use Modules\App\Models\StaffModel;
+use Modules\App\Models\DepartmentModel;
 class NewsController extends ControllerBase {
 
 	protected function onConstruct(){
@@ -24,6 +25,18 @@ class NewsController extends ControllerBase {
 						"conditions"	=> "status = 1",
 						"order"			=> "type_id ASC, position ASC, id ASC"
 					));
+					$list_depart = DepartmentModel::find(array('conditions' => 'status = 1 ', 'order'=> 'position ASC, id ASC',));
+					foreach ($list_depart as $key => $item) {
+						
+						$arr_category[$key] = $item->toArray();
+						$list_staff = StaffModel::find(array(
+							'conditions' 	=> 'status = 1 and department_id = :department_id:',
+							'bind'			=> array('department_id' => $item->id),
+							'order'			=> 'manager DESC, id ASC',
+						));
+						$arr_category[$key]['list_staff'] = $list_staff;
+					}
+					$this->view->arr_category = $arr_category;
 					$this->view->pick('news/staff');
 				}else{
 					$this->detail($code);

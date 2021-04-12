@@ -34,11 +34,11 @@ footer.footer2 {
 			flex-wrap: wrap;
 			justify-content: space-between;
 			.logo {
-				width: 70px;
+				width: 100%;
 				margin-bottom: 20px;
 			}
 			.paper {
-				width: calc(100% - 90px);
+				width: calc(100%);
 			}
 			.info {
 				width: 100%;

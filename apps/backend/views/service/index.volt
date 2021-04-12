@@ -18,12 +18,6 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('category') }}</label>
-								<div class="col-md-10 col-sm-10 col-xs-12">
-									{{ form.render('category_id',(['class':'form-control select2','data-placeholder':'Chọn danh mục'])) }}
-								</div>
-							</div>
-							<div class="form-group">
 								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('image') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
 									<div class="input-group">
@@ -61,12 +55,6 @@
 								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="description">{{ language._('description') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
 									{{ form.render('description',(['class':'form-control'])) }}
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="content">{{ language._('content') }} <span class="required">*</span></label>
-								<div class="col-md-10 col-sm-10 col-xs-12">
-									{{ form.render('content',(['class':'form-control'])) }}
 								</div>
 							</div>
 						</div>
@@ -195,14 +183,6 @@
 	});
 
 	CKEDITOR.replace('description',
-	{
-		filebrowserBrowseUrl        : "{{url('/library/ckfinder/ckfinder.html')}}",
-		filebrowserUploadUrl        : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",
-		filebrowserImageUploadUrl   : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')}}",
-		filebrowserFlashUploadUrl   : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash')}}",
-	});
-
-	CKEDITOR.replace('content',
 	{
 		filebrowserBrowseUrl        : "{{url('/library/ckfinder/ckfinder.html')}}",
 		filebrowserUploadUrl        : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",

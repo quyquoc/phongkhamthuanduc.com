@@ -1,24 +1,14 @@
 {% if list_review is defined and list_review | length > 0 %}
-	<section class="box box-quote bg-gray">
+	<section class="section box box-testimonial">
 		<div class="container">
-			<div class="box-header">
-				<h1 class="box-title">Khách hàng đánh giá</h1>
-			</div>
-			<div class="quote-slide">
+			<div class="review-slide">
 				{% for item in list_review %}
 					<div class="item">
-						<figure>
-							{% set lnk_avatar = url(item.avatar ? item.avatar : '/favicon.png')  %}
-							<div class="avatar" style="background-image:url('{{ lnk_avatar }}')"><img src="{{ lnk_avatar }}"></div>
-							<blockquote>
-								<p class="quote">{{ item.description }}</p>
-								<i class="fa fa-quote-right"></i>
-								<p class="customer">
-									<span class="name">{{ item.name }}</span>
-									<span class="pos">{{ item.info }}</span>
-								</p>
-							</blockquote>
-						</figure>
+						{% set lnk_avatar = url(item.avatar ? item.avatar : '/favicon.png')  %}
+					<div class="img"><div class="avatar" style="background-image: url('{{ lnk_avatar }}');"><img src="{{ lnk_avatar }}"></div></div>	
+						<p class="description">{{ item.description }}</p>
+						<p class="name">{{ item.name }} </p>
+						<p class="pos">{{ item.info }} </p>
 					</div>
 				{% endfor %}
 			</div>
@@ -26,10 +16,10 @@
 	</section>
 
 	<script type="text/javascript">
-		$('.quote-slide').slick({
-		  dots: true,
+		$('.review-slide').slick({
+		  dots: false,
 		  infinite: true,
-		  arrows: false,
+		  arrows: true,
 		  autoplay: true,
 		  slidesToShow: 1,
 		  slidesToScroll: 1

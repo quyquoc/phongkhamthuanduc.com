@@ -50,7 +50,7 @@ try {
 
 	define('ROOT_URL', $base_url);
 	define('BACKEND_URL', ROOT_URL.'/admin');
-	define('UPLOAD_URL', ROOT_URL.'/uploads');
+	define('UPLOAD_URL', '/uploads');
 	define('UPLOAD_EXT', 'bmp,gif,jpeg,jpg,png,swf,doc,xls,docx,xlsx,pdf');
 	define('UPLOAD_SIZE', '5M');
 	define('ROOT_PATH', realpath(dirname(dirname(__FILE__))));

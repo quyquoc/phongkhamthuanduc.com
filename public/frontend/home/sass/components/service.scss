@@ -64,8 +64,6 @@
 #clinic {
     .box-header {
         p {
-            margin-top: 10px;
-            max-width: 500px;
             text-align: left;
         }
     }
@@ -86,6 +84,7 @@
 				background-position: center;
 				background-repeat: no-repeat;
 				float: initial;
+				position: relative;
 				.image {
 					position: relative;
 					display: block;
@@ -96,30 +95,36 @@
 					background-repeat: no-repeat;
 					background-size: cover;
 					@extend %overlay;
-					.overlay {
-						opacity:1;
-						bottom: 0;
-						position: absolute;
-						display: flex;
-						flex-direction: row;
-						width: 100%;
-						height: fit-content;
-						min-height: 50px;
-						align-items: center;
-						text-align: center;
-						flex-direction: column;
-						justify-content: center;
-						background: rgba($color_page, 0.5);
-						color: #FFF;
-						padding: 5px 20px;
+					
+					
+				}
+				.img {
+					overflow: hidden;
+				}
+				&:hover{
+					.image { transform: scale(1.1); transition: all 0.3s ease-in-out;}
+					.overlay {opacity: 1;
 						transition: all 0.3s ease-in-out;
-					}
-					&:hover{
-						.overlay {opacity: 1; height: 100%;
-							transition: all 0.3s ease-in-out;
-							background: rgba($color_page, 0.85);
-							min-height: 100%; }
-					}
+						background: rgba($color_page, 1);
+						 }
+				}
+				.overlay {
+					opacity:1;
+					bottom: 0;
+					position: absolute;
+					display: flex;
+					flex-direction: row;
+					width: 100%;
+					height: fit-content;
+					min-height: 50px;
+					align-items: center;
+					text-align: center;
+					flex-direction: column;
+					justify-content: center;
+					background: rgba($color_page, 0.5);
+					color: #FFF;
+					padding: 5px 20px;
+					transition: all 0.3s ease-in-out;
 				}
 				.title { padding: 5px 0 0; }
 			}

@@ -11,10 +11,12 @@
 						<ul id="da-thumbs" class="da-thumbs">
 							{% for item in list_depart %}
 								<li class="item wow zoomIn" data-type="image">
-									<div class="image" style="background-image: url('{{url(item.image)}}')">
-										<a class="overlay"href="{{ url('/chuyen-khoa/'~item.code) }}"> {{item.title}}
+									<div class="img">
+										<a class="image" href="{{ url('/chuyen-khoa/'~item.code) }}" style="background-image: url('{{url(item.image)}}')">
 										</a>
 									</div>
+									<a class="overlay" href="{{ url('/chuyen-khoa/'~item.code) }}"> {{item.title}}
+									</a>
 								</li>
 							{% endfor %}
 						</ul>

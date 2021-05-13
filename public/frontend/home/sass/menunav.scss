@@ -26,9 +26,7 @@
 		}
 		&:hover, &.active {
 			position: relative;
-			a { color: $color_page;position: relative; &::before{
-				position: absolute; bottom: 0px; left: 0px; width: calc(100%); height: 2px; content:''; background: $color_page
-			} }
+			a { color: $color_page;position: relative; }
 		}
 		&.column{ position: initial; }
 		.menu-header {

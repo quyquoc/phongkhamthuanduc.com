@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="container-wrapper">
 			<div class="box-header" data-aos="fade-up">
-				<h1 class="box-title text-left">Định hướng phát triển bền vững</h1>
+				<h1 class="box-title ">Định hướng phát triển bền vững</h1>
 			</div>
 			<div class="box-body">
 				<div class="inner">

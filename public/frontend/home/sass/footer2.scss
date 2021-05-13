@@ -29,7 +29,7 @@ footer.footer2 {
 			margin-bottom:7px;
 		}
 		.company {
-			width: calc(100%/3);
+			width: 170px;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -47,7 +47,7 @@ footer.footer2 {
 		}
 		.footer-menu {
 			text-align: left;
-			width: calc(100%/3);
+			width: calc(100%/3*2 - 150px);
 			ul li {
 				margin-bottom: 20px;
 				display: flex;

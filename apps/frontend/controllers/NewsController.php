@@ -60,35 +60,52 @@ class NewsController extends ControllerBase {
 		if(!empty($code)){// hien thi chi tiet
 			$this->detail($code);
 		}else{
-			$category = NewsCategoryModel::findFirst(array(
-				'conditions'	=> 'code = :code: and status = 1',
-				'bind'				=> array('code'=>$category_code)
-			));
-			$this->view->category = $category;
-			$this->view->menu_lv1 = $this->view->category_code = $category->code;
-			if(!empty($category)){
+			if($category_code == 'tin-tuc') {
+				$gioithieu = NewsCategoryModel::findFirstByCode('gioi-thieu');
 				$list_item = NewsArticleModel::find(array(
-					'conditions'	=> "status = 1 and category_id = $category->id",
+					'conditions'	=> "status = 1 and category_id != $gioithieu->id",
 					"order"			=> "published DESC",
 					"limit"			=> 12
 				));
 				$count_item = NewsArticleModel::find(array(
-					'conditions'	=> "status = 1 and category_id = $category->id",
+					'conditions'	=> "status = 1 and category_id != $gioithieu->id",
 					"order"			=> "published DESC"
 				));
-				if($list_item && count($list_item) > 0) {
+				$head = array(
+					'title'			=> "Tin tức",
+					'url'			=> $this->url->get('/tin-tuc')
+				);
+			}else{
+				$category = NewsCategoryModel::findFirst(array(
+					'conditions'	=> 'code = :code: and status = 1',
+					'bind'				=> array('code'=>$category_code)
+				));
+				$this->view->category = $category;
+				$this->view->menu_lv1 = $this->view->category_code = $category->code;
+				if(!empty($category)){
+					$list_item = NewsArticleModel::find(array(
+						'conditions'	=> "status = 1 and category_id = $category->id",
+						"order"			=> "published DESC",
+						"limit"			=> 12
+					));
+					$count_item = NewsArticleModel::find(array(
+						'conditions'	=> "status = 1 and category_id = $category->id",
+						"order"			=> "published DESC"
+					));
 					$head = array(
 						'title'			=> $category->title,
 						'description'	=> $category->description,
 						'image'			=> $category->image,
 						'url'			=> $this->url->get('/'.$category->code)
 					);
-
-					$this->view->setVar('head', $head);
-					$this->view->setVar('list_item', $list_item);
-					$this->view->setVar('count_item', $count_item->count());
-					$this->view->pick('news/category');
-				}else {$this->response->redirect();}
+				}
+					
+			}
+			if($list_item && count($list_item) > 0) {
+				$this->view->setVar('head', $head);
+				$this->view->setVar('list_item', $list_item);
+				$this->view->setVar('count_item', $count_item->count());
+				$this->view->pick('news/category');
 			}else {$this->response->redirect();}
 		}
 	}
@@ -148,24 +165,24 @@ class NewsController extends ControllerBase {
 			$limit			= !empty($this->request->get('limit')) ? $this->request->get('limit') : 6;
 			$offset			= !empty($this->request->get('offset')) ? $this->request->get('offset') : 0;
 			
+			$gioithieu = NewsCategoryModel::findFirstByCode('gioi-thieu');
 			$category = NewsCategoryModel::findFirstById($category_id);
 			$this->view->category = $category;
-
-			if (!empty($detail_id)) {
-				$list_item = NewsArticleModel::find(array(
-					'conditions'	=> "status = 1 and category_id = $category_id and id!= $article->id",
-					"order"			=> "published DESC",
-					"offset" 	=> 	$offset	,
-					"limit" 	=> $limit
-				));
-			}else{
-				$list_item = NewsArticleModel::find(array(
-					'conditions'	=> "status = 1 and category_id = $category_id",
-					"order"			=> "published DESC",
-					"offset" 	=> 	$offset	,
-					"limit" 	=> $limit
-				));
+			$conditions ="status = 1 and category_id != $gioithieu->id";
+			if(!empty($detail_id)){
+				$conditions =$conditions . " AND id!= $article->id";
 			}
+			if(!empty($category_id)){
+				$conditions =$conditions . " AND category_id = $category_id";
+			}
+
+			
+				$list_item = NewsArticleModel::find(array(
+					'conditions'	=> $conditions,
+					"order"			=> "published DESC",
+					"offset" 		=> 	$offset	,
+					"limit" 		=> $limit
+				));
 			
 			$this->view->appload = $list_item;
 		}

@@ -478,7 +478,7 @@ a.button.transparent:hover {
 }
 .social-date span.published {
   position: relative;
-  margin-right: 15px;
+  margin-right: 0px;
   padding-left: 20px;
   color: black;
 }
@@ -775,15 +775,6 @@ a.button.transparent:hover {
   color: #00AE57;
   position: relative;
 }
-.menunav li:hover a::before, .menunav li.active a::before {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: calc(100%);
-  height: 2px;
-  content: "";
-  background: #00AE57;
-}
 .menunav li.column {
   position: initial;
 }
@@ -1036,6 +1027,7 @@ header .header {
   background-color: rgba(255, 255, 255, 0.4);
   position: relative;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
 }
 header .container-wrapper {
   height: 100%;
@@ -1057,6 +1049,9 @@ header .main_menu {
 }
 header.home {
   position: fixed;
+}
+header.home .header {
+  box-shadow: none;
 }
 header .menunav ul.level1 {
   top: 80px;
@@ -1425,8 +1420,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 
 .box-relative {
-  border-top: 1px solid #768295;
+  border-top: 1px solid rgba(0, 174, 87, 0.09);
   padding-top: 40px;
+  padding-bottom: 20px;
 }
 .box-relative .box-title {
   width: fit-content;
@@ -3524,7 +3520,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .news.news-list .item .title {
   height: 52px;
   padding: 0;
-  margin: 15px 0 10px 0;
+  margin: 5px 0 10px 0;
 }
 .news.news-list .item .title a {
   font-weight: 700;
@@ -3538,6 +3534,10 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 .news.news-list .item .content {
   padding: 15px;
+}
+.news.news-list .item .content .published {
+  font-size: 13px;
+  text-align: right;
 }
 .news.news-list .item:hover {
   box-shadow: 0 5px 20px rgba(0, 174, 87, 0.3);
@@ -3556,13 +3556,8 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .news.news-detail .module {
   max-width: 860px;
 }
-.news.news-detail .title {
-  font-size: 30px;
-  font-weight: 700;
-}
-.news.news-detail .description {
-  font-weight: 500;
-  margin: 20px 0 10px;
+.news.news-detail .box-header .box-title {
+  line-height: 1.2;
 }
 
 @media only screen and (max-width: 800px) {
@@ -3585,13 +3580,14 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
     margin: 0 0 20px;
   }
 }
+@media only screen and (max-width: 400px) {
+  .news.news-detail .box-header .box-title {
+    font-size: 20px;
+  }
+}
 /*------------------------------------------------
 ** gallery
 **------------------------------------------------*/
-#gallery .gallery {
-  padding-top: 50px;
-}
-
 .gallery.gallery-list .modulecontent ul.da-thumbs {
   width: initial;
   display: flex;
@@ -3638,8 +3634,10 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   opacity: 1;
   transition: opacity 0.5s, transform 0.5s;
 }
-.gallery.gallery-list .modulecontent ul.da-thumbs li .title {
-  padding: 5px 0 0;
+.gallery.gallery-list .modulecontent ul.da-thumbs li .content {
+  background-color: #00AE57;
+  padding: 10px;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 800px) {
@@ -3715,8 +3713,6 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 
 #clinic .box-header p {
-  margin-top: 10px;
-  max-width: 500px;
   text-align: left;
 }
 
@@ -3735,6 +3731,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   background-position: center;
   background-repeat: no-repeat;
   float: initial;
+  position: relative;
 }
 .clinic .modulecontent ul.da-thumbs li .image {
   position: relative;
@@ -3746,7 +3743,19 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   background-repeat: no-repeat;
   background-size: cover;
 }
-.clinic .modulecontent ul.da-thumbs li .image .overlay {
+.clinic .modulecontent ul.da-thumbs li .img {
+  overflow: hidden;
+}
+.clinic .modulecontent ul.da-thumbs li:hover .image {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+.clinic .modulecontent ul.da-thumbs li:hover .overlay {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  background: #00ae57;
+}
+.clinic .modulecontent ul.da-thumbs li .overlay {
   opacity: 1;
   bottom: 0;
   position: absolute;
@@ -3763,13 +3772,6 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   color: #FFF;
   padding: 5px 20px;
   transition: all 0.3s ease-in-out;
-}
-.clinic .modulecontent ul.da-thumbs li .image:hover .overlay {
-  opacity: 1;
-  height: 100%;
-  transition: all 0.3s ease-in-out;
-  background: rgba(0, 174, 87, 0.85);
-  min-height: 100%;
 }
 .clinic .modulecontent ul.da-thumbs li .title {
   padding: 5px 0 0;
@@ -4122,7 +4124,7 @@ footer.footer2 .footer-info h4 {
   margin-bottom: 7px;
 }
 footer.footer2 .footer-info .company {
-  width: calc(100%/3);
+  width: 170px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -4142,7 +4144,7 @@ footer.footer2 .footer-info .company p {
 }
 footer.footer2 .footer-info .footer-menu {
   text-align: left;
-  width: calc(100%/3);
+  width: calc(100%/3*2 - 150px);
 }
 footer.footer2 .footer-info .footer-menu ul li {
   margin-bottom: 20px;

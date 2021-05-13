@@ -265,7 +265,7 @@ a.button {
   }
   span.published {
     position: relative;
-    margin-right: 15px;
+    margin-right: 0px;
     padding-left: 20px;
     color: black;
     &:before {
@@ -572,8 +572,9 @@ a.button {
   }
 }
 .box-relative {
-  border-top: 1px solid $color_page_2;
+  border-top: 1px solid rgba( $color_page, 0.09);
   padding-top: 40px;
+  padding-bottom: 20px;
   .box-title {
     width: fit-content;
     border: 0;

@@ -2,9 +2,6 @@
 /*------------------------------------------------
 ** gallery
 **------------------------------------------------*/
-#gallery{
-	.gallery { padding-top: 50px; }
-}
 .gallery{
 	// .container { max-width: 100%; }
 	&.gallery-list{
@@ -53,7 +50,12 @@
 							.overlay {opacity: 1; 	transition: opacity 0.5s, transform 0.5s;}
 						}
 					}
-					.title { padding: 5px 0 0; }
+					.content {
+						background-color: $color_page;
+						padding: 10px;
+						color: $color_white
+					}
+					// .title { padding: 5px 0 0; }
 				}
 			}
 		}

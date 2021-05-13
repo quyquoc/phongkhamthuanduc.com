@@ -45,7 +45,7 @@
 		</div>
 	</div>
 </div>
-{{ partial("partials/boxes/BoxColumn_1x4") }}
+{# partial("partials/boxes/BoxColumn_1x4") #}
 <div class="section box box-about">
 	<div class="container">
 		<div class="container-wrapper">

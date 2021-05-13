@@ -14,7 +14,7 @@
                                         <div class="content">
                                             <div class="title">{{item.title}}</div>
                                             <div class="description">{{item.description}}</div>
-                                            <a  onclick="getOption('{{item.title}}');popRegis()" href="javascript:void(0)" class="button">Liên hệ tư vấn</a>
+                                            <a  href="{{url('/dich-vu/'~ item.code)}}" class="button">Xem thêm</a>
                                         </div>
                                     </div>
                                 </div>
@@ -25,8 +25,7 @@
                                         <div class="content">
                                             <div class="title">{{item.title}}</div>
                                             <div class="description">{{item.description}}</div>
-                                            <a  onclick="getOption('{{item.title}}');popRegis()" href="javascript:void(0)" class="button">Liên hệ tư vấn</a>
-
+                                            <a  href="{{url('/dich-vu/'~item.code)}}" class="button">Xem thêm</a>
                                         </div>
                                     </div>
                                     <div class="image" style="background-image: url('{{ url(item.image) }}'); align-items: initial;">

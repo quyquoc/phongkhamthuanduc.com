@@ -3,26 +3,20 @@
 		<div class="container">
 			<div class="container-wrapper">
 				<div class="company wow fadeInUp">
-					<h3 class="logo">Phòng Khám Thuận Đức</h3>
-					<div class="paper">
-						<h4>Giấy phép hoạt động:</h4>
-						<p>07386/HCM-GPHĐ cấp ngày 25/01/2010 tại Sở Y tế TP. Huế.</p>
-					</div>
-					<div class="info">
-						<h4>Người chịu trách nhiệm chuyên môn:</h4>
-						<p>Bác sĩ Nguyễn Văn A <br>
-						Chuyên khoa Nội tổng quát.</p>
-						
-						
-					</div>
+					<img src="{{url('/logo.svg')}}" alt="">
+					
 				</div>
 				<div class="footer-menu wow fadeInUp">
-					<h3>Thông tin liên hệ</h3>
+					<h3>Phòng Khám Thuận Đức</h3>
 					<ul class="ul">
 						<li><img src="{{assets}}/images/pin.svg"> 85 Nguyễn Huệ, phường Vĩnh Ninh, thành phố Huế, Thừa Thiên Huế</li>
 						<li><img src="{{assets}}/images/telephone.svg"> <a href="tel:02343833888">0234 3833 888</a></li>
 						<li><img src="{{assets}}/images/email.svg"><a href="mailto:pkthuanduc@gmail.com">pkthuanduc@gmail.com</a></li>
 					</ul>
+					<div class="paper">
+						<h4>Giấy phép hoạt động:</h4>
+						<p>07386/HCM-GPHĐ cấp ngày 25/01/2010 tại Sở Y tế TP. Huế.</p>
+					</div>
 				</div>
 				<div class="fan_page wow fadeInUp">
 					<h3>Liên kết chúng tôi</h3>

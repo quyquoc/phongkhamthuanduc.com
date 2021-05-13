@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="section container-wrapper">
 			<div class="box-header">
-				<h1 class="box-title"><span>Thư viện</span> </h1>
+				<h1 class="box-title"><span>Dự án đã thực hiện</span> </h1>
 			</div>
 			<div class="gallery gallery-list">
 				<div class="modulecontent">
@@ -27,7 +27,9 @@
 											</div>
 										</a>
 										{% endif %}
-
+										<div class="content">
+											<div class="title">{{ item.title }}</div>
+										</div>
 									</div>
 								</li>
 							{% endfor %}

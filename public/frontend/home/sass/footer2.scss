@@ -29,20 +29,22 @@ footer.footer2 {
 			margin-bottom:7px;
 		}
 		.company {
-			width: 250px;
+			width: 200px;
 			text-align: center;
 			img {
-				margin: auto auto 20px;
+				margin: 50px auto auto;
 			}
-			p { font-size: 13px }
 		}
 		.footer-menu {
 			text-align: left;
-			width: calc(100%/3*2 - 250px);
+			width: calc(100%/3*2 - 200px);
 			ul li {
-				margin-bottom: 30px;
-				display: flex;
-				align-items: center;img {margin-right: 10px;}
+				i.fa {
+					width: 20px;
+				}
+				line-height: 1.5;
+				margin-bottom: 10px;
+				img {margin-right: 10px;}
 				&:last-child{margin-bottom: 0;}
 			}
 		}
@@ -72,6 +74,7 @@ footer.footer2 {
 			.company { 
 				width: 100%;
 				margin-bottom: 20px;
+				img {margin-top: 0;}
 			}
 			h3{height: auto; margin: 20px 0 15px 0;} 
 			.footer-menu { 
@@ -89,8 +92,10 @@ footer.footer2 {
 				padding: 20px 0 40px;
 			}
 			.company { 
-				display: none;
+				
+				// img {margin:0}
 			}
+			
 			h3{height: auto; margin: 20px 0 15px 0;} 
 			.footer-menu { 
 				width: 100%;

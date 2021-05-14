@@ -1599,12 +1599,14 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   flex-wrap: wrap;
 }
 .box-about .box-body .image {
+  min-height: 400px;
   width: 50%;
   padding: 0;
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-position: center bottom;
 }
 .box-about .box-body .image img {
   display: none;
@@ -1624,7 +1626,17 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .box-about .box-body .contentWrapper p {
   margin-bottom: 20px;
 }
+.box-about.reason {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.box-about.reason .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
 .box-about.reason .box-body {
+  justify-content: flex-end;
   color: #ffffff;
 }
 .box-about.reason .box-body .contentWrapper ul {
@@ -1839,6 +1851,11 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
     max-width: 500px;
     margin: auto;
   }
+}
+.box-clinic .box-header p {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 .box-clinic .box-body .inner {
   display: flex;
@@ -3719,7 +3736,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 
 #clinic .box-header p {
-  text-align: left;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 
 .clinic .modulecontent ul.da-thumbs {
@@ -4130,23 +4149,22 @@ footer.footer2 .footer-info h4 {
   margin-bottom: 7px;
 }
 footer.footer2 .footer-info .company {
-  width: 250px;
+  width: 200px;
   text-align: center;
 }
 footer.footer2 .footer-info .company img {
-  margin: auto auto 20px;
-}
-footer.footer2 .footer-info .company p {
-  font-size: 13px;
+  margin: 50px auto auto;
 }
 footer.footer2 .footer-info .footer-menu {
   text-align: left;
-  width: calc(100%/3*2 - 250px);
+  width: calc(100%/3*2 - 200px);
 }
 footer.footer2 .footer-info .footer-menu ul li {
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+footer.footer2 .footer-info .footer-menu ul li i.fa {
+  width: 20px;
 }
 footer.footer2 .footer-info .footer-menu ul li img {
   margin-right: 10px;
@@ -4184,6 +4202,9 @@ footer.footer2 .copyright a:hover {
     width: 100%;
     margin-bottom: 20px;
   }
+  footer.footer2 .footer-info .company img {
+    margin-top: 0;
+  }
   footer.footer2 .footer-info h3 {
     height: auto;
     margin: 20px 0 15px 0;
@@ -4200,9 +4221,6 @@ footer.footer2 .copyright a:hover {
 @media only screen and (max-width: 610px) {
   footer.footer2 .footer-info .container-wrapper {
     padding: 20px 0 40px;
-  }
-  footer.footer2 .footer-info .company {
-    display: none;
   }
   footer.footer2 .footer-info h3 {
     height: auto;

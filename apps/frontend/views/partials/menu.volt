@@ -15,11 +15,7 @@
 	</li>
 	<li class="{{ menu is defined and menu == 'kham-bao-hiem-y-te' ? 'active' : '' }}"><a href="{{ url('/kham-bao-hiem-y-te') }}">Khám BHYT</a></li>
 	<li class="{{ menu is defined and menu == 'tin-tuc' ? 'active' : '' }}"><a href="{{ url('/tin-tuc') }}">Tin tức </a> <img src="{{assets}}/images/icon-down.svg">
-		<ul class="level1">
-			<li class="{{ menu_lv1 is defined and menu_lv1 == 'thong-tin-y-khoa' ? 'active' : '' }}"><a href="{{ url('/thong-tin-y-khoa') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Thông tin y khoa</a></li>
-			<li class="{{ menu_lv1 is defined and menu_lv1 == 'cau-chuyen-phong-kham' ? 'active' : '' }}"><a href="{{ url('/cau-chuyen-phong-kham') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Câu chuyện phòng khám</a></li>
-			<li class="{{ menu_lv1 is defined and menu_lv1 == 'goc-yeu-thuong' ? 'active' : '' }}"><a href="{{ url('/goc-yeu-thuong') }}"><i class="fa fa-angle-right" aria-hidden="true"></i>Góc yêu thương</a></li>
-		</ul>		
+		{{element.NewsMenuWithCategory('tin-tuc')}}	
 	</li>
 	<li class="{{ menu is defined and menu == 'thu-vien' ? 'active' : '' }}"><a href="{{ url('/thu-vien') }}">Thư viện</a></li>
 	<li class="{{ menu is defined and menu == 'lien-he' ? 'active' : '' }}"><a href="{{ url('/lien-he') }}">Liên hệ</a></li>

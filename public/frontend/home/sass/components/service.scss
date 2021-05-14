@@ -70,13 +70,13 @@
 	}
 }
 #clinic {
-    .box-header {
-        p {
-            text-align: left;
-        }
-    }
+	.box-header {
+		p {max-width: 900px;
+		margin: auto; text-align: center;}
+	}
 }
 .clinic{
+	
 	.modulecontent {
 		ul.da-thumbs {
 			width: initial;

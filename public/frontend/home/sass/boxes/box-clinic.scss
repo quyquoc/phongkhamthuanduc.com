@@ -1,4 +1,8 @@
 .box-clinic {
+	.box-header {
+		p {max-width: 900px;
+		margin: auto; text-align: center;}
+	}
 	.box-body {
 		.inner {
 			display: flex;

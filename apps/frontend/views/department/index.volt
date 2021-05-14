@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="section container-wrapper">
 			<div class="box-header">
-				<h1 class="box-title text-left"><span>Chuyên khoa</span> </h1>
+				<h1 class="box-title"><span>Chuyên khoa</span> </h1>
 				<p>{{Ohi.sysConfig('gioi-thieu-chuyen-khoa',true)}}</p>
 			</div>
 			<div class=" clinic clinic-list">
@@ -12,7 +12,7 @@
 							{% for item in list_depart %}
 								<li class="item wow zoomIn" data-type="image">
 									<div class="img">
-										<a class="image" href="{{ url('/chuyen-khoa/'~item.code) }}" style="background-image: url('{{url(item.image)}}')">
+										<a class="image" href="{{ url('/chuyen-khoa/'~item.code) }}" style="background-image: url('{{ item.image is not empty ? url(item.image) : assets ~'/images/no-image.jpg'}}')">
 										</a>
 									</div>
 									<a class="overlay" href="{{ url('/chuyen-khoa/'~item.code) }}"> {{item.title}}

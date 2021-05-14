@@ -57,7 +57,9 @@
 					</div>
 					<div class="content pleft">
                         {{ Ohi.sysConfig('introduction',false)}}
+                       
 					</div>
+                    <a href="{{url('/gioi-thieu')}}">Xem thêm</a>
 				</div>
 				<div class="image wow fadeInUp" style="background-image: url('{{ url(Ohi.sysConfig('introduction',true, 'image')) }}');">
 					<img src=" {{ url(Ohi.sysConfig('introduction',true, 'image')) }} " />
@@ -70,14 +72,14 @@
     <div class="section box box-clinic">
         <div class="container">
             <div class="box-header wow fadeInUp">
-                <h1 class="box-title text-left ">Chuyên khoa</h1>
+                <h1 class="box-title">Chuyên khoa</h1>
                 <p>{{Ohi.sysConfig('introduction',true)}}</p>
             </div>
             <div class="box-body">
                 <div class="inner">
                     {% for item in list_depart %}
                     <a href="{{url('/chuyen-khoa/'~item.code)}}" class="item wow fadeInUp">
-                        <div class="image"><img src="{{ url(item.logo) }}" /></div>
+                        <div class="image"><img src="{{ item.logo is not empty ?  url(item.logo) : url('/logo.svg') }}" /></div>
                         <div class="content">
                             <h3 class="title">{{ item.title }}</h3>
                         </div>
@@ -86,19 +88,22 @@
                 </div>
             </div>
         </div>
+        
     </div>
 {% endif %}
-<div class="section box box-about reason" style="background-image: url('{{ url( Ohi.sysConfig('vi-sao-nen-chon-chung-toi',true, 'image')) }}');">
-	<div class="container">
+<div class="box-about reason" style="background-image: url('{{ url( Ohi.sysConfig('vi-sao-nen-chon-chung-toi',true, 'image')) }}');">
+    <div class="overlay section ">
+        <div class="container">
 		<div class="container-wrapper">
 			<div class="box-body">
 				<div class="contentWrapper wow fadeInUp">
 					<div class="box-header">
-						<h1 class="box-title text-left text-color-page1">{{Ohi.sysConfig('vi-sao-nen-chon-chung-toi',true,"title")}}</h1>
+						<h1 class="box-title text-left text-color-page1">{{Ohi.sysConfig('vi-sao-nen-chon-chung-toi',true,"title")}}?</h1>
 					</div>
 					<div class="content ">
                         {{Ohi.sysConfig('vi-sao-nen-chon-chung-toi',false)}}
 					</div>
+				</div>
 				</div>
 				
 			</div>

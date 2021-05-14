@@ -323,7 +323,7 @@ a.button.transparent:hover {
   width: 100%;
   margin: 0 0 40px;
   padding: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .box-title {
@@ -984,18 +984,6 @@ a.button.transparent:hover {
   border-color: #E53549;
 }
 
-@media only screen and (max-width: 1100px) {
-  .menunav li a {
-    padding: 0 10px;
-    font-size: 15px;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .menunav li a {
-    padding: 0 10px;
-    font-size: 14px;
-  }
-}
 header {
   width: 100%;
   position: relative;
@@ -1515,6 +1503,11 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   margin-left: 0;
   margin-right: 20px;
   margin-bottom: 20px;
+  border: 1px solid #E53549;
+}
+.box-head .box-body .content .bottom a:hover {
+  border-color: #00AE57;
+  background-color: #00AE57;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1879,22 +1872,6 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .box-clinic .box-body .inner .item:hover {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   transform: translate3d(0, -10px, 0);
-}
-.box-clinic .box-body .inner .item:first-child {
-  width: calc(100%);
-  border: 0;
-  padding-left: 0;
-  padding-top: 0;
-}
-.box-clinic .box-body .inner .item:first-child p {
-  max-width: 550px;
-}
-.box-clinic .box-body .inner .item:first-child .button {
-  margin: 20px auto auto 0;
-}
-.box-clinic .box-body .inner .item:first-child:hover {
-  box-shadow: 0 0 0 #fff;
-  transform: translate3d(0, 0px, 0);
 }
 
 @media only screen and (max-width: 900px) {
@@ -3560,6 +3537,14 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   line-height: 1.2;
 }
 
+.box-news {
+  background-color: rgba(56, 84, 223, 0.05);
+}
+.box-news .news.news-list .item {
+  box-shadow: none;
+  background-color: #ffffff;
+}
+
 @media only screen and (max-width: 800px) {
   .news.news-list .item {
     width: calc(100%/2 - 20px);
@@ -3578,6 +3563,13 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   .news.news-list .item {
     width: calc(100%);
     margin: 0 0 20px;
+  }
+  .news.news-list .item:last-child {
+    margin-bottom: 0;
+  }
+
+  .box-news .news.news-list .item {
+    margin: 0 5px 20px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -3671,6 +3663,14 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   padding-right: 30px;
   margin-left: auto;
   margin-right: 0;
+  margin: 0 0 20px;
+}
+.service .box-body .item .content .description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 .service .box-body .item .content .button {
   position: relative;

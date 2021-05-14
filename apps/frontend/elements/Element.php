@@ -222,7 +222,13 @@ class Element extends Component{
 			}
 		}else {
 			$this->view->title = "Tin mới nhất";
-			$list_item = NewsArticleModel::init()->newsWithCategory($category_code, $options);
+			
+			$list_item = NewsArticleModel::find(array(
+				"conditions" =>"status = 1",
+				"order"		 => "published DESC , created DESC",
+				"limit"		=> 6
+			));
+			// $list_item = NewsArticleModel::init()->newsWithCategory($category_code, $options, $limit = 6);
 		}
 
 		$this->view->list_article = $list_item;

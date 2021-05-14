@@ -62,10 +62,11 @@
 			'params' 		=> 1
 		));
 		
-		$router->add('/dich-vu', array(
+		$router->add('/dich-vu/:params', array(
 			'module' 		=> 'frontend',
 			'controller'	=> 'service',
 			'action' 		=> 'index',
+			'params' 		=> 1
 		));
 
 		// Multimedia

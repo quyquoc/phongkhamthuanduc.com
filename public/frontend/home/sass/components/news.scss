@@ -73,7 +73,14 @@
 	}
   }
 }
-
+.box-news {
+	background-color: rgba($color_page_3, 0.05);
+	.news.news-list .item {
+		box-shadow: none;
+		background-color: $color_white;
+	}
+	
+}
 @media only screen and (max-width: 800px) {
 	.news.news-list .item {
 		width: calc(100%/2 - 20px);
@@ -89,8 +96,10 @@
 		.item {
 			width: calc(100%);
 			margin: 0 0 20px;
+			&:last-child{margin-bottom: 0;}
 		}
 	}
+	.box-news .news.news-list .item {margin: 0 5px 20px;}
 }
 @media only screen and (max-width: 400px) {
 	.news.news-detail .box-header .box-title {

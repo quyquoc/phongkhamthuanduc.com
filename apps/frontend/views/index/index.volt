@@ -45,6 +45,7 @@
 		</div>
 	</div>
 </div>
+{{ element.NewsBoxArticle(null, ['type':'lastest'], ['limit':6]) }}
 {# partial("partials/boxes/BoxColumn_1x4") #}
 <div class="section box box-about">
 	<div class="container">
@@ -71,12 +72,10 @@
         <div class="container">
             <div class="box-header wow fadeInUp">
                 <h1 class="box-title text-left ">Chuyên khoa</h1>
+                <p>{{Ohi.sysConfig('introduction',true)}}</p>
             </div>
             <div class="box-body">
                 <div class="inner">
-                    <div class="item wow fadeInUp">
-                        <p>{{Ohi.sysConfig('introduction',true)}}</p>
-                    </div>
                     {% for item in list_depart %}
                     <a href="{{url('/chuyen-khoa/'~item.code)}}" class="item wow fadeInUp">
                         <div class="image"><img src="{{ url(item.logo) }}" /></div>

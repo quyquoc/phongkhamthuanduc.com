@@ -288,6 +288,14 @@ class Element extends Component{
 			}
 		}
 	}
+	public function ServiceMenu( $options = null) {
+		$service = ServiceModel::find(array(
+			"conditions"	=> "status = 1",
+			"order"			=> "id ASC"
+		));
+		$this->view->list_menu = $service;
+		$this->view->partial("elements/ServiceMenu");		
+	}
 }	
 
 /* End of file Element.php */

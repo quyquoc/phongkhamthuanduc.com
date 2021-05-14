@@ -8,7 +8,9 @@
 		</ul>
 	</li>
 	<li class="{{ menu is defined and menu == 'chuyen-khoa' ? 'active' : '' }}"><a href="{{ url('/chuyen-khoa') }}">Chuyên khoa </a></li>
-	<li class="{{ menu is defined and menu == 'dich-vu' ? 'active' : '' }}"><a href="{{ url('/dich-vu') }}">Dịch vụ</a></li>
+	<li class="{{ menu is defined and menu == 'dich-vu' ? 'active' : '' }}"><a href="{{ url('/dich-vu') }}">Dịch vụ</a> <img src="{{assets}}/images/icon-down.svg">
+		{{ element.ServiceMenu() }}
+	</li>
 	<li class="{{ menu is defined and menu == 'kham-bao-hiem-y-te' ? 'active' : '' }}"><a href="{{ url('/kham-bao-hiem-y-te') }}">Khám BHYT</a></li>
 	<li class="{{ menu is defined and menu == 'tin-tuc' ? 'active' : '' }}"><a href="{{ url('/tin-tuc') }}">Tin tức </a> <img src="{{assets}}/images/icon-down.svg">
 		<ul class="level1">

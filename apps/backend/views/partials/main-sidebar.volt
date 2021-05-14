@@ -40,9 +40,27 @@
 			{% if role=="full" or in_array('service', role) %}
 				<li class="{{ (dispatcher.getControllerName() in ['service']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/service/index','<i class="fa fa-clipboard"></i>' ~ language._('Dich vụ')) }}</li>
 			{% endif %}
-			{% if role=="full" or in_array('department', role) %}
-				<li class="{{ (dispatcher.getControllerName() in ['department']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/department/index','<i class="fa fa-hospital-o"></i>' ~ language._('Chuyên khoa')) }}</li>
+
+			{% if role=="full" or in_array('department', role) or in_array('staff', role) %}
+				<li class="treeview{{ (dispatcher.getControllerName() in [ 'department', 'staff']) ? ' active' : '' }}">
+					<a href="#">
+						<i class="fa fa-hospital-o"></i> <span>Phòng ban</span>
+						<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+					<ul class="treeview-menu">
+						{% if role=="full" or in_array('department', role) %}
+							<li class="{{ (dispatcher.getControllerName() in ['department']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/department/index','<i class="fa fa-circle-o"></i>' ~ language._('Chuyên khoa')) }}</li>
+						{% endif %}
+						{% if role=="full" or in_array('staff', role) %}
+							<li class="{{ (dispatcher.getControllerName() in ['staff']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/staff/index','<i class="fa fa-circle-o"></i>' ~ language._('staff')) }}</li>
+						{% endif %}
+					
+					</ul>
+				</li>
 			{% endif %}
+			
 			{% if role=="full" or in_array('booking', role) %}
 				<li class="{{ (dispatcher.getControllerName() in ['booking']) ? ' active' : '' }}">{{ link_to(define.backend ~ '/booking/index','<i class="fa fa-calendar"></i>' ~ language._('Đặt lịch khám')) }}</li>
 			{% endif %}
@@ -74,6 +92,9 @@
 						{{ link_to(define.backend ~ '/contact','<i class="fa fa-comments-o"></i><span>' ~ language._('contact')) ~ '</span>' }}
 					</li>
 				{% endif %}
+				{% if role=="full" or in_array('testimonial', role) %}
+					<li class="{{ (dispatcher.getControllerName() in ['testimonial']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/testimonial/index','<i class="fa fa-thumbs-o-up"></i>' ~ language._('Ý kiến đánh giá')) }}</li>
+				{% endif %}
 		  <!-- Member -->
 				{% if role=="full" or in_array('member', role) or in_array('permission-group', role) or in_array('permission-privilege', role) or in_array('permission-group-privilege', role) %}
 					<li class="treeview{{ (dispatcher.getControllerName() in ['member', 'permission-group', 'permission-privilege', 'permission-group-privilege']) ? ' active' : '' }}">
@@ -99,32 +120,12 @@
 						</ul>
 					</li>
 				{% endif %}
-
-			<!-- Config -->
-				{% if role=="full" or in_array('sys-config', role) or in_array('testimonial', role) or in_array('staff', role) %}
-					<li class="treeview{{ (dispatcher.getControllerName() in ['sys-config', 'testimonial', 'staff']) ? ' active' : '' }}">
-						<a href="#">
-							<i class="fa fa-globe"></i> <span>Cấu hình website</span>
-							<span class="pull-right-container">
-								<i class="fa fa-angle-left pull-right"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							{% if role=="full" or in_array('staff', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['staff']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/staff/index','<i class="fa fa-circle-o"></i>' ~ language._('staff')) }}</li>
-							{% endif %}
-							{% if role=="full" or in_array('testimonial', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['testimonial']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/testimonial/index','<i class="fa fa-circle-o"></i>' ~ language._('Ý kiến đánh giá')) }}</li>
-							{% endif %}
-							{% if role=="full" or in_array('sys-config', role) %}
-								<li class="{{ (dispatcher.getControllerName() in ['sys-config']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/sys-config/index','<i class="fa fa-circle-o"></i>' ~ language._('Thông tin website')) }}</li>
-							{% endif %}
-						</ul>
-					</li>
-				{% endif %}
-
+	
+			{% if role=="full" or in_array('sys-config', role) %}
+				<li class="{{ (dispatcher.getControllerName() in ['sys-config']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/sys-config/index','<i class="fa fa-globe"></i>' ~ language._('Thông tin website')) }}</li>
+			{% endif %}
 			<!-- Data -->
-				<li class="{{ (dispatcher.getControllerName() in ['data']) ? 'active' : '' }}"><a onclick="open_ckfinder();"><i class="fa fa-floppy-o"></i><span>{{ language._('resource') }}</a></span></li>
+			<li class="{{ (dispatcher.getControllerName() in ['data']) ? 'active' : '' }}"><a onclick="open_ckfinder();"><i class="fa fa-floppy-o"></i><span>{{ language._('resource') }}</a></span></li>
 
 		</ul>
 	</section>

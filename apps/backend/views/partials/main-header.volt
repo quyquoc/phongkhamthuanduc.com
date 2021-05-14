@@ -3,9 +3,9 @@
 	<!-- Logo -->
 	<a class="logo" href="{{ url() }}" target="_blank">
 		<!-- mini logo for sidebar mini 50x50 pixels -->
-		<span class="logo-mini"><b>TĐ</b></span>
+		<span class="logo-mini"><b>PKTĐ</b></span>
 		<!-- logo for regular state and mobile devices -->
-		<span class="logo-lg"><b>Thuận Đức</b></span>
+		<span class="logo-lg"><b>PK Thuận Đức</b></span>
 	</a>
 	<!-- Header Navbar: style can be found in header.less -->
 	<nav class="navbar navbar-static-top">

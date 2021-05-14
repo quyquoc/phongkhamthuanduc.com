@@ -53,14 +53,14 @@
 			<div class="box-body">
 				<div class="contentWrapper wow fadeInUp">
 					<div class="box-header">
-						<h1 class="box-title text-left">Phòng khám Thuận Đức</h1>
+						<h1 class="box-title text-left"> {{ Ohi.sysConfig('introduction',true, 'description')}}</h1>
 					</div>
 					<div class="content pleft">
-                        {{ Ohi.sysConfig('gioi-thieu-chuyen-khoa',false)}}
+                        {{ Ohi.sysConfig('introduction',false)}}
 					</div>
 				</div>
-				<div class="image wow fadeInUp" style="background-image: url('{{ assets }}/images/hospital.jpg');">
-					<img src=" {{ assets }}/images/hospital.jpg" />
+				<div class="image wow fadeInUp" style="background-image: url('{{ url(Ohi.sysConfig('introduction',true, 'image')) }}');">
+					<img src=" {{ url(Ohi.sysConfig('introduction',true, 'image')) }} " />
 				</div>
 			</div>
 		</div>

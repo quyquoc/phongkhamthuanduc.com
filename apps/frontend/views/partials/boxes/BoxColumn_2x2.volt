@@ -9,36 +9,36 @@
 					<div class="item" data-aos="fade-up">
 						<div class="image"><img src="{{ assets }}/images/doctor.svg" /></div>
 						<div class="content">
-							<h3 class="title">Bác sĩ giỏi chuyên môn, giàu nhân ái</h3>
-							<div class="description">Đội ngũ y bác sĩ và điều dưỡng viên của phòng khám đều là những bậc lương y giỏi chuyên môn và giàu kinh nghiệm khám chữa ở lĩnh vực liên quan. Là những người tâm huyết với nghề, từng được đào tạo hoặc tác nghiệp tại nước ngoài.</div>
+							<h3 class="title">{{ Ohi.sysConfig('dinh-huong-1',true,'description')}}</h3>
+							<div class="description">{{ Ohi.sysConfig('dinh-huong-1',true)}}</div>
 						</div>
 					</div>
 					<div class="item" data-aos="fade-up">
 						<div class="image"><img src="{{ assets }}/images/config.svg" /></div>
 						<div class="content">
-							<h3 class="title">Công nghệ tiên tiến và vượt trội</h3>
-							<div class="description">Chúng tôi coi trọng tìm tòi và triển khai các công nghệ kỹ thuật tiên tiến, đặc biệt là những công nghệ kiểm tra tinh vi mang tính quốc tế. Hiện nay phần lớn thiết bị và công nghệ chữa trị chúng tôi tin dùng đều đến từ các quốc gia có nền y học phát triển.</div>
+							<h3 class="title">{{ Ohi.sysConfig('dinh-huong-2',true,'description')}}</h3>
+							<div class="description">{{ Ohi.sysConfig('dinh-huong-2',true)}}</div>
 						</div>
 					</div>
 					<div class="item" data-aos="fade-up">
 						<div class="image"><img src="{{ assets }}/images/chat.svg" /></div>
 						<div class="content">
-							<h3 class="title">Môi trường thân thiện</h3>
-							<div class="description">Với mong muốn mang đến sự thuận tiện và tiết kiệm thời gian tối đa cho bệnh nhân. Phòng khám đã cho xây dựng hệ thống các dịch vụ từ tư vấn hướng dẫn, chẩn đoán điều trị tới chăm sóc sau điều trị.</div>
+							<h3 class="title">{{ Ohi.sysConfig('dinh-huong-3',true,'description')}}</h3>
+							<div class="description">{{ Ohi.sysConfig('dinh-huong-3',true)}}</div>
 						</div>
 					</div>
 					<div class="item" data-aos="fade-up">
 						<div class="image"><img src="{{ assets }}/images/hand.svg" /></div>
 						<div class="content">
-							<h3 class="title">Dịch vụ tận tâm chu đáo</h3>
-							<div class="description">Phòng khám được thiết kế, bố trí tổng thể dựa trên các yêu cầu về tiêu chuẩn phòng khám tư được ban hành bởi bộ y tế.</div>
+							<h3 class="title">{{ Ohi.sysConfig('dinh-huong-4',true,'description')}}</h3>
+							<div class="description">{{ Ohi.sysConfig('dinh-huong-4',true)}}</div>
 						</div>
 					</div>
 					<div class="item" data-aos="fade-up">
 						<div class="image"><img src="{{ assets }}/images/pig.svg" /></div>
 						<div class="content">
-							<h3 class="title">Chi phí tối ưu</h3>
-							<div class="description">100% chi phí của chúng tôi đều công khai, minh bạch và được nhập hệ thống cẩn thận. Bác sỹ sẽ đưa ra chi phí điều trị dự kiến cùng các liệu trình điều trị. Người bệnh có quyền lựa chọn liệu trình phù hợp nhất với điều kiện kinh tế và tính chất công việc củ</div>
+							<h3 class="title">{{ Ohi.sysConfig('dinh-huong-5',true,'description')}}</h3>
+							<div class="description">{{ Ohi.sysConfig('dinh-huong-5',true)}}</div>
 						</div>
 					</div>
 				</div>

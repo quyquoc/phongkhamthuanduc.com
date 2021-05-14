@@ -4,7 +4,7 @@
 			<div class="container-wrapper">
 				<div class="company wow fadeInUp">
 					<img src="{{url('/logo.svg')}}" alt="">
-					
+					<p>GPKD: 07386/HCM-GPHĐ cấp ngày 25/01/2010 tại Sở Y tế TP. Huế.</p>
 				</div>
 				<div class="footer-menu wow fadeInUp">
 					<h3>Phòng Khám Thuận Đức</h3>
@@ -13,10 +13,6 @@
 						<li><img src="{{assets}}/images/telephone.svg"> <a href="tel:02343833888">0234 3833 888</a></li>
 						<li><img src="{{assets}}/images/email.svg"><a href="mailto:pkthuanduc@gmail.com">pkthuanduc@gmail.com</a></li>
 					</ul>
-					<div class="paper">
-						<h4>Giấy phép hoạt động:</h4>
-						<p>07386/HCM-GPHĐ cấp ngày 25/01/2010 tại Sở Y tế TP. Huế.</p>
-					</div>
 				</div>
 				<div class="fan_page wow fadeInUp">
 					<h3>Liên kết chúng tôi</h3>

@@ -3072,12 +3072,12 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   text-align: center;
 }
 .box-testimonial .review-slide .img {
-  width: 160px;
+  width: 130px;
   border: 1px solid #E53549;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 20px;
-  padding: 20px;
+  padding: 4px;
 }
 .box-testimonial .review-slide .avatar {
   width: 120px;
@@ -4102,7 +4102,7 @@ footer.footer2 a {
 }
 footer.footer2 .footer-info .container-wrapper {
   text-align: center;
-  padding: 30px 0px 0;
+  padding: 50px 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -4124,43 +4124,36 @@ footer.footer2 .footer-info h4 {
   margin-bottom: 7px;
 }
 footer.footer2 .footer-info .company {
-  width: 170px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 250px;
+  text-align: center;
 }
-footer.footer2 .footer-info .company .logo {
-  width: 100%;
-  margin-bottom: 20px;
-}
-footer.footer2 .footer-info .company .paper {
-  width: calc(100%);
-}
-footer.footer2 .footer-info .company .info {
-  width: 100%;
+footer.footer2 .footer-info .company img {
+  margin: auto auto 20px;
 }
 footer.footer2 .footer-info .company p {
-  margin-bottom: 20px;
+  font-size: 13px;
 }
 footer.footer2 .footer-info .footer-menu {
   text-align: left;
-  width: calc(100%/3*2 - 150px);
+  width: calc(100%/3*2 - 250px);
 }
 footer.footer2 .footer-info .footer-menu ul li {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
 }
 footer.footer2 .footer-info .footer-menu ul li img {
   margin-right: 10px;
 }
+footer.footer2 .footer-info .footer-menu ul li:last-child {
+  margin-bottom: 0;
+}
 footer.footer2 .footer-info .fan_page {
   width: calc(100%/3);
   max-width: 300px;
 }
 footer.footer2 .copyright {
-  margin-top: 10px;
-  padding: 10px 0;
+  padding: 20px 0;
   background: #000000;
   text-align: center;
 }
@@ -4175,12 +4168,15 @@ footer.footer2 .copyright a:hover {
   color: #00AE57;
 }
 
-@media only screen and (max-width: 1100px) {
-  footer.footer2 .footer-info .container-wrapper {
-    justify-content: center;
+@media only screen and (max-width: 1165px) {
+  footer.footer2 .footer-info .footer-menu ul li {
+    margin-bottom: 20px;
   }
+}
+@media only screen and (max-width: 900px) {
   footer.footer2 .footer-info .company {
     width: 100%;
+    margin-bottom: 20px;
   }
   footer.footer2 .footer-info h3 {
     height: auto;
@@ -4197,10 +4193,10 @@ footer.footer2 .copyright a:hover {
 }
 @media only screen and (max-width: 610px) {
   footer.footer2 .footer-info .container-wrapper {
-    justify-content: center;
+    padding: 20px 0 40px;
   }
   footer.footer2 .footer-info .company {
-    width: 100%;
+    display: none;
   }
   footer.footer2 .footer-info h3 {
     height: auto;

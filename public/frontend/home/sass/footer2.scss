@@ -7,7 +7,7 @@ footer.footer2 {
 	.footer-info {
 		.container-wrapper {
 			text-align: center;
-			padding: 30px 0px 0;
+			padding: 50px 0px ;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -29,36 +29,27 @@ footer.footer2 {
 			margin-bottom:7px;
 		}
 		.company {
-			width: 170px;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			.logo {
-				width: 100%;
-				margin-bottom: 20px;
+			width: 250px;
+			text-align: center;
+			img {
+				margin: auto auto 20px;
 			}
-			.paper {
-				width: calc(100%);
-			}
-			.info {
-				width: 100%;
-			}
-			p { margin-bottom: 20px; }
+			p { font-size: 13px }
 		}
 		.footer-menu {
 			text-align: left;
-			width: calc(100%/3*2 - 150px);
+			width: calc(100%/3*2 - 250px);
 			ul li {
-				margin-bottom: 20px;
+				margin-bottom: 30px;
 				display: flex;
 				align-items: center;img {margin-right: 10px;}
+				&:last-child{margin-bottom: 0;}
 			}
 		}
 		.fan_page { width: calc(100%/3); max-width: 300px; }
 	}
 	.copyright { 
-		margin-top: 10px;
-		padding: 10px 0;
+		padding: 20px 0;
 		background:#000000;
 		text-align: center;
 		.developer {
@@ -70,15 +61,17 @@ footer.footer2 {
 	}
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1165px) {
+	footer.footer2 .footer-info .footer-menu ul li {
+		margin-bottom: 20px;
+	}
+}
+@media only screen and (max-width: 900px) {
 	footer.footer2 {
 		.footer-info {
-			.container-wrapper {
-				justify-content: center;
-			}
 			.company { 
 				width: 100%;
-				
+				margin-bottom: 20px;
 			}
 			h3{height: auto; margin: 20px 0 15px 0;} 
 			.footer-menu { 
@@ -92,12 +85,11 @@ footer.footer2 {
 @media only screen and (max-width: 610px) {
 	footer.footer2 {
 		.footer-info {
-			.container-wrapper {
-				justify-content: center;
+			.container-wrapper{
+				padding: 20px 0 40px;
 			}
 			.company { 
-				width: 100%;
-				
+				display: none;
 			}
 			h3{height: auto; margin: 20px 0 15px 0;} 
 			.footer-menu { 

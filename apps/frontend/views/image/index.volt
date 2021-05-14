@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="section container-wrapper">
 			<div class="box-header">
-				<h1 class="box-title"><span>Dự án đã thực hiện</span> </h1>
+				<h1 class="box-title"><span>Thư viện ảnh</span> </h1>
 			</div>
 			<div class="gallery gallery-list">
 				<div class="modulecontent">

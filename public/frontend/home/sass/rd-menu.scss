@@ -163,6 +163,7 @@
 		transition: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 		li{
 			line-height: 21px;
+			img {display: none;}
 			a:not([href]):not([tabindex]) {color:#000}
 			a, .mm-image {
 				display: block;
@@ -174,12 +175,13 @@
 			}
 			ul {
 				display: block;
-		    position: initial;
-		    width: 100%;
-		    padding: 0;
-		    background: transparent;
-		    .mm-image { display: none; }
+				position: initial;
+				width: 100%;
+				padding: 0;
+				background: transparent;
+				.mm-image { display: none; }
 				li {
+					img {display: block;}
 					a {
 						font-size: 16px;
 						line-height: 30px;

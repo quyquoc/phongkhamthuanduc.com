@@ -40,7 +40,7 @@
                     <h1 class="box-title text-left">Trường hợp khẩn cấp</h1>
                 </div>
                <a class="hot" href="tel:02343833888"> <img src="{{assets}}/images/telephone-handle-silhouette.svg"> 0234 3833 888</a>
-               <p>Your treatment plan is designed for steady progress, with every phase promptly implemented.</p>
+               <p>{{ Ohi.sysConfig('truong-hop-khan-cap',true)}}</p>
             </div>
 		</div>
 	</div>
@@ -56,8 +56,7 @@
 						<h1 class="box-title text-left">Phòng khám Thuận Đức</h1>
 					</div>
 					<div class="content pleft">
-						<p>Phòng khám Đa khoa Thuận Đức được Sở y tế Thừa Thiên Huế cấp giấy phép hoạt động số: 620/TTH_GPHĐ ngày 1/11/2016 và Giấy phép khám sức khỏe định kỳ cho cán bộ công nhân viên các cơ quan xí nghiệp theo Công văn số: 1685/SYT-NVY ngày 5/7/2019.</p>
-						<p>Ngoài ra, Phòng khám Đa khoa Thuận Đức còn được Bảo Hiểm xã Hội tỉnh Thừa Thiên Huế cho phép khám Bảo hiểm y tế ban đầu theo hợp đồng số: 07/HĐKCB BHYT-2020 ngày 30 tháng 12 năm 2109 với các dịch vụ về Nội khoa, Ngoại khoa, Sản khoa, Nhi khoa, Răng Hàm Mặt, Tai Mũi Họng, Da Liễu, Mắt, Giải phẫu bệnh, Xét nghiệm, X-Quang, Siêu âm, Y học cổ truyền, KHHGĐ và dịch vụ Chăm sóc Mẹ và Bé tại nhà.</p>
+                        {{ Ohi.sysConfig('gioi-thieu-chuyen-khoa',false)}}
 					</div>
 				</div>
 				<div class="image wow fadeInUp" style="background-image: url('{{ assets }}/images/hospital.jpg');">
@@ -89,23 +88,16 @@
         </div>
     </div>
 {% endif %}
-<div class="section box box-about reason" style="background-image: url('{{ assets }}/images/bg-reason.jpg');">
+<div class="section box box-about reason" style="background-image: url('{{ url( Ohi.sysConfig('vi-sao-nen-chon-chung-toi',true, 'image')) }}');">
 	<div class="container">
 		<div class="container-wrapper">
 			<div class="box-body">
 				<div class="contentWrapper wow fadeInUp">
 					<div class="box-header">
-						<h1 class="box-title text-left text-color-page1">Vì sao nên chọn chúng tôi</h1>
+						<h1 class="box-title text-left text-color-page1">{{Ohi.sysConfig('vi-sao-nen-chon-chung-toi',true,"title")}}</h1>
 					</div>
 					<div class="content ">
-						<p>5 lý do để bạn chọn Phòng Khám Đa Khoa Việt Nhật là điểm khám bệnh lý tưởng nhất tại Tp. Huế.</p>
-                        <ul>
-                            <li>Đội ngũ bác sĩ có chuyên môn cao, giàu kinh nghiệm</li>
-                            <li>Quy trình tiếp nhận và khám bệnh nhanh, gọn, chính xác</li>
-                            <li>Trang thiết bị hiện đại</li>
-                            <li>Hệ thống nhà thuốc đầy đủ</li>
-                            <li>Hoạt động dựa theo cơ sở pháp lý đã được Sở Y tế duyệt</li>
-                        </ul>
+                        {{Ohi.sysConfig('vi-sao-nen-chon-chung-toi',false)}}
 					</div>
 				</div>
 				

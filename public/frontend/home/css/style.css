@@ -841,7 +841,7 @@ a.button.transparent:hover {
   left: 0;
 }
 .menunav li:hover ul.level1 li a {
-  padding: 0 20px;
+  padding: 0 10px;
   text-align: left;
 }
 .menunav li:hover ul.level1 li a .fa {
@@ -1246,6 +1246,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .rd-menu ul li {
   line-height: 21px;
 }
+.rd-menu ul li img {
+  display: none;
+}
 .rd-menu ul li a:not([href]):not([tabindex]) {
   color: #000;
 }
@@ -1266,6 +1269,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 .rd-menu ul li ul .mm-image {
   display: none;
+}
+.rd-menu ul li ul li img {
+  display: block;
 }
 .rd-menu ul li ul li a {
   font-size: 16px;

@@ -3,7 +3,7 @@
 		<div class="section container-wrapper">
 			<div class="box-header">
 				<h1 class="box-title text-left"><span>Chuyên khoa</span> </h1>
-				<p>{{Ohi.sysConfig('introduction',true)}}</p>
+				<p>{{Ohi.sysConfig('gioi-thieu-chuyen-khoa',true)}}</p>
 			</div>
 			<div class=" clinic clinic-list">
 				<div class="modulecontent">

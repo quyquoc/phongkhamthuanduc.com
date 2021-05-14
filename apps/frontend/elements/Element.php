@@ -288,13 +288,25 @@ class Element extends Component{
 			}
 		}
 	}
-	public function ServiceMenu( $options = null) {
-		$service = ServiceModel::find(array(
-			"conditions"	=> "status = 1",
-			"order"			=> "id ASC"
-		));
-		$this->view->list_menu = $service;
-		$this->view->partial("elements/ServiceMenu");		
+	public function LevelMenu( $option = null) {
+		if($option =='dich-vu') {
+			$service = ServiceModel::find(array(
+				"conditions"	=> "status = 1",
+				"order"			=> "id ASC"
+			));
+			$list_menu = $service;
+		}else{
+			$depart = DepartmentModel::find(array(
+				"conditions"	=> "status = 1",
+				"order"			=> "id ASC"
+			));
+			$list_menu = $depart;
+		}
+		
+	
+		$this->view->option = $option ;
+		$this->view->list_menu = $list_menu ;
+		$this->view->partial("elements/LevelMenu");		
 	}
 }	
 

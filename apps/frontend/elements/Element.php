@@ -291,11 +291,20 @@ class Element extends Component{
 	public function LevelMenu( $option = null) {
 		if($option =='dich-vu') {
 			$service = ServiceModel::find(array(
-				"conditions"	=> "status = 1",
+				"conditions"	=> "status = 1 and code != 'kham-bao-hiem-y-te'",
 				"order"			=> "id ASC"
 			));
 			$list_menu = $service;
-		}else{
+		}
+		elseif($option =='gioi-thieu') {
+			$category = NewsCategoryModel::findFirstByCode($option);
+			$artical = NewsArticleModel::find(array(
+				"conditions"	=> "status = 1 and category_id = $category->id",
+				"order"			=> "id ASC"
+			));
+			$list_menu = $artical;
+		}
+		else{
 			$depart = DepartmentModel::find(array(
 				"conditions"	=> "status = 1",
 				"order"			=> "id ASC"

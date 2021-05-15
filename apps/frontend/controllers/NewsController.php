@@ -20,36 +20,13 @@ class NewsController extends ControllerBase {
 			$this->view->menu = 'gioi-thieu';
 			if(!empty($code)) {
 				$this->view->menu_lv1 = $code;
-				if($code=='nhan-luc-phong-kham'){
-					$this->view->list_staff= StaffModel::find(array(
-						"conditions"	=> "status = 1",
-						"order"			=> "type_id ASC, position ASC, id ASC"
-					));
-					$list_depart = DepartmentModel::find(array('conditions' => 'status = 1 ', 'order'=> 'position ASC, id ASC',));
-					foreach ($list_depart as $key => $item) {
-						
-						$arr_category[$key] = $item->toArray();
-						$list_staff = StaffModel::find(array(
-							'conditions' 	=> 'status = 1 and department_id = :department_id:',
-							'bind'			=> array('department_id' => $item->id),
-							'order'			=> 'manager DESC, id ASC',
-						));
-						$arr_category[$key]['list_staff'] = $list_staff;
-					}
-					$this->view->arr_category = $arr_category;
-					$this->view->pick('news/staff');
-				}else{
+				
 					$this->detail($code);
-				}
 			}else{
 				$this->about();
 			}
 		}
-		elseif($category_code == 'kham-bao-hiem-y-te') {
-			$this->view->menu =  'kham-bao-hiem-y-te';
-			
-			$this->detail($category_code);
-		}
+		
 		else {
 			$this->news($category_code, $code);
 		}
@@ -120,10 +97,10 @@ class NewsController extends ControllerBase {
 		$this->view->pick('news/about');
 	}
 	private function detail($code) {
-		$item = NewsArticleModel::init()->newsDetailWithCode($code);
+		$item = NewsArticleModel::findFirstByCode($code);
 		if($item){
 			// update hits
-			$article = NewsArticleModel::findFirstByCode($item->code);
+			$article = $item;
 			$article->hits++;
 			$article->save();
 			$category = NewsCategoryModel::findFirstById($article->category_id);
@@ -145,7 +122,24 @@ class NewsController extends ControllerBase {
 				'image'		 	=> !empty($article->seo_image) ? $article->seo_image : $article->image,
 				'url'		 	=> $this->url->get("/".$category->code."/".$article->code)
 			);
-
+			if($code=='nhan-luc-phong-kham'){
+				$this->view->list_staff= StaffModel::find(array(
+					"conditions"	=> "status = 1",
+					"order"			=> "type_id ASC, position ASC, id ASC"
+				));
+				$list_depart = DepartmentModel::find(array('conditions' => 'status = 1 ', 'order'=> 'position ASC, id ASC',));
+				foreach ($list_depart as $key => $item) {
+					
+					$arr_category[$key] = $item->toArray();
+					$list_staff = StaffModel::find(array(
+						'conditions' 	=> 'status = 1 and department_id = :department_id:',
+						'bind'			=> array('department_id' => $item->id),
+						'order'			=> 'manager DESC, id ASC',
+					));
+					$arr_category[$key]['list_staff'] = $list_staff;
+				}
+				$this->view->arr_category = $arr_category;
+			}
 			$this->view->article 	= $item;
 			$this->view->count_item 	= $count_item->count();
 			$this->view->category = $category;

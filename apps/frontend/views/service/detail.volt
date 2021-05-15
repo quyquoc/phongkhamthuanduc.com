@@ -17,9 +17,9 @@
 	</div>
 	
 {% if list_relative is defined and list_relative is not empty %}
-	<div class="section main-content service service-list ">
+	<div class="section main-content service service-list line">
 		<div class="container">
-				<div class="box-header"><div class="box-title text-left">Các dịch vụ khác</div></div>
+				<div class="box-header"><div class="box-title">Các dịch vụ khác</div></div>
 				<div class="box-body">
 						{% for item in list_relative %}
 								{% if loop.index is divisibleby(2) %}

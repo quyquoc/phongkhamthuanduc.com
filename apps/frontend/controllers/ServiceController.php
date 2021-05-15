@@ -14,6 +14,11 @@ class ServiceController extends ControllerBase {
 	public function indexAction($code=null) {
 		$this->view->menu 	= 'dich-vu';
 		if(!empty($code)) {
+			if($code == 'kham-bao-hiem-y-te') {
+				$this->view->menu =  'kham-bao-hiem-y-te';
+				
+				$this->detail($code);
+			}
 			$this->detail($code);
 		}else{
 			$service = ServiceModel::find(array(

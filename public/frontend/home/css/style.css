@@ -1925,6 +1925,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   margin: auto;
   text-align: center;
 }
+.box-clinic .box-body .inner .item .image img {
+  max-height: 100px;
+}
 .box-clinic .box-body .inner .item .content {
   width: 100%;
 }

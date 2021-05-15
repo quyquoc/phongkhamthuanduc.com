@@ -24,7 +24,6 @@
 				<div class="container">
 					<div class="list-item">
 						<ul>
-							<li class="color-page-3">Chuyên khoa</li>
 							{% if list_depart is defined and list_depart is not empty %}
 								{% for item in list_depart %}
 									<li class="color-page {{ item.code == article.code  ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/'~item.code)}}"><img src="{{ url(item.logo_white)}}"> {{ item.title }}</a></li>

@@ -26,14 +26,14 @@
 	}
 	.inner-content {
 		position: relative;
-		background-color: rgba($color_text, 0.5);
+		background-color: rgba($color_text, 0.7);
 		padding-bottom: 40px;
 		
 		.container-wrapper {
 			position: relative;
 			width: 100%;
-			height: calc(100vh * 2/3);
-			min-height: 300px;
+			// height: calc(100vh * 2/3);
+			min-height: 240px;
 			display: flex;
 			text-align: center;
 			align-items: center;

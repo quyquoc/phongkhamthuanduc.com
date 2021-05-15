@@ -1479,14 +1479,13 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 .box-head .inner-content {
   position: relative;
-  background-color: rgba(41, 51, 46, 0.5);
+  background-color: rgba(41, 51, 46, 0.7);
   padding-bottom: 40px;
 }
 .box-head .inner-content .container-wrapper {
   position: relative;
   width: 100%;
-  height: calc(100vh * 2/3);
-  min-height: 300px;
+  min-height: 240px;
   display: flex;
   text-align: center;
   align-items: center;
@@ -3896,7 +3895,8 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   justify-content: space-between;
 }
 .clinic.clinic-detail .container .list-item {
-  width: 250px;
+  width: 300px;
+  padding: 30px 0 60px;
 }
 .clinic.clinic-detail .container .list-item ul li {
   height: 70px;
@@ -3912,10 +3912,10 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   margin-right: 10px;
 }
 .clinic.clinic-detail .container .list-item ul li:hover {
-  background-color: #367a36 !important;
+  background-color: #00cc66 !important;
 }
 .clinic.clinic-detail .container .list-item .color-page.active {
-  background-color: #367a36 !important;
+  background-color: #00cc66 !important;
 }
 .clinic.clinic-detail .container .list-item .color-page-3 {
   color: #ffffff;
@@ -3928,7 +3928,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 .clinic.clinic-detail .container .item {
   margin-top: 20px;
-  width: calc(100% - 270px);
+  width: calc(100% - 330px);
 }
 
 @media only screen and (max-width: 550px) {

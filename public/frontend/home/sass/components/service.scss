@@ -173,7 +173,8 @@
             flex-wrap: wrap;
             justify-content: space-between;
             .list-item {
-                width: 250px;
+                width: 300px;
+				padding: 30px 0 60px;
                 ul li {
                     height: 70px;
                     background-color: $color_page;
@@ -186,11 +187,11 @@
                     padding: 5px 10px;
                     img {margin-right: 10px;}
                     &:hover {
-                        background-color: rgba(54, 122, 54, 1)!important;
+                        background-color: #00cc66!important;
                     }
                 }
                 .color-page.active{
-                    background-color: rgba(54, 122, 54, 1)!important;
+                    background-color: #00cc66!important;
                 }
                 .color-page-3 {
                     color: $color_white;
@@ -204,7 +205,7 @@
             }
             .item {
                 margin-top: 20px;
-                width: calc(100% - 270px);
+                width: calc(100% - 330px);
                
             }
         }

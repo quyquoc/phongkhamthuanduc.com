@@ -17,17 +17,19 @@
 									{{ form.render('title',(['class':'form-control','data-validate-length-range':'2','placeholder':language._('title'),'required':'required'])) }}
 								</div>
 							</div>
+							{#
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('image') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('Ảnh banner') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
 									<div class="input-group">
 										{{ form.render('banner',(['class':'form-control','placeholder':language._('image'),'ondblclick':'imageManager($(this))'])) }}
 										<div class="input-group-btn">
-											<button type="button" class="btn btn-danger" onclick="imageManager($('input[name=image]'));" data-target="image" data-view="view-img">Chọn ảnh</button>
+											<button type="button" class="btn btn-danger" onclick="imageManager($('input[name=banner]'));" data-target="banner" data-view="view-img">Chọn ảnh</button>
 										</div>
 									</div>
 								</div>
 							</div>
+							#}
 							<div class="form-group">
 								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('image') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
@@ -40,23 +42,23 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('logo màu') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('Logo màu') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
 									<div class="input-group">
-										{{ form.render('logo',(['class':'form-control','placeholder':language._('image'),'ondblclick':'imageManager($(this))'])) }}
+										{{ form.render('logo',(['class':'form-control','placeholder':language._('Logo màu'),'ondblclick':'imageManager($(this))'])) }}
 										<div class="input-group-btn">
-											<button type="button" class="btn btn-danger" onclick="imageManager($('input[name=image]'));" data-target="image" data-view="view-img">Chọn ảnh</button>
+											<button type="button" class="btn btn-danger" onclick="imageManager($('input[name=logo]'));" data-target="logo" data-view="view-img">Chọn ảnh</button>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('logo trắng') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('Logo trắng') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
 									<div class="input-group">
-										{{ form.render('logo_white',(['class':'form-control','placeholder':language._('image'),'ondblclick':'imageManager($(this))'])) }}
+										{{ form.render('logo_white',(['class':'form-control','placeholder':language._('Logo trắng'),'ondblclick':'imageManager($(this))'])) }}
 										<div class="input-group-btn">
-											<button type="button" class="btn btn-danger" onclick="imageManager($('input[name=image]'));" data-target="image" data-view="view-img">Chọn ảnh</button>
+											<button type="button" class="btn btn-danger" onclick="imageManager($('input[name=logo_white]'));" data-target="logo_white" data-view="view-img">Chọn ảnh</button>
 										</div>
 									</div>
 								</div>

@@ -764,6 +764,7 @@ a.button.transparent:hover {
   padding: 0 12px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 .menunav li a {
   width: 100%;

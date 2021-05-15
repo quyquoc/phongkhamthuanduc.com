@@ -19,10 +19,10 @@ class NewsController extends ControllerBase {
 		if($category_code == 'gioi-thieu') {
 			$this->view->menu = 'gioi-thieu';
 			if(!empty($code)) {
-				$this->view->menu_lv1 = $code;
-				
 					$this->detail($code);
+					$this->view->menu_lv1 = $code;
 			}else{
+				$this->view->menu_lv1 ='gioi-thieu';
 				$this->about();
 			}
 		}
@@ -124,6 +124,11 @@ class NewsController extends ControllerBase {
 				'image'		 	=> !empty($article->seo_image) ? $article->seo_image : $article->image,
 				'url'		 	=> $this->url->get("/".$category->code."/".$article->code)
 			);
+			
+			$this->view->article 	= $article;
+			$this->view->count_item 	= $count_item->count();
+			$this->view->category = $category;
+			$this->view->menu_lv1 = $category->code;
 			if($code=='nhan-luc-phong-kham'){
 				$this->view->list_staff= StaffModel::find(array(
 					"conditions"	=> "status = 1",
@@ -142,10 +147,6 @@ class NewsController extends ControllerBase {
 				}
 				$this->view->arr_category = $arr_category;
 			}
-			$this->view->article 	= $article;
-			$this->view->count_item 	= $count_item->count();
-			$this->view->category = $category;
-			$this->view->menu_lv1 = $category->code;
 			$this->view->pick("news/detail");
 		}
 		else { $this->response->redirect(); }

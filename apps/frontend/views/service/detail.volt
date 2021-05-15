@@ -22,34 +22,34 @@
 				<div class="box-header"><div class="box-title">Các dịch vụ khác</div></div>
 				<div class="box-body">
 						{% for item in list_relative %}
-								{% if loop.index is divisibleby(2) %}
-								<div class="item reverse wow">
-									<div class="image" style="background-image: url('{{ url(item.image) }}'); align-items: initial;">
-										<img src="{{ url(item.image) }}" />
-									</div>
-									<div class="contentWrapper">
-										<div class="content">
-											<div class="title">{{item.title}}</div>
-											<div class="description">{{item.description}}</div>
-											<a  href="{{url('/dich-vu/'~ item.code)}}" class="button">Xem thêm</a>
-										</div>
-									</div>
+						{% if loop.index is divisibleby(2) %}
+						<div class="item reverse wow">
+							<div class="image" style="background-image: url('{{ item.image is not empty ?  url(item.image) : url(assets) ~ '/images/no-image.jpg' }}'); align-items: initial;">
+								<img src="{{ item.image is not empty ?  url(item.image) : url(assets) ~ '/images/no-image.jpg' }}" />
+							</div>
+							<div class="contentWrapper">
+								<div class="content">
+									<div class="title">{{item.title}}</div>
+									<div class="description">{{item.description}}</div>
+									<a  href="{{url('/dich-vu/'~ item.code)}}" class="button">Xem thêm</a>
 								</div>
-									
-								{% else %}
-								<div class="item  wow fadeInLeft">
-									<div class="contentWrapper ">
-										<div class="content">
-											<div class="title">{{item.title}}</div>
-											<div class="description">{{item.description}}</div>
-											<a  href="{{url('/dich-vu/'~item.code)}}" class="button">Xem thêm</a>
-										</div>
-									</div>
-									<div class="image" style="background-image: url('{{ url(item.image) }}'); align-items: initial;">
-										<img src="{{ url(item.image) }}" />
-									</div>
+							</div>
+						</div>
+						   
+						{% else %}
+						<div class="item  wow fadeInLeft">
+							<div class="contentWrapper ">
+								<div class="content">
+									<div class="title">{{item.title}}</div>
+									<div class="description">{{item.description}}</div>
+									<a  href="{{url('/dich-vu/'~item.code)}}" class="button">Xem thêm</a>
 								</div>
-								{% endif %}
+							</div>
+							<div class="image" style="background-image: url('{{ item.image is not empty ?  url(item.image) : url(assets) ~ '/images/no-image.jpg' }}'); align-items: initial;">
+								<img src="{{ item.image is not empty ?  url(item.image) : url(assets) ~ '/images/no-image.jpg' }}" />
+							</div>
+						</div>
+						{% endif %}
 						{% endfor %}
 				</div>
 			</div>

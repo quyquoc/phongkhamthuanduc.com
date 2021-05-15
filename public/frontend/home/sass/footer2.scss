@@ -9,11 +9,10 @@ footer.footer2 {
 			text-align: center;
 			padding: 50px 0px ;
 			display: flex;
-			// flex-wrap: wrap;
+			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: flex-start;
 			text-align: left;
-			margin: auto;
 		}
 		h3 {
 			height: 40px;
@@ -29,8 +28,9 @@ footer.footer2 {
 			margin-bottom:7px;
 		}
 		.company {
-			width: 300px;
+			width: 270px;
 			height: 150px;
+			margin: 0 30px;
 			iframe{
 				
 				width: 100%;
@@ -41,6 +41,7 @@ footer.footer2 {
 		.footer-menu {
 			width: fit-content;
 			text-align: left;
+			max-width: 400px;
 			ul li {
 				i.fa {
 					width: 20px;
@@ -51,7 +52,7 @@ footer.footer2 {
 				&:last-child{margin-bottom: 0;}
 			}
 		}
-		.fan_page { width: calc(100%/3); max-width: 350px;  margin: 0 10px;}
+		.fan_page { width: 320px;  }
 	}
 	.copyright { 
 		padding: 20px 0;
@@ -71,11 +72,10 @@ footer.footer2 {
 		.container-wrapper {
 			flex-wrap: wrap;
 		}
-		.fan_page {
-			margin: 0;
-		}
+		
 		.company { 
 			width: 100%;
+			margin: 0;
 			height: auto;
 		}
 	}

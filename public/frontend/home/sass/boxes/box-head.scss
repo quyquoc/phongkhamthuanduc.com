@@ -1,6 +1,10 @@
 .box-head {
 	&.page-home{
 		margin-top: 54px;
+		.inner-content {
+			position: relative;
+			background-color: rgba($color_text, 0.35);
+		}
 	}
 	margin-top: 1px;
 	position: relative;

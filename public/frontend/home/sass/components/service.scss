@@ -176,9 +176,9 @@
                 width: 300px;
 				padding: 30px 0 60px;
                 ul li {
-                    height: 70px;
                     background-color: $color_page;
-
+					padding: 10px;
+					border: 1px solid #01964C;
                     a{
                         color: $color_white;
                         display: flex;

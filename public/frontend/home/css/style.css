@@ -772,7 +772,7 @@ a.button.page-color:hover {
   padding: 0;
   position: relative;
   height: 100%;
-  padding: 0 12px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -1000,6 +1000,11 @@ a.button.page-color:hover {
   border-color: #E53549;
 }
 
+@media only screen and (max-width: 1180px) {
+  .menunav li {
+    padding: 0 12px;
+  }
+}
 header {
   width: 100%;
   position: relative;
@@ -1450,6 +1455,10 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .box-head.page-home {
   margin-top: 54px;
 }
+.box-head.page-home .inner-content {
+  position: relative;
+  background-color: rgba(41, 51, 46, 0.35);
+}
 .box-head .img {
   height: 100%;
 }
@@ -1857,6 +1866,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .box-contact .box-body .inner .form #appForm select option {
   background: #ffffff;
   color: #00AE57;
+}
+.box-contact .box-body .inner .form a {
+  margin-top: 20px;
 }
 .box-contact .box-body .inner .form a:hover {
   background: #3854DF;
@@ -3902,8 +3914,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   padding: 30px 0 60px;
 }
 .clinic.clinic-detail .container .list-item ul li {
-  height: 70px;
   background-color: #00AE57;
+  padding: 10px;
+  border: 1px solid #01964C;
   padding: 5px 10px;
 }
 .clinic.clinic-detail .container .list-item ul li a {
@@ -4219,10 +4232,10 @@ footer.footer2 .footer-info .container-wrapper {
   text-align: center;
   padding: 50px 0px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   text-align: left;
-  margin: auto;
 }
 footer.footer2 .footer-info h3 {
   height: 40px;
@@ -4238,8 +4251,9 @@ footer.footer2 .footer-info h4 {
   margin-bottom: 7px;
 }
 footer.footer2 .footer-info .company {
-  width: 300px;
+  width: 270px;
   height: 150px;
+  margin: 0 30px;
 }
 footer.footer2 .footer-info .company iframe {
   width: 100%;
@@ -4249,6 +4263,7 @@ footer.footer2 .footer-info .company iframe {
 footer.footer2 .footer-info .footer-menu {
   width: fit-content;
   text-align: left;
+  max-width: 400px;
 }
 footer.footer2 .footer-info .footer-menu ul li {
   line-height: 1.5;
@@ -4264,9 +4279,7 @@ footer.footer2 .footer-info .footer-menu ul li:last-child {
   margin-bottom: 0;
 }
 footer.footer2 .footer-info .fan_page {
-  width: calc(100%/3);
-  max-width: 350px;
-  margin: 0 10px;
+  width: 320px;
 }
 footer.footer2 .copyright {
   padding: 20px 0;
@@ -4288,11 +4301,9 @@ footer.footer2 .copyright a:hover {
   footer.footer2 .footer-info .container-wrapper {
     flex-wrap: wrap;
   }
-  footer.footer2 .footer-info .fan_page {
-    margin: 0;
-  }
   footer.footer2 .footer-info .company {
     width: 100%;
+    margin: 0;
     height: auto;
   }
 }

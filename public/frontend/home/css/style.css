@@ -3910,7 +3910,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 .clinic.clinic-detail .container .list-item ul li img {
   margin-right: 10px;
-  max-width: 65px;
+  max-width: 60px;
 }
 .clinic.clinic-detail .container .list-item ul li:hover {
   background-color: #00cc66 !important;

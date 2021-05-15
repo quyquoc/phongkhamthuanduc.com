@@ -18,7 +18,6 @@
 							<input type="text"  class="colum-2" name="phone"  placeholder="Điện thoại">
 							<input type="text"  class="colum-2" name="from_email"  placeholder="Email"/>
 							<select name="service" id="service" class="form-control" class=" btn-filter"  placeholder="Dịch vụ cần tư vấn">
-								<option value="Khám bảo hiểm y tế">Khám bảo hiểm y tế</option>
 								{% if list_options is defined %}
 									{% for item in list_options %}
 										<option value="{{item.title}}">{{item.title}}</option>

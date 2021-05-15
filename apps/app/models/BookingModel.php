@@ -20,6 +20,7 @@ class BookingModel extends DatatableManagerModel {
 			'from_date' 	=> 'from_date',
 			'from_time'  	=> 'from_time',
 			'department_title' => 'department_title',
+			'doctor_name' 	=> 'doctor_name',
 			'status'    	=> 'status',
 			'editor_id' 	=> 'editor_id',
 			'updated'   	=> 'updated',

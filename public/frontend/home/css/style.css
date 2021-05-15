@@ -1063,7 +1063,7 @@ header.home .header {
   box-shadow: none;
 }
 header .menunav ul.level1 {
-  top: 80px;
+  top: 100px;
 }
 header.stick {
   height: 60px;
@@ -4256,7 +4256,7 @@ footer.footer2 .footer-info h4 {
   margin-bottom: 7px;
 }
 footer.footer2 .footer-info .company {
-  width: 270px;
+  width: 330px;
   height: 170px;
   margin: 0 30px;
 }
@@ -4268,7 +4268,7 @@ footer.footer2 .footer-info .company iframe {
 footer.footer2 .footer-info .footer-menu {
   width: fit-content;
   text-align: left;
-  max-width: 400px;
+  max-width: 350px;
 }
 footer.footer2 .footer-info .footer-menu ul li {
   line-height: 1.5;
@@ -4302,13 +4302,13 @@ footer.footer2 .copyright a:hover {
   color: #00AE57;
 }
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1080px) {
   footer.footer2 .footer-info .container-wrapper {
     flex-wrap: wrap;
   }
   footer.footer2 .footer-info .company {
     width: 100%;
-    margin: 0;
+    margin: 20px 0;
     height: auto;
   }
 }

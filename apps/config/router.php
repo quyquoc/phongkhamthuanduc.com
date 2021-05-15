@@ -54,7 +54,11 @@
 			'controller'=> 'news',
 			'action' 		=> 'addItem'
 		));
-
+		$router->add('/filter', array(
+            'module' 		=> 	'frontend',
+            'controller' 	=> 	'contact',
+            'action' 		=> 	'filter',
+        ));
 		$router->add('/chuyen-khoa/:params', array(
 			'module' 		=> 'frontend',
 			'controller'	=> 'department',

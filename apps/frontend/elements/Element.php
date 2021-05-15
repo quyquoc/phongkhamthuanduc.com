@@ -147,7 +147,11 @@ class Element extends Component{
 
 	public function BoxContact($title = null) {
 		$this->view->title = $title;
-		$this->view->list_option= DepartmentModel::find(array(
+		$this->view->list_depart= DepartmentModel::find(array(
+			"conditions"	=> "status = 1",
+			"order"			=> "position ASC"
+		));
+		$this->view->list_doctor= StaffModel::find(array(
 			"conditions"	=> "status = 1",
 			"order"			=> "position ASC"
 		));

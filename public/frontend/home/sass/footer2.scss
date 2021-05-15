@@ -28,7 +28,7 @@ footer.footer2 {
 			margin-bottom:7px;
 		}
 		.company {
-			width: 270px;
+			width: 330px;
 			height: 170px;
 			margin: 0 30px;
 			iframe{
@@ -41,7 +41,7 @@ footer.footer2 {
 		.footer-menu {
 			width: fit-content;
 			text-align: left;
-			max-width: 400px;
+			max-width: 350px;
 			ul li {
 				i.fa {
 					width: 20px;
@@ -67,7 +67,7 @@ footer.footer2 {
 	}
 }
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1080px) {
 	footer.footer2 .footer-info {
 		.container-wrapper {
 			flex-wrap: wrap;
@@ -75,7 +75,7 @@ footer.footer2 {
 		
 		.company { 
 			width: 100%;
-			margin: 0;
+			margin: 20px 0;
 			height: auto;
 		}
 	}

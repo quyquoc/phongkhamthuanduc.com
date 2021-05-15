@@ -11,11 +11,19 @@
 						<div class="notice success">Thông tin đã gửi thành công!</div>
 						<div class="notice error">Lỗi! Không gửi được thông tin!</div>
 						<form name="appForm" id="appForm" method="post" action="" enctype="multipart/form-data">
-							<select name="service" id="service" class="form-control" class=" btn-filter" >
+							<select name="depart" id="depart" class="form-control" class=" btn-filter" >
 								<option value="">Chuyên khoa</option>
-								{% if list_option is defined and list_option|length > 0%}
-									{% for item in list_option %}
+								{% if list_depart is defined and list_depart|length > 0%}
+									{% for item in list_depart %}
 										<option value="{{item.title}}">{{item.title}}</option>
+									{% endfor %}
+								{% endif %}
+							</select>
+							<select name="doctor" id="doctor" class="form-control" class=" btn-filter" >
+								<option value="">Chọn bác sĩ</option>
+								{% if list_doctor is defined and list_doctor|length > 0%}
+									{% for item in list_doctor %}
+										<option value="{{item.fullname}}">{{item.fullname}}</option>
 									{% endfor %}
 								{% endif %}
 							</select>
@@ -35,6 +43,19 @@
 		</div>
 	</div>
 	<script type="text/javascript">
+		$('#depart').on('change', function(e){
+		$.ajax({
+			url: '{{url()}}/filter',
+			data:{
+				depart: $('#depart option:selected').val(),
+			},
+				success: resp => {
+					if(resp && resp.toString().trim() !==''){
+						$('#doctor').html(resp);
+					} 
+				}
+			})
+	});
 		$(".contact-form .form a.send").click(function() {
 			var param = new Object();
 			
@@ -44,7 +65,8 @@
 			param.date 	  = $(form+ ' input[name="date"]').val();
 			param.time 	  = $(form+ ' input[name="time"]').val();
 			param.from_email  = $(form+ ' input[name="from_email"]').val();
-			param.department_title = $(form+ ' select option:selected').val();
+			param.department_title = $(form+ ' #depart option:selected').val();
+			param.doctor_name = $(form+ ' #doctor option:selected').val();
 			book(form, param);
 		});
 		

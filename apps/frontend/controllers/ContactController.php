@@ -1,6 +1,8 @@
 <?php
 namespace Modules\Frontend\Controllers;
 use Modules\App\Models\ContactModel;
+use Modules\App\Models\DepartmentModel;
+use Modules\App\Models\StaffModel;
 use Modules\App\Models\BookingModel;
 class ContactController extends ControllerBase {
 
@@ -10,6 +12,21 @@ class ContactController extends ControllerBase {
 	
 	public function indexAction() {
 		$this->view->setVar('menu', 'lien-he');
+	}
+	public function filterAction() {
+		$depart = (string)$this->request->get('depart');
+		$conditions = "status = 1";
+		if(!empty($depart)){
+			$depart_found = DepartmentModel::findFirstByTitle($depart);
+			if($depart_found) {
+				$conditions = $conditions . " AND department_id = $depart_found->id";
+			}
+		}
+		$this->view->list_doctor = StaffModel::find(array(
+			"conditions" => $conditions 
+		));
+
+		$this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_ACTION_VIEW);
 	}
 	public function sendAction(){ 
 		$out = array('status'=> 'false', 'content'=>'');
@@ -66,6 +83,7 @@ class ContactController extends ControllerBase {
 				'date'				=> $this->request->getPost('date'),
 				'time'				=> $this->request->getPost('time'),
 				'department_title'	=> $this->request->getPost('department_title'),
+				'doctor_name'	=> $this->request->getPost('doctor_name'),
 			);
 
 			if(!$form_data['phone'] || empty($form_data['phone'])){
@@ -76,6 +94,7 @@ class ContactController extends ControllerBase {
 			$bookingModel->phone = $form_data['phone'];
 			$bookingModel->email = $form_data['from_email'];
 			$bookingModel->department_title = $form_data['department_title'];
+			$bookingModel->doctor_name = $form_data['doctor_name'];
 			$bookingModel->from_date = date ('Y-m-d', strtotime($form_data['date']));
 			// $bookingModel->from_time = time(' H:i:s', strtotime($form_data['time']));
 			$bookingModel->created = date('Y-m-d H:i:s');

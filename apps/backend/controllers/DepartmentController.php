@@ -33,7 +33,7 @@ class DepartmentController extends BackendController {
 			// 	//  $data['image'] = $img[$i];
 			//    }else{
 				 $item['default'] = 0;
-			   }
+			//    }
 			   $im_json[] = $item;
 			 }
 	   

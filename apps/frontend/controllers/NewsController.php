@@ -140,7 +140,7 @@ class NewsController extends ControllerBase {
 				}
 				$this->view->arr_category = $arr_category;
 			}
-			$this->view->article 	= $item;
+			$this->view->article 	= $article;
 			$this->view->count_item 	= $count_item->count();
 			$this->view->category = $category;
 			$this->view->menu_lv1 = $category->code;

@@ -1,5 +1,4 @@
 <div id="clinic-detail" class="page-clinic detail">	
-	<div class="container">
 		<div class="box box-head">
 			<div class="inner-image">
 				<div class="img">
@@ -8,13 +7,15 @@
 				</div>
 			</div>
 			<div class="inner-content">
-				<div class="container-wrapper">
-					<div class="box-body" data-aos="fade-up">
-						<h2 class="title">{{ article.title }}</h2>
+				<div class="container">
+					<div class="container-wrapper">
+					
+						<div class="box-body" data-aos="fade-up">
+							<h2 class="title">{{ article.title }}</h2>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</div> 
 
 	<div class="clinic clinic-detail">

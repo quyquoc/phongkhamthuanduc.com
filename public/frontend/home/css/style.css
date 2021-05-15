@@ -1903,7 +1903,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .box-clinic .box-body .inner .item {
   overflow: hidden;

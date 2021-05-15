@@ -4216,6 +4216,9 @@ footer.footer2 .copyright a:hover {
   }
 }
 @media only screen and (max-width: 900px) {
+  footer.footer2 .footer-info .container-wrapper {
+    padding: 5px 0 40px;
+  }
   footer.footer2 .footer-info .company {
     width: 100%;
     margin-bottom: 20px;
@@ -4237,9 +4240,6 @@ footer.footer2 .copyright a:hover {
   }
 }
 @media only screen and (max-width: 610px) {
-  footer.footer2 .footer-info .container-wrapper {
-    padding: 20px 0 40px;
-  }
   footer.footer2 .footer-info h3 {
     height: auto;
     margin: 20px 0 15px 0;

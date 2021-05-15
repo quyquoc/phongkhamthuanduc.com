@@ -39,8 +39,9 @@ class DepartmentController extends ControllerBase {
 	}
 	private function depart(){
 		$depart = DepartmentModel::find(array(
-			"conditions" => "status",
+			"conditions" => "status = 1",
 			"order"		 => "id ASC",
+			
 		));
 		$this->view->list_depart = $depart;
 	

@@ -3923,6 +3923,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   color: #ffffff;
   display: flex;
   align-items: center;
+  min-height: 50px;
 }
 .clinic.clinic-detail .container .list-item ul li img {
   margin-right: 10px;

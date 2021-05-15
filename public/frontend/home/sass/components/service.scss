@@ -179,11 +179,12 @@
                     background-color: $color_page;
 					padding: 10px;
 					border-bottom: 1px solid #01964C;
-					
+
                     a{
                         color: $color_white;
                         display: flex;
                         align-items: center;
+						min-height: 50px;
                     }
                     padding: 5px 10px;
                     img {margin-right: 10px; max-width: 60px;}

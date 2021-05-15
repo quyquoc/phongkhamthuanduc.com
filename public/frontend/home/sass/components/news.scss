@@ -84,6 +84,9 @@
 	.news.news-list .item {
 		box-shadow: none;
 		background-color: $color_white;
+		.description {
+			display: none;
+		}
 	}
 	
 }

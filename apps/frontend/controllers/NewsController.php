@@ -88,6 +88,8 @@ class NewsController extends ControllerBase {
 	}
 
 	private function about() {
+		$this->view->ton_chi = NewsArticleModel::findFirstByCode('ton-chi-phong-kham');
+		$this->view->lich_su = NewsArticleModel::findFirstByCode('lich-su-hinh-thanh');
 		$album = ImageAlbumModel::findFirstByCode('chung-chi');
 		$this->view->certificate = ImageModel::find(array(
 			"conditions" => "status = 1 and album_id = {$album->id}",

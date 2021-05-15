@@ -29,8 +29,8 @@ footer.footer2 {
 			margin-bottom:7px;
 		}
 		.company {
-			width: 200px;
-			text-align: center;
+			width: 300px;
+			height: 185px;
 			padding-top: 5px;
 			iframe{
 				
@@ -41,7 +41,6 @@ footer.footer2 {
 		}
 		.footer-menu {
 			text-align: left;
-			width: calc(100%/3*2 - 200px);
 			ul li {
 				i.fa {
 					width: 20px;
@@ -52,7 +51,7 @@ footer.footer2 {
 				&:last-child{margin-bottom: 0;}
 			}
 		}
-		.fan_page { width: calc(100%/3); max-width: 300px; }
+		.fan_page { width: calc(100%/3); max-width: 350px;  margin: 0 10px;}
 	}
 	.copyright { 
 		padding: 20px 0;
@@ -67,22 +66,24 @@ footer.footer2 {
 	}
 }
 
-@media only screen and (max-width: 1165px) {
-	footer.footer2 .footer-info .footer-menu ul li {
-		margin-bottom: 20px;
+@media only screen and (max-width: 11650px) {
+	footer.footer2 .footer-info {
+		.fan_page {
+			margin: 0;
+		}
+		.company { 
+			width: 100%;
+			margin-top: 20px;
+		}
 	}
 }
 @media only screen and (max-width: 900px) {
 	footer.footer2 {
 		.footer-info {
 			.container-wrapper{
-				padding: 5px 0 40px;
+				padding: 5px 0 10px;
 			}
-			.company { 
-				width: 100%;
-				margin-bottom: 20px;
-				img {margin-top: 0;}
-			}
+			
 			h3{height: auto; margin: 20px 0 15px 0;} 
 			.footer-menu { 
 				width: 55%;

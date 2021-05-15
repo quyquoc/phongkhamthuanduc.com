@@ -81,17 +81,12 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="education">{{ language._('education') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="education">{{ language._('Nội dung') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
 									{{ form.render('education',(['class':'form-control'])) }}
 								</div>
 							</div>
-							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="experience">{{ language._('experience') }}</label>
-								<div class="col-md-10 col-sm-10 col-xs-12">
-									{{ form.render('experience',(['class':'form-control'])) }}
-								</div>
-							</div>
+						
 						</div>
 					</div>
 				</div>
@@ -117,11 +112,5 @@
 		filebrowserImageUploadUrl   : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')}}",
 		filebrowserFlashUploadUrl   : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash')}}",
 	});
-	CKEDITOR.replace('experience',
-	{
-		filebrowserBrowseUrl        : "{{url('/library/ckfinder/ckfinder.html')}}",
-		filebrowserUploadUrl        : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",
-		filebrowserImageUploadUrl   : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')}}",
-		filebrowserFlashUploadUrl   : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash')}}",
-	});
 </script>
+

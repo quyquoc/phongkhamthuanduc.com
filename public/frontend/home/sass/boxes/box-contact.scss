@@ -1,15 +1,20 @@
 .box-contact{
-    background-image: url('../images/img-contact.jpg');
+    // background-image: url('../images/img-contact.jpg');
     position: relative;
-    padding: 10px 0;
     background-color: $color_page;
     background-position: center right;
     background-repeat: no-repeat;
     background-size: 50%;
     .box-body{
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
         .inner{
-            width: 100%;
+            width: 50%;
+            max-width: calc(1170px/2);
+            margin-left: auto;
+            padding: 0 10px;
             .box-title{
                 color: $color_white;
             }
@@ -67,24 +72,33 @@
             flex-wrap: wrap;
             align-items: center;
             .contact-form {
-                width: calc(50% - 30px);
-                margin-left: 0;
+                // width: calc(50% - 30px);
+                // margin-left: 0;
             }   
+        }
+        .box-video {
+            width: 50%;
+            iframe{
+                height: 100%;
+                width: 100%;
+            }
         }
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
     .box-contact{
-        background-image: none;
-      
         .box-body{
             .inner{
+                width: 100%;
                 .contact-form {
                     width: calc(100%);
                     max-width: 500px;
                     margin:auto;
                 }   
+            }
+            .box-video {
+                width: 100%;
             }
         }
     }

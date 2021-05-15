@@ -78,9 +78,6 @@
 {% if arr_category is defined and arr_category | length > 0 %}
 	<div class="section box box-column-1x3 page-staff">
 		<div class="container">
-			<div class="box-header wow fadeInUp">
-				<h1 class="box-title">Đội ngũ bác sĩ</h1>
-			</div>
 				{% for item in arr_category %}
 				{% if item['list_staff'] and item['list_staff'] | length > 0 %}
 					<h1 class="box-title-2 text-left">{{item['title']}}</h1>
@@ -104,6 +101,9 @@
 											{% if item_p.email is not empty %}
 											<a href="mailto:{{item_p.email}}"><i class="fa fa-envelope"></i></a>
 											{% endif %}
+										</div>
+										<div class="content">
+											{{ item_p.education }}
 										</div>
 									</div>
 								</div>

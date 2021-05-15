@@ -16,7 +16,7 @@
                         <p>cho cả gia đình</p>
                         <div class="bottom">
                             <a href="{{url('/chuyen-khoa')}}" class="button">Chuyên khoa</a>
-                            <a href="javasript:void(0);" onclick="popRegis()" class="button transparent">Đặt lịch tư vấn</a>
+                            <a href="javasript:void(0);" onclick="popRegis()" class="button page-color">Đặt lịch tư vấn</a>
                         </div>
                     </div>
                 </div>

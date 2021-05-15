@@ -61,6 +61,14 @@ a.button {
       border-color: $color_page_1;
     }
   }
+  &.page-color{
+    background-color: rgba($color_page, 1);
+    border: 1px solid $color_page;
+    &:hover {
+      background-color: rgba($color_page_1, 1);
+      border-color: $color_page_1;
+    }
+  }
 }
 .bg-page {
   background-color: #f7fafd;
@@ -147,7 +155,8 @@ a.button {
     color: $color_page_1
   }
   &.text-color-page3 {
-    color: $color_page_3
+    color: $color_page_3;
+    text-transform: uppercase;
   }
 }
 .line {border-top: 1px solid rgba(#000, 0.1);}

@@ -16,8 +16,9 @@
 			width: 50%;
 			.content { padding:20px ;&.pleft {padding-left: 0;} &.pright {padding-right: 0;}}
 			p { margin-bottom: 20px; }
+			a {margin-bottom: 20px; display: block;}
 		}
-		&.revire {
+		&.revise {
 			flex-wrap: wrap-reverse;
 		}
 	}
@@ -103,6 +104,9 @@
 @media only screen and (max-width: 900px) {
 	.box-about {
 		.box-body {
+			&.revise{
+				margin-top: 20px;
+			}
 			.image {
 				width: 100%;
 				max-width: 700px;

@@ -8,7 +8,7 @@
 		<div class="content">
 			<div class="published">{{ date('d-m-Y', strtotime(item.published)) }}</div>
 			<h4 class="title"><a href="{{ link }}" title="{{ item.title }}">{{ item.title }}</a></h4>
-			{#<div class="description">{{ item.description }}</div>#}
+			<div class="description">{{ item.description }}</div>
 		</div>
 	</div>
 </div>

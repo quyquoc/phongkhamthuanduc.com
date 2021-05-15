@@ -46,6 +46,11 @@
 		}
 		.description {
 			padding: 20px 10px 30px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 5;
+			-webkit-box-orient: vertical;
 		}
 		.name {
 			color: $color_page;

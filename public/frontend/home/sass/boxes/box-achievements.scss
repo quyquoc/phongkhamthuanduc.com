@@ -16,7 +16,7 @@
 			align-items: center;
 			justify-content: center;
 			span {
-				font-size: 60px;
+				font-size: 40px;
 				font-weight: 900;
 				position: relative;
 				&::after{
@@ -42,17 +42,9 @@
 	}
 }
 
-// @media only screen and (max-width: 1000px) {
-// 	.box-achievements .contentWrapper .item {
-// 		width: calc(100% / 2);
-// 	}
-// }
-// @media only screen and (max-width: 500px) {
-// 	.box-achievements .contentWrapper .item {
-// 		width: calc(100%);
-// 		.image {
-// 			width: 30%;
-// 			padding-top: 30%;
-// 		}
-// 	}
-// }
+@media only screen and (max-width: 860px) {
+	.box-achievements .box-body {
+		max-width:  550px;
+		margin: auto;
+	}
+}

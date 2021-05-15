@@ -12,7 +12,7 @@
 							{% for item in list_depart %}
 								<li class="item wow zoomIn" data-type="image">
 									<div class="img">
-										<a class="image" href="{{ url('/chuyen-khoa/'~item.code) }}" style="background-image: url('{{ item.image is not empty ? url(item.image) : assets ~'/images/no-image.jpg'}}')">
+										<a class="image" href="{{ url('/chuyen-khoa/'~item.code) }}" style="background-image: url('{{ item.image is not empty ? url(item.image) : assets ~'/images/img-contact.jpg'}}')">
 										</a>
 									</div>
 									<a class="overlay" href="{{ url('/chuyen-khoa/'~item.code) }}"> {{item.title}}

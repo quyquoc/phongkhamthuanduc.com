@@ -63,7 +63,7 @@
 			
 			p{margin-bottom: 40px;font-size: 49px;color: $color_white; font-weight: 200;}
 			.bottom {
-				a{margin-left: 0; margin-right: 20px; margin-bottom: 20px; border: 1px solid $color_page_1; &:hover {border-color: $color_page; background-color: $color_page;} }
+				a{margin-left: 0; margin-right: 20px; margin-bottom: 20px;}
 				display: flex; flex-wrap: wrap;
 			}
 		}

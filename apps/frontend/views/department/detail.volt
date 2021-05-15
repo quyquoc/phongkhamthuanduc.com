@@ -2,7 +2,7 @@
 		<div class="box box-head">
 			<div class="inner-image">
 				<div class="img">
-					<div class="slide-banner" style="background-image: url('{{ url(article.banner) }}');">
+					<div class="slide-banner" style="background-image: url('{{ url(assets)~'/images/bg-home.png' }}');">
 					</div>
 				</div>
 			</div>

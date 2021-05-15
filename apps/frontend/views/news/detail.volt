@@ -82,10 +82,11 @@
 				<h1 class="box-title">Đội ngũ bác sĩ</h1>
 			</div>
 				{% for item in arr_category %}
+				{% if item['list_staff'] and item['list_staff'] | length > 0 %}
 					<h1 class="box-title-2 text-left">{{item['title']}}</h1>
 					<div class="box-body">
 						<div class="inner">
-						{% if item['list_staff'] and item['list_staff'] | length > 0 %}
+					
 							{% for item_p in item['list_staff'] %}
 								<div class="item wow fadeInUp">
 									<div class="content">
@@ -107,9 +108,10 @@
 									</div>
 								</div>
 							{% endfor %}
-						{% endif %}
+						
 						</div>
 					</div>
+					{% endif %}
 				{% endfor %}
 		</div>
 	</div>

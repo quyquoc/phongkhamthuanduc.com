@@ -1723,9 +1723,6 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 
 @media only screen and (max-width: 900px) {
-  .box-about .box-body {
-    flex-direction: column;
-  }
   .box-about .box-body .image {
     width: 100%;
     max-width: 700px;

@@ -7,12 +7,15 @@
 			<div class="review-slide">
 				{% for item in list_review %}
 					<div class="item">
-						{% set lnk_avatar = url(item.avatar ? item.avatar : '/favicon.png')  %}
-					<div class="img"><div class="avatar" style="background-image: url('{{ lnk_avatar }}');"><img src="{{ lnk_avatar }}"></div></div>	
-						<p class="description">{{ item.description }}</p>
-						<p class="name">{{ item.name }} </p>
-						<p class="pos">{{ item.info }} </p>
-					</div>
+						<div class="inner">
+							{% set lnk_avatar = url(item.avatar ? item.avatar : '/favicon.png')  %}
+							<div class="img"><div class="avatar" style="background-image: url('{{ lnk_avatar }}');"><img src="{{ lnk_avatar }}"></div></div>	
+								<p class="description">{{ item.description }}</p>
+								<p class="name">{{ item.name }} </p>
+								<p class="pos">{{ item.info }} </p>
+							</div>
+						</div>
+						
 				{% endfor %}
 			</div>
 		</div>

@@ -10,6 +10,11 @@
 		max-width: 900px;
 		margin: auto;
 		text-align: center;
+		.inner {
+			max-width: 620px;
+			margin: auto;
+			padding: 0 10px;
+		}
 		.img{
 			width: 130px;
 			border: 1px solid $color_page_1;
@@ -44,11 +49,12 @@
 		}
 		.name {
 			color: $color_page;
-			font-weight: 600;
+			font-weight: 700;
+			font: optional;font-size: 20px;
 			margin-bottom: 10px;
 		}
 		.pos {
-			color: $color_page;
+			color: rgba($color_page,0.9);
 			font-weight: 400;
 		}
 	}

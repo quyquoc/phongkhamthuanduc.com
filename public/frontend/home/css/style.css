@@ -3105,6 +3105,11 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   margin: auto;
   text-align: center;
 }
+.box-testimonial .review-slide .inner {
+  max-width: 620px;
+  margin: auto;
+  padding: 0 10px;
+}
 .box-testimonial .review-slide .img {
   width: 130px;
   border: 1px solid #E53549;
@@ -3138,11 +3143,13 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 .box-testimonial .review-slide .name {
   color: #00AE57;
-  font-weight: 600;
+  font-weight: 700;
+  font: optional;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 .box-testimonial .review-slide .pos {
-  color: #00AE57;
+  color: rgba(0, 174, 87, 0.9);
   font-weight: 400;
 }
 

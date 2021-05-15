@@ -7,8 +7,8 @@
                           {% for item in list_item %}
                                 {% if loop.index is divisibleby(2) %}
                                 <div class="item reverse wow">
-                                    <div class="image" style="background-image: url('{{ url(item.image) }}'); align-items: initial;">
-                                        <img src="{{ url(item.image) }}" />
+                                    <div class="image" style="background-image: url('{{ item.image is not empty ?  url(item.image) : url(assets) ~ '/images/no-image.jpg' }}'); align-items: initial;">
+                                        <img src="{{ item.image is not empty ?  url(item.image) : url(assets) ~ '/images/no-image.jpg' }}" />
                                     </div>
                                     <div class="contentWrapper">
                                         <div class="content">
@@ -28,8 +28,8 @@
                                             <a  href="{{url('/dich-vu/'~item.code)}}" class="button">Xem thêm</a>
                                         </div>
                                     </div>
-                                    <div class="image" style="background-image: url('{{ url(item.image) }}'); align-items: initial;">
-                                        <img src="{{ url(item.image) }}" />
+                                    <div class="image" style="background-image: url('{{ item.image is not empty ?  url(item.image) : url(assets) ~ '/images/no-image.jpg' }}'); align-items: initial;">
+                                        <img src="{{ item.image is not empty ?  url(item.image) : url(assets) ~ '/images/no-image.jpg' }}" />
                                     </div>
                                 </div>
                                 {% endif %}

@@ -17,6 +17,9 @@
 			.content { padding:20px ;&.pleft {padding-left: 0;} &.pright {padding-right: 0;}}
 			p { margin-bottom: 20px; }
 		}
+		&.revire {
+			flex-wrap: wrap-reverse;
+		}
 	}
 	&.reason {
 		position: relative;

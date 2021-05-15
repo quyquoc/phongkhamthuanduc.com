@@ -1631,6 +1631,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .box-about .box-body .contentWrapper p {
   margin-bottom: 20px;
 }
+.box-about .box-body.revire {
+  flex-wrap: wrap-reverse;
+}
 .box-about.reason {
   position: relative;
   background-repeat: no-repeat;

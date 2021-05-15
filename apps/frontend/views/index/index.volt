@@ -2,7 +2,7 @@
 <div class="box box-head page-home">
     <div class="inner-image">
         <div class="img">
-            <div class="slide-banner" style="background-image: url('{{ assets }}/images/bg-home.jpg');">
+            <div class="slide-banner" style="background-image: url('{{ url( Ohi.sysConfig('banner-lon',true ,'image'))}}');">
             </div>
         </div>
     

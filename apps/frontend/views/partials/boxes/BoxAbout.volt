@@ -15,6 +15,8 @@
 				<div class="image wow fadeInUp" style="background-image: url('{{ url(lich_su.image) }} ');">
 					<img src="{{ url(lich_su.image) }}" />
 				</div>
+			</div>
+			<div class="box-body revire">
 				<div class="image wow fadeInUp" style="background-image: url('{{ url(ton_chi.image) }} ');">
 					<img src="{{ url(ton_chi.image) }}" />
 				</div>

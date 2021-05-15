@@ -3931,6 +3931,10 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   width: calc(100% - 330px);
 }
 
+.page-clinic .box-head .box-body .title {
+  font-size: 40px;
+}
+
 @media only screen and (max-width: 550px) {
   .service .box-body .item.reverse {
     background: #E7E9EC;
@@ -3998,6 +4002,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   .clinic.clinic-detail .container .list-item {
     width: 82px;
   }
+  .clinic.clinic-detail .container .list-item span {
+    display: none;
+  }
 }
 @media only screen and (max-width: 700px) {
   .ablumn .modulecontent .item {
@@ -4010,6 +4017,10 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   }
   .clinic.clinic-detail .container .list-item {
     width: 100%;
+    padding-bottom: 0;
+  }
+  .clinic.clinic-detail .container .list-item span {
+    display: initial;
   }
 }
 @media only screen and (max-width: 500px) {

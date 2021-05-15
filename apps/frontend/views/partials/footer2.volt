@@ -8,7 +8,7 @@
 						<li><i class="fa fa-map-marker"></i> 85 Nguyễn Huệ, phường Vĩnh Ninh, thành phố Huế, Thừa Thiên Huế</li>
 						<li><i class="fa  fa-phone"></i> <a href="tel:02343833888">0234 3833 888</a></li>
 						<li><i class="fa fa-envelope-o"></i><a href="mailto:pkthuanduc@gmail.com">pkthuanduc@gmail.com</a></li>
-						<li><i class="fa fa-file-o"></i>07386/HCM-GPHĐ cấp ngày 25/01/2010 tại Sở Y tế TP. Huế.</li>
+						<li><i class="fa fa-file-o"></i>{{ Ohi.sysConfig('giay-phep',true)}}.</li>
 					</ul>
 				</div>
 				<div class="company wow fadeInUp">

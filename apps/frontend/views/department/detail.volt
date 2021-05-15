@@ -26,7 +26,7 @@
 						<ul>
 							{% if list_depart is defined and list_depart is not empty %}
 								{% for item in list_depart %}
-									<li class="color-page {{ item.code == article.code  ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/'~item.code)}}"><img src="{{ url(item.logo_white)}}"> {{ item.title }}</a></li>
+									<li class="color-page {{ item.code == article.code  ? 'active':'' }}"><a href="{{ url('/chuyen-khoa/'~item.code)}}"><img src="{{ url(item.logo_white)}}"> <span>{{ item.title }}</span></a></li>
 								{% endfor %}
 							{% endif %}
 						</ul>

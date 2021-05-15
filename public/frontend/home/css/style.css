@@ -1921,6 +1921,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .box-clinic .box-body .inner .item .image {
   width: 100%;
   padding: 0;
+  max-height: 100px;
   margin: auto;
   text-align: center;
 }

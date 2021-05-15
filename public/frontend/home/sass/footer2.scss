@@ -9,7 +9,7 @@ footer.footer2 {
 			text-align: center;
 			padding: 50px 0px ;
 			display: flex;
-			flex-wrap: wrap;
+			// flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: flex-start;
 			text-align: left;
@@ -40,6 +40,7 @@ footer.footer2 {
 			}
 		}
 		.footer-menu {
+			width: fit-content;
 			text-align: left;
 			ul li {
 				i.fa {
@@ -66,8 +67,11 @@ footer.footer2 {
 	}
 }
 
-@media only screen and (max-width: 11650px) {
+@media only screen and (max-width: 1150px) {
 	footer.footer2 .footer-info {
+		.container-wrapper {
+			flex-wrap: wrap;
+		}
 		.fan_page {
 			margin: 0;
 		}

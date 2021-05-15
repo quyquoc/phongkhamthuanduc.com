@@ -4203,7 +4203,6 @@ footer.footer2 .footer-info .container-wrapper {
   text-align: center;
   padding: 50px 0px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   text-align: left;
@@ -4233,6 +4232,7 @@ footer.footer2 .footer-info .company iframe {
   min-height: 170px;
 }
 footer.footer2 .footer-info .footer-menu {
+  width: fit-content;
   text-align: left;
 }
 footer.footer2 .footer-info .footer-menu ul li {
@@ -4269,7 +4269,10 @@ footer.footer2 .copyright a:hover {
   color: #00AE57;
 }
 
-@media only screen and (max-width: 11650px) {
+@media only screen and (max-width: 1150px) {
+  footer.footer2 .footer-info .container-wrapper {
+    flex-wrap: wrap;
+  }
   footer.footer2 .footer-info .fan_page {
     margin: 0;
   }

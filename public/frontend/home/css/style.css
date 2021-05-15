@@ -347,6 +347,7 @@ a.button.page-color:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-transform: uppercase;
 }
 .box-title.text-left {
   margin-left: 0;
@@ -361,7 +362,6 @@ a.button.page-color:hover {
 }
 .box-title.text-color-page3 {
   color: #3854DF;
-  text-transform: uppercase;
 }
 
 .line {
@@ -3618,6 +3618,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 }
 .news.news-detail .box-header .box-title {
   line-height: 1.2;
+  text-transform: none;
 }
 
 .box-news {

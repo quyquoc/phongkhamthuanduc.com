@@ -19,32 +19,32 @@ class DepartmentController extends BackendController {
 			$model->status = 1;
 
 			 //IMGS UPDATE
-			 $is     = $this->request->getPost("is"); // kiem tra co check default
-			 $img    = $this->request->getPost("img"); // mang image
+			//  $is     = $this->request->getPost("is"); // kiem tra co check default
+			//  $img    = $this->request->getPost("img"); // mang image
 			
-			 $ch         = 0;
-			 $im_json    = array();
+			//  $ch         = 0;
+			//  $im_json    = array();
 	   
-			 for ($i = 0; $i < count($img) ; $i++) {
-			   $item['src'] = $img[$i];
-			   if($img[$i] == $is){
-				 $ch = 1;
-				 $item['default'] = 1;
-				 $data['image'] = $img[$i];
-			   }else{
-				 $item['default'] = 0;
-			   }
-			   $im_json[] = $item;
-			 }
+			//  for ($i = 0; $i < count($img) ; $i++) {
+			//    $item['src'] = $img[$i];
+			//    if($img[$i] == $is){
+			// 	 $ch = 1;
+			// 	 $item['default'] = 1;
+			// 	 $data['image'] = $img[$i];
+			//    }else{
+			// 	 $item['default'] = 0;
+			//    }
+			//    $im_json[] = $item;
+			//  }
 	   
-			 if(!empty($im_json) && $ch == 0){
-			   $im_json[0]['default']  = 1;
-			   $data['image']          = $im_json[0]['src'];
-			 }
+			//  if(!empty($im_json) && $ch == 0){
+			//    $im_json[0]['default']  = 1;
+			//    $data['image']          = $im_json[0]['src'];
+			//  }
 	   
-			 $js_img = json_encode($im_json);
-			 $model->imgs  = $js_img;
-			 $model->image = !empty($data['image']) ? $data['image'] : null;
+			//  $js_img = json_encode($im_json);
+			//  $model->imgs  = $js_img;
+			//  $model->image = !empty($data['image']) ? $data['image'] : null;
 	   
 		  return $model;
 		});

@@ -27,13 +27,13 @@ class DepartmentController extends BackendController {
 	   
 			 for ($i = 0; $i < count($img) ; $i++) {
 			   $item['src'] = $img[$i];
-			//    if($img[$i] == $is){
-			// 	 $ch = 1;
-			// 	 $item['default'] = 1;
-			// 	//  $data['image'] = $img[$i];
-			//    }else{
+			   if($img[$i] == $is){
+				 $ch = 1;
+				 $item['default'] = 1;
+				 $data['image'] = $img[$i];
+			   }else{
 				 $item['default'] = 0;
-			//    }
+			   }
 			   $im_json[] = $item;
 			 }
 	   
@@ -44,7 +44,7 @@ class DepartmentController extends BackendController {
 	   
 			 $js_img = json_encode($im_json);
 			 $model->imgs  = $js_img;
-			 $model->image = !empty($data['image']) ? $data['image'] : null;
+			//  $model->image = !empty($data['image']) ? $data['image'] : null;
 	   
 		  return $model;
 		});

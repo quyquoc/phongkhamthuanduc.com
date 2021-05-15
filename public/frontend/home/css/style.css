@@ -3916,7 +3916,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .clinic.clinic-detail .container .list-item ul li {
   background-color: #00AE57;
   padding: 10px;
-  border: 1px solid #01964C;
+  border-bottom: 1px solid #01964C;
   padding: 5px 10px;
 }
 .clinic.clinic-detail .container .list-item ul li a {

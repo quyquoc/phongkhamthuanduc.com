@@ -3725,6 +3725,10 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   margin-left: 0;
   margin-right: auto;
 }
+.service .box-body .item.reverse .button {
+  margin-right: auto;
+  margin-left: 0;
+}
 .service .box-body .image {
   width: calc(50% - 15px);
   text-align: center;
@@ -3886,6 +3890,10 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   .service .box-body .image {
     width: 100%;
     padding-top: calc(100% * 9/16);
+  }
+  .service .box-body .content .button {
+    margin-left: 0;
+    margin-right: auto;
   }
   .service .box-body .contentWrapper {
     width: 100%;

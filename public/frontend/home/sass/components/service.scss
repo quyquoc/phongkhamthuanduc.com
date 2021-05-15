@@ -42,6 +42,11 @@
 					// 	margin-left: 0px;
 					// }
 				}
+				.button {
+					margin-right: auto;
+					margin-left: 0;
+
+				}
 			}
 		}
 		
@@ -208,6 +213,10 @@
             width: 100%;
             padding-top: calc(100% * 9/16);
         }
+		.content .button {
+			margin-left: 0;
+			margin-right: auto;
+		}
         .contentWrapper {
             width: 100%;
             .content {
@@ -216,6 +225,7 @@
                 .button-3 {
                     display: none;
                     // margin: 10px auto!important;
+				
                 }
             } 
         }

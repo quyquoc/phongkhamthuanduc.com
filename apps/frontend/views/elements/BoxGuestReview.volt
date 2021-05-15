@@ -2,7 +2,7 @@
 	<section class="section box box-testimonial">
 		<div class="container">
 			<div class="box-header">
-				<h1 class="box-title">Khách hàng đánh giá</h1>
+				<h1 class="box-title">Khách hàng nhận xét</h1>
 			</div>
 			<div class="review-slide">
 				{% for item in list_review %}

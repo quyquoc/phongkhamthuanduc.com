@@ -1643,6 +1643,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   justify-content: flex-end;
   color: #ffffff;
 }
+.box-about.reason .box-body .contentWrapper .content {
+  padding: 0;
+}
 .box-about.reason .box-body .contentWrapper ul {
   padding-left: 20px;
 }

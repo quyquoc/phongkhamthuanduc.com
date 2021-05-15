@@ -222,9 +222,12 @@ class Element extends Component{
 			}
 		}else {
 			$this->view->title = "Tin mới nhất";
-			
+			$category_code = NewsCategoryModel::findFirst(array(
+				'conditions'	=> 'code = :code: and status = 1',
+				'bind'				=> array('code'=>'gioi-thieu')
+			));
 			$list_item = NewsArticleModel::find(array(
-				"conditions" =>"status = 1",
+				"conditions" =>"status = 1 and category_id != $category_code->id",
 				"order"		 => "published DESC , created DESC",
 				"limit"		=> 6
 			));

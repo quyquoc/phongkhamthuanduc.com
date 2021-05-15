@@ -30,6 +30,9 @@
 			justify-content: flex-end;
 			color: $color_white;
 			.contentWrapper {
+				.content {
+					padding: 0;
+				}
 				ul{
 					padding-left: 20px;
 					li {

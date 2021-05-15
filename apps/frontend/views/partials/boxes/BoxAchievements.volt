@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="container-wrapper">
 			<div class="box-header wow fadeInUp">
-				<h1 class="box-title text-left text-color-page3">Thành tựu đạt được</h1>
+				<h1 class="box-title text-color-page3">Thành tựu đạt được</h1>
 			</div>
 			<div class="box-body">
 				<div class="item wow fadeInUp">

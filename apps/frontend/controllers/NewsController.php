@@ -147,6 +147,10 @@ class NewsController extends ControllerBase {
 				}
 				$this->view->arr_category = $arr_category;
 			}
+			if($category->code == "huong-dan") {
+				$this->view->menu = 'kham-bao-hiem-y-te';
+				$this->view->menu_lv1 = $article->code;
+			}
 			$this->view->pick("news/detail");
 		}
 		else { $this->response->redirect(); }

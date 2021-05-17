@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="module">
 				<div class="box-header"><h1 class="box-title">{{ article.title }}</h1></div>
-				{% if category.code != 'gioi-thieu' %}
+				{% if category.code != 'gioi-thieu' and  category.code != 'huong-dan' %}
 				<div class="social-date">
 					<div class="fblike">
 						<div class="fb-like" data-href="{{ url('/' ~ article.category_code ~ '/' ~ article.code) }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 	</div>
-	{% if category.code != 'gioi-thieu' %}
+	{% if category.code != 'gioi-thieu' and  category.code != 'huong-dan' %}
 		{% if list_relative is defined and list_relative is not empty %}
 			<div class="box box-relative">
 				<div class="container">	

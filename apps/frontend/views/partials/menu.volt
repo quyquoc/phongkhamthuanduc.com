@@ -15,7 +15,10 @@
 	<li class="{{ menu is defined and menu == 'dich-vu' ? 'active' : '' }}"><a href="{{ url('/dich-vu') }}">Dịch vụ <i class="fa fa-angle-down"></i></a>
 		{{ element.LevelMenu('dich-vu') }}
 	</li>
-	<li class="{{ menu is defined and menu == 'kham-bao-hiem-y-te' ? 'active' : '' }}"><a href="{{ url('/dich-vu/kham-bao-hiem-y-te') }}">Khám BHYT</a></li>
+	<li class="{{ menu is defined and menu == 'kham-bao-hiem-y-te' ? 'active' : '' }}"><a href="{{ url('/dich-vu/kham-bao-hiem-y-te') }}">Khám BHYT <i class="fa fa-angle-down"></i></a>
+	
+		{{ element.LevelMenu('huong-dan') }}
+	</li>
 	<li class="{{ menu is defined and menu == 'tin-tuc' ? 'active' : '' }}"><a href="{{ url('/tin-tuc') }}">Tin tức <i class="fa fa-angle-down"></i> </a>
 		{{element.NewsMenuWithCategory('tin-tuc')}}	
 	</li>

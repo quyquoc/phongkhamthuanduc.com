@@ -303,7 +303,7 @@ class Element extends Component{
 			));
 			$list_menu = $service;
 		}
-		elseif($option =='gioi-thieu') {
+		elseif($option =='huong-dan') {
 			$category = NewsCategoryModel::findFirstByCode($option);
 			$artical = NewsArticleModel::find(array(
 				"conditions"	=> "status = 1 and category_id = $category->id",

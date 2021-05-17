@@ -61,7 +61,7 @@ class BookingModel extends DatatableManagerModel {
 			),
 			array (
 				'name'		=> 'b@from_date',
-				'label' 	=> 'Ngày ở',
+				'label' 	=> 'Ngày hẹn',
 				'width'		=> '100px',
 				'filter'	=> array(
 					'type' 	=> 'text'

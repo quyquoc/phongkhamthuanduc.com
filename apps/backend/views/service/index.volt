@@ -29,32 +29,15 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="gallery">{{ language._('Thư viện ảnh') }}</label>
-								<div class="col-md-10 col-sm-10 col-xs-12">
-									<div class="panel-body">
-										<div id="multi_upload_images" class="col-md-12 col-sm-12 col-xs-12 dropzone dz-clickable dz-started">
-											{% if model is defined and model.imgs is not empty and model.imgs != '[]' %}
-												{% set imgs = model.imgs | json_decode %}
-												{% if imgs is iterable and imgs|length > 0 %}
-													{% for i in imgs %}
-														<div class="dz-preview dz-error">
-															<input type="hidden" name="img[]" value="{{i.src}}" />
-															<input class="radi" type="radio" {{ i.default == 1 ? 'checked' : '' }} value="{{i.src}}" name="is" >
-															<div class="dz-image">
-																<img data-dz-thumbnail="" alt="" src="{{i.src}}">
-															</div>  
-														</div>
-													{% endfor %}
-												{% endif %}
-											{% endif %}
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
 								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="description">{{ language._('description') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
 									{{ form.render('description',(['class':'form-control'])) }}
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="description">{{ language._('content') }}</label>
+								<div class="col-md-10 col-sm-10 col-xs-12">
+									{{ form.render('content',(['class':'form-control'])) }}
 								</div>
 							</div>
 						</div>
@@ -183,6 +166,13 @@
 	});
 
 	CKEDITOR.replace('description',
+	{
+		filebrowserBrowseUrl        : "{{url('/library/ckfinder/ckfinder.html')}}",
+		filebrowserUploadUrl        : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",
+		filebrowserImageUploadUrl   : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')}}",
+		filebrowserFlashUploadUrl   : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash')}}",
+	});
+	CKEDITOR.replace('content',
 	{
 		filebrowserBrowseUrl        : "{{url('/library/ckfinder/ckfinder.html')}}",
 		filebrowserUploadUrl        : "{{url('/library/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",

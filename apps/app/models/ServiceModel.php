@@ -18,6 +18,7 @@ class ServiceModel extends DatatableManagerModel {
 			'category_id'       => 'category_id', 
 			'code'      		=> 'code', 
 			'description'   	=> 'description',
+			'content'   		=> 'content',
 			'featured'      	=> 'featured',
 			'image'         	=> 'image',
 			'imgs'         		=> 'imgs',

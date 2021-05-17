@@ -35,6 +35,12 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label class="control-label col-md-2 col-sm-2 col-xs-12">{{ language._('Bác sỹ') }}</label>
+								<div class="col-md-10 col-sm-10 col-xs-12">
+									{{ form.render('doctor_name',(['class':'form-control'])) }}
+								</div>
+							</div>
+							<div class="form-group">
 								<label class="control-label col-md-2 col-sm-2 col-xs-12">{{ language._('Ngày hẹn') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
 									{{ form.render('from_date',(['class':'form-control','placeholder':language._('Ngày hẹn')])) }}

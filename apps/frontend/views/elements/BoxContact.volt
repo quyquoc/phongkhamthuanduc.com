@@ -1,4 +1,4 @@
-<div class="box box-contact">
+<div id ="element" class="box box-contact">
 	<div class="container-wrapper">
 		<div class="box-body">
 			<div class="inner">
@@ -32,7 +32,7 @@
 							<input type="text"  class="colum-2" name="from_email"  placeholder="Email"/>
 							<input type="text"  class="colum-2" name="date" data-provide="datepicker"  placeholder="Ngày hẹn"/>
 							<!-- <input type="text"  class="colum-2" name="time"  data-provide="timepicker"   placeholder="Giờ hẹn"/> -->
-							<a class="button send" title="Gửi yêu cầu!" href="javascript:void(0)">Đặt lịch tư vấn!</a>
+							<a class="button sended" title="Gửi yêu cầu!" href="javascript:void(0)">Đặt lịch tư vấn!</a>
 						</form>
 					</div>
 				</div>
@@ -56,10 +56,10 @@
 				}
 			})
 	});
-		$(".contact-form .form a.send").click(function() {
+		$("#element .form a.sended").click(function() {
 			var param = new Object();
 			
-			form 			= ".contact-form .form";
+			form 			= "#element .form";
 			param.fullname  = $(form+ ' input[name="fullname"]').val();
 			param.phone 	= $(form+ ' input[name="phone"]').val();
 			param.date 	  = $(form+ ' input[name="date"]').val();

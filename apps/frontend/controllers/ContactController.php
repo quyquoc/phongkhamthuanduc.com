@@ -96,14 +96,12 @@ class ContactController extends ControllerBase {
 			$bookingModel->department_title = $form_data['department_title'];
 			$bookingModel->doctor_name = $form_data['doctor_name'];
 			$bookingModel->from_date = date ('Y-m-d', strtotime($form_data['date']));
-			// $bookingModel->from_time = time(' H:i:s', strtotime($form_data['time']));
 			$bookingModel->created = date('Y-m-d H:i:s');
 			if(!$bookingModel->save()){
 				throw new \Exception("Lỗi! Vui lòng gửi lại");
 			}
 			$form_data['subject'] = "Thông tin đặt hẹn khám từ {$this->config->website}";
 			if($this->send_mail($form_data)) {
-				// $this->send_telegram($form_data);
 				$out['status'] = 'true';
 				$out['content'] = $this->view->getRender('contact', 'mail',
 					array(),

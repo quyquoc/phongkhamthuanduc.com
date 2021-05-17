@@ -19,6 +19,7 @@ class ServiceForm extends Form {
 		
 		$this->add(new Text("image"));
 		$this->add(new TextArea("description"));
+		$this->add(new TextArea("content"));
 
 		// Config tab
 		$this->add(new Text("code"));

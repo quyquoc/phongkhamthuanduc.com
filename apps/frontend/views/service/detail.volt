@@ -8,6 +8,7 @@
 					<div class="item">
 						<div class="content-detail">
 							<div class="description">{{ article.description }}</div>
+							<div class="content">{{ article.content }}</div>
 						</div>
 					</div>
 					<a  onclick="getOption('{{article.title}}');popRegis()" href="javascript:void(0)" class="button">Liên hệ tư vấn</a>

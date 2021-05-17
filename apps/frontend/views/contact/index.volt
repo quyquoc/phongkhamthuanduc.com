@@ -27,14 +27,14 @@
 </div>
 
 <script>
-  $(".contact .contact-form a.send").click(function() {
+  $("#contact .contact-form a.send").click(function() {
     var param = new Object();
-        form              = ".contact .contact-form ";
-        param.fullname    = $(form+' input[name="fullname"]').val();
-        param.phone       = $(form+' input[name="phone"]').val();
-        param.from_email  = $(form+' input[name="from_email"]').val();
-        param.content     = $(form+' textarea[name="content"]').val();
-        send_contact(form, param);
+        form_contact              = "#contact .form ";
+        param.fullname    = $(form_contact+' input[name="fullname"]').val();
+        param.phone       = $(form_contact+' input[name="phone"]').val();
+        param.from_email  = $(form_contact+' input[name="from_email"]').val();
+        param.content     = $(form_contact+' textarea[name="content"]').val();
+        send(form_contact, param);
   });
 </script> 
 <div class="map">

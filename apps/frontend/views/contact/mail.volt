@@ -29,11 +29,11 @@
 		{% if data['department_title'] is defined and data['department_title'] is not empty %}
 			<p>Khoa: {{ data["department_title"] }}</p>
 		{% endif %}
-		{% if data['date'] is defined and data['date'] is not empty %}
-			<p>Ngày hẹn: {{ data["date"] }}</p>
+		{% if data['doctor_name'] is defined and data['doctor_name'] is not empty %}
+			<p>Bác sỹ: {{ data["doctor_name"] }}</p>
 		{% endif %}
-		{% if data['time'] is defined and data['time'] is not empty %}
-			<p>Giờ: {{ data["time"] }}</p>
+		{% if data['from_date'] is defined and data['from_date'] is not empty %}
+			<p>Giờ: {{ data["from_date"] }}</p>
 		{% endif %}
 		{% if data['content'] is defined and data['content'] is not empty %}
 			<p>Nội dung: {{ data["content"] }}</p>

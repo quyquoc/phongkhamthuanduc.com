@@ -47,41 +47,41 @@ function action_page() {
 	}
 }
 
-function send_contact(form, param) {
+function send(form_contact, param) {
 
 	var uri = url + '/gui-lien-he';
 	var email_regex = /^([a-zA-Z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 
 	if(param.fullname == "") {
-		$(form + ' input[name="fullname"]').addClass('error');
-		$(form + ' input[name="fullname"]').focus();
+		$(form_contact + ' input[name="fullname"]').addClass('error');
+		$(form_contact + ' input[name="fullname"]').focus();
 		return false;
 	}else{
-		$(form + ' input[name="fullname"]').removeClass('error');
+		$(form_contact + ' input[name="fullname"]').removeClass('error');
 	}
 	if(param.phone == "") {
-		$(form + ' input[name="phone"]').addClass('error');
-		$(form + ' input[name="phone"]').focus();
+		$(form_contact + ' input[name="phone"]').addClass('error');
+		$(form_contact + ' input[name="phone"]').focus();
 		return false;
 	}else{
-		$(form + ' input[name="phone"]').removeClass('error');
+		$(form_contact + ' input[name="phone"]').removeClass('error');
 	}
-	$(form + ' #loading').fadeIn('fast');
+	$(form_contact + ' #loading').fadeIn('fast');
 	$.post(uri, param, function(data){
-		console.log(data.status);
+		console.log('fone1');
 		if(data.status && data.status === "true") {
 
-			$(form + ' #loading').fadeOut('fast');
+			$(form_contact + ' #loading').fadeOut('fast');
 			if($('#tracking').html() == "") {
 				$('#tracking').html(data.content);
 			}
-			$(form + " .notice.success").html("Gửi thành công");
-			$(form + " .notice.success").slideDown('slow').delay(3000).slideUp('slow');
-			clear_form(form);
+			$(form_contact + " .notice.success").html("Gửi thành công");
+			$(form_contact + " .notice.success").slideDown('slow').delay(3000).slideUp('slow');
+			clear_form(form_contact);
 		} else {
-			$(form + ' #loading').fadeOut('fast');
-			$(form + " .notice.error").html(data.content);
-			$(form + " .notice.error").slideDown('slow').delay(3000).slideUp('slow');
+			$(form_contact + ' #loading').fadeOut('fast');
+			$(form_contact + " .notice.error").html(data.content);
+			$(form_contact + " .notice.error").slideDown('slow').delay(3000).slideUp('slow');
 		}
 	}, 'json');
 }

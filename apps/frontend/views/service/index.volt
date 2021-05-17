@@ -13,7 +13,7 @@
                                     <div class="contentWrapper">
                                         <div class="content">
                                             <a href="{{url('/dich-vu/'~item.code)}}" class="title">{{item.title}}</a>
-                                            <div class="description">{{item.description}}</div>
+                                            <div class="description">{{  item.description | striptags }}</div>
                                             <a  href="{{url('/dich-vu/'~ item.code)}}" class="button">Xem thêm</a>
                                         </div>
                                     </div>
@@ -24,7 +24,7 @@
                                     <div class="contentWrapper ">
                                         <div class="content">
                                             <a  href="{{url('/dich-vu/'~item.code)}}"  class="title">{{item.title}}</a>
-                                            <div class="description">{{item.description}}</div>
+                                            <div class="description">{{ item.description | striptags }}</div>
                                             <a  href="{{url('/dich-vu/'~item.code)}}" class="button">Xem thêm</a>
                                         </div>
                                     </div>

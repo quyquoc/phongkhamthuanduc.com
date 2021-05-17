@@ -95,37 +95,38 @@
 				{% if role=="full" or in_array('testimonial', role) %}
 					<li class="{{ (dispatcher.getControllerName() in ['testimonial']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/testimonial/index','<i class="fa fa-thumbs-o-up"></i>' ~ language._('Ý kiến đánh giá')) }}</li>
 				{% endif %}
-		  <!-- Member -->
-				{% if role=="full" or in_array('member', role) or in_array('permission-group', role) or in_array('permission-privilege', role) or in_array('permission-group-privilege', role) %}
-					<li class="treeview{{ (dispatcher.getControllerName() in ['member', 'permission-group', 'permission-privilege', 'permission-group-privilege']) ? ' active' : '' }}">
-						<a href="#">
-						<i class="fa fa-user"></i> <span>{{ language._('member') }}</span>
-						<span class="pull-right-container">
-							<i class="fa fa-angle-left pull-right"></i>
-						</span>
-						</a>
-						<ul class="treeview-menu">
-						{% if role=="full" or in_array('member', role) %}
-							<li class="{{ (dispatcher.getControllerName() in ['member']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/member/index', '<i class="fa fa-circle-o"></i>' ~ language._('member')) }}</li>
-						{% endif %}
-						{% if role=="full" or in_array('permission-group', role) %}
-							<li class="{{ (dispatcher.getControllerName() in ['permission-group']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/permission-group/index', '<i class="fa fa-circle-o"></i> Nhóm quyền') }}</li>
-						{% endif %}
-						{% if role=="full" or in_array('permission-privilege', role) %}
-							<li class="{{ (dispatcher.getControllerName() in ['permission-privilege']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/permission-privilege/index', '<i class="fa fa-circle-o"></i>' ~ language._('privilege')) }}</li>
-						{% endif %}
-						{% if role=="full" or in_array('permission-group-privilege', role) %}
-							<li class="{{ (dispatcher.getControllerName() in ['permission-group-privilege']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/permission-group-privilege/index', '<i class="fa fa-circle-o"></i>' ~ language._('permission')) }}</li>
-						{% endif %}
-						</ul>
-					</li>
-				{% endif %}
-	
+
 			{% if role=="full" or in_array('sys-config', role) %}
 				<li class="{{ (dispatcher.getControllerName() in ['sys-config']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/sys-config/index','<i class="fa fa-globe"></i>' ~ language._('Thông tin website')) }}</li>
 			{% endif %}
+					  <!-- Member -->
+					  {% if role=="full" or in_array('member', role) or in_array('permission-group', role) or in_array('permission-privilege', role) or in_array('permission-group-privilege', role) %}
+					  <li class="treeview{{ (dispatcher.getControllerName() in ['member', 'permission-group', 'permission-privilege', 'permission-group-privilege']) ? ' active' : '' }}">
+						  <a href="#">
+						  <i class="fa fa-cog"></i> <span>{{ language._('Quản trị hệ thống') }}</span>
+						  <span class="pull-right-container">
+							  <i class="fa fa-angle-left pull-right"></i>
+						  </span>
+						  </a>
+						  <ul class="treeview-menu">
+						  {% if role=="full" or in_array('member', role) %}
+							  <li class="{{ (dispatcher.getControllerName() in ['member']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/member/index', '<i class="fa fa-circle-o"></i>' ~ language._('member')) }}</li>
+						  {% endif %}
+						  {% if role=="full" or in_array('permission-group', role) %}
+							  <li class="{{ (dispatcher.getControllerName() in ['permission-group']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/permission-group/index', '<i class="fa fa-circle-o"></i> Nhóm quyền') }}</li>
+						  {% endif %}
+						  {% if role=="full" or in_array('permission-privilege', role) %}
+							  <li class="{{ (dispatcher.getControllerName() in ['permission-privilege']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/permission-privilege/index', '<i class="fa fa-circle-o"></i>' ~ language._('privilege')) }}</li>
+						  {% endif %}
+						  {% if role=="full" or in_array('permission-group-privilege', role) %}
+							  <li class="{{ (dispatcher.getControllerName() in ['permission-group-privilege']) ? 'active' : '' }}">{{ link_to(define.backend ~ '/permission-group-privilege/index', '<i class="fa fa-circle-o"></i>' ~ language._('permission')) }}</li>
+						  {% endif %}
+						  </ul>
+					  </li>
+				  {% endif %}
+	  
 			<!-- Data -->
-			<li class="{{ (dispatcher.getControllerName() in ['data']) ? 'active' : '' }}"><a onclick="open_ckfinder();"><i class="fa fa-floppy-o"></i><span>{{ language._('resource') }}</a></span></li>
+			{#<li class="{{ (dispatcher.getControllerName() in ['data']) ? 'active' : '' }}"><a onclick="open_ckfinder();"><i class="fa fa-floppy-o"></i><span>{{ language._('resource') }}</a></span></li>#}
 
 		</ul>
 	</section>

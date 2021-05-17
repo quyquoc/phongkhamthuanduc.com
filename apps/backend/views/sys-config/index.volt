@@ -22,9 +22,15 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="control-label col-md-2 col-sm-2 col-xs-12" for="data">{{ language._('data') }} <span class="required">*</span></label>
+							<label class="control-label col-md-2 col-sm-2 col-xs-12" for="data">{{ language._('data') }}</label>
 							<div class="col-md-10 col-sm-10 col-xs-12">
 								{{ form.render('data',(['class':'form-control'])) }}
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-2 col-sm-2 col-xs-12" for="data">{{ language._('description') }} </label>
+							<div class="col-md-10 col-sm-10 col-xs-12">
+								{{ form.render('description',(['class':'form-control'])) }}
 							</div>
 						</div>
 						<div class="form-group">

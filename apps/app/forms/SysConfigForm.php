@@ -19,11 +19,7 @@ class SysConfigForm extends Form {
 		$code = new Text("code");
 		$code->addValidator(new PresenceOf());
 		$this->add($code);
-		
-		$data = new TextArea("data");
-		$data->addValidator(new PresenceOf());
-		$this->add($data);
-		
+		$this->add(new TextArea("data"));
 		$this->add(new Text("description"));
 		$this->add(new Text("image"));
 		$this->add(new Text("link"));

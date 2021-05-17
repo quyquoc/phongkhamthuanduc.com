@@ -42,10 +42,10 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('Icon màu') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('Icon trang chủ') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
 									<div class="input-group">
-										{{ form.render('logo',(['class':'form-control','placeholder':language._('Icon màu'),'ondblclick':'imageManager($(this))'])) }}
+										{{ form.render('logo',(['class':'form-control','placeholder':language._('Icon trang chủ'),'ondblclick':'imageManager($(this))'])) }}
 										<div class="input-group-btn">
 											<button type="button" class="btn btn-danger" onclick="imageManager($('input[name=logo]'));" data-target="logo" data-view="view-img">Chọn ảnh</button>
 										</div>
@@ -53,10 +53,10 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('Icon trắng') }}</label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="status">{{ language._('Icon menu') }}</label>
 								<div class="col-md-10 col-sm-10 col-xs-12">
 									<div class="input-group">
-										{{ form.render('logo_white',(['class':'form-control','placeholder':language._('Icon trắng'),'ondblclick':'imageManager($(this))'])) }}
+										{{ form.render('logo_white',(['class':'form-control','placeholder':language._('Icon menu'),'ondblclick':'imageManager($(this))'])) }}
 										<div class="input-group-btn">
 											<button type="button" class="btn btn-danger" onclick="imageManager($('input[name=logo_white]'));" data-target="logo_white" data-view="view-img">Chọn ảnh</button>
 										</div>

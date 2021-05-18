@@ -73,7 +73,7 @@
         <div class="container">
             <div class="box-header wow fadeInUp">
                 <h1 class="box-title">Chuyên khoa</h1>
-                <p>{{Ohi.sysConfig('introduction',true)}}</p>
+                <p>{{Ohi.sysConfig('gioi-thieu-chuyen-khoa',true)}}</p>
             </div>
             <div class="box-body">
                 <div class="inner">

@@ -33,7 +33,7 @@
 			<p>Bác sỹ: {{ data["doctor_name"] }}</p>
 		{% endif %}
 		{% if data['from_date'] is defined and data['from_date'] is not empty %}
-			<p>Giờ: {{ data["from_date"] }}</p>
+			<p>Ngày: {{ data["from_date"] }}</p>
 		{% endif %}
 		{% if data['content'] is defined and data['content'] is not empty %}
 			<p>Nội dung: {{ data["content"] }}</p>

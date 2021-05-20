@@ -80,8 +80,7 @@ class ContactController extends ControllerBase {
 				'fullname'			=> $this->request->getPost('fullname'),
 				'phone'				=> $this->request->getPost('phone'),
 				'from_email'		=> $this->request->getPost('from_email'),
-				'date'				=> $this->request->getPost('date'),
-				'time'				=> $this->request->getPost('time'),
+				'from_date'			=> $this->request->getPost('date'),
 				'department_title'	=> $this->request->getPost('department_title'),
 				'doctor_name'	=> $this->request->getPost('doctor_name'),
 			);
@@ -95,7 +94,7 @@ class ContactController extends ControllerBase {
 			$bookingModel->email = $form_data['from_email'];
 			$bookingModel->department_title = $form_data['department_title'];
 			$bookingModel->doctor_name = $form_data['doctor_name'];
-			$bookingModel->from_date = date ('Y-m-d', strtotime($form_data['date']));
+			$bookingModel->from_date = date ('Y-m-d', strtotime($form_data['from_date']));
 			$bookingModel->created = date('Y-m-d H:i:s');
 			if(!$bookingModel->save()){
 				throw new \Exception("Lỗi! Vui lòng gửi lại");

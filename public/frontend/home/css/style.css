@@ -3969,39 +3969,6 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   font-size: 40px;
 }
 
-@media only screen and (max-width: 550px) {
-  .service .box-body .item.reverse {
-    background: #E7E9EC;
-  }
-  .service .box-body .item.reverse .content {
-    text-align: center;
-    padding-right: 20px;
-  }
-  .service .box-body .image {
-    width: 100%;
-    padding-top: calc(100% * 9/16);
-  }
-  .service .box-body .content .button {
-    margin-left: 0;
-    margin-right: auto;
-  }
-  .service .box-body .contentWrapper {
-    width: 100%;
-  }
-  .service .box-body .contentWrapper .content {
-    padding: 0 20px;
-    text-align: center;
-  }
-  .service .box-body .contentWrapper .content .button-3 {
-    display: none;
-  }
-
-  .clinic .modulecontent ul.da-thumbs li {
-    display: block;
-    width: calc(100%);
-    margin: 0 0 20px;
-  }
-}
 .ablumn .modulecontent h2 {
   width: 100%;
   margin-top: -25px;
@@ -4051,10 +4018,43 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   }
   .clinic.clinic-detail .container .list-item {
     width: 100%;
+    display: none;
     padding-bottom: 0;
   }
   .clinic.clinic-detail .container .list-item span {
     display: initial;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .service .box-body .item.reverse {
+    background: #E7E9EC;
+  }
+  .service .box-body .item.reverse .content {
+    text-align: center;
+    padding: 0 15px;
+  }
+  .service .box-body .image {
+    width: 100%;
+    padding-top: calc(100% * 9/16);
+  }
+  .service .box-body .item .content .button {
+    margin: 20px auto;
+  }
+  .service .box-body .contentWrapper {
+    width: 100%;
+  }
+  .service .box-body .contentWrapper .content {
+    padding: 0 20px;
+    text-align: center;
+  }
+  .service .box-body .contentWrapper .content .button-3 {
+    display: none;
+  }
+
+  .clinic .modulecontent ul.da-thumbs li {
+    display: block;
+    width: calc(100%);
+    margin: 0 0 20px;
   }
 }
 @media only screen and (max-width: 500px) {

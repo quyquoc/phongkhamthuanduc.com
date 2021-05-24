@@ -31,13 +31,14 @@
                 <div class="box-header">
                     <h1 class="box-title text-left">Giờ mở cửa</h1>
                 </div>
-                <div class="date"><p class="left">Thứ 2 - thứ 6</p><p class="right">7:00 - 18:00</p></div>
-                <div class="date"><p class="left">Thứ 7</p><p class="right">7:00 - 17:30</p></div>
-                <div class="date"><p class="left">Chủ nhật</p><p class="right">7:00 - 17:30</p></div>
+                <p class="left">{{ Ohi.sysConfig('weekdays',true, 'description')}}:</p>
+                <div class="date">{{ Ohi.sysConfig('weekdays',false)}}</div>
+                <p class="left">{{ Ohi.sysConfig('weekend',true, 'description')}}:</p>
+                <div class="date">{{ Ohi.sysConfig('weekend',false)}}</div>
             </div>
             <div class="inner">
                 <div class="box-header">
-                    <h1 class="box-title text-left">Trường hợp khẩn cấp</h1>
+                    <h1 class="box-title">Trường hợp khẩn cấp</h1>
                 </div>
                <a class="hot" href="tel:02343833888"> <img src="{{assets}}/images/telephone-handle-silhouette.svg"> 0234 3833 888</a>
                <p>{{ Ohi.sysConfig('truong-hop-khan-cap',true)}}</p>

@@ -1709,9 +1709,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   background-size: cover;
 }
 .box-about-2 .box-body {
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
-  padding: 50px 70px;
+  padding: 50px 60px;
   background: #FFFFFF;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -1719,8 +1719,8 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   justify-content: space-between;
 }
 .box-about-2 .box-body .inner {
-  width: calc(50% - 10px);
-  max-width: 400px;
+  width: calc(60% - 10px);
+  max-width: 500px;
 }
 .box-about-2 .box-body .inner .date {
   display: flex;
@@ -1728,8 +1728,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   justify-content: space-between;
   margin-bottom: 15px;
 }
-.box-about-2 .box-body .inner .date .right {
-  text-align: right;
+.box-about-2 .box-body .inner .date .color {
   color: #00AE57;
 }
 .box-about-2 .box-body .inner .date:last-child {
@@ -1738,13 +1737,18 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .box-about-2 .box-body .inner .hot {
   font-size: 35px;
   display: flex;
+  justify-content: center;
   color: #29332E;
+  margin-bottom: 30px;
 }
 .box-about-2 .box-body .inner p {
-  text-align: left;
+  text-align: center;
 }
 .box-about-2 .box-body .inner:first-child {
-  max-width: 270px;
+  width: calc(40%);
+}
+.box-about-2 .box-body .inner:first-child p {
+  text-align: left;
 }
 
 @media only screen and (max-width: 900px) {
@@ -1771,7 +1775,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
     margin-top: -100px;
   }
   .box-about-2 .box-body {
-    padding: 30px 40px;
+    padding: 30px 30px;
   }
   .box-about-2 .box-body .box-header {
     margin-bottom: 15px;
@@ -1786,8 +1790,12 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
     max-width: 100%;
   }
   .box-about-2 .box-body .inner:first-child {
+    width: 100%;
     max-width: 400px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+  }
+  .box-about-2 .box-body .inner:first-child .box-title.text-left {
+    margin-left: auto;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -1799,6 +1807,11 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   }
   .box-about-2 .box-body .inner .hot {
     font-size: 29px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .box-about-2 .box-header .box-title {
+    font-size: 19px;
   }
 }
 .box-contact {

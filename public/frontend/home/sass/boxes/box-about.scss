@@ -87,14 +87,17 @@
 				flex-wrap: wrap;
 				justify-content: space-between;
 				.color{ color: $color_page}
-				margin-bottom: 15px;&:last-child{margin-bottom: 0;}
+				margin: 10px 0 20px;&:last-child{margin-bottom: 0;}
 			}
 			.hot{
-				font-size: 35px;
-				display: flex;
-				justify-content: center;
-				color: $color_text;
-				margin-bottom: 30px;
+				p{
+					font-size: 30px;
+					display: flex;
+					justify-content: center;
+					color: $color_text;
+				}
+				
+				margin-bottom: 20px;
 			}
 			p{text-align: center;}
 			&:first-child{width: calc(40%); p{text-align: left;}}

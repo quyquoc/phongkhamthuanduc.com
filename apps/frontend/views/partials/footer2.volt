@@ -6,7 +6,7 @@
 					<h3>Phòng Khám Thuận Đức</h3>
 					<ul class="ul">
 						<li><i class="fa fa-map-marker"></i> 85 Nguyễn Huệ, phường Vĩnh Ninh, thành phố Huế, Thừa Thiên Huế</li>
-						<li><i class="fa  fa-phone"></i> <a href="tel:02343833888">0234 3833 888</a></li>
+						<li><i class="fa  fa-phone"></i> <a href="tel:02343833888">0234 3833 888</a> -  <a href="tel:02343818184">0234 3818 184</a></li>
 						<li><i class="fa fa-envelope-o"></i><a href="mailto:pkthuanduc@gmail.com">pkthuanduc@gmail.com</a></li>
 						<li><i class="fa fa-file-o"></i>{{ Ohi.sysConfig('giay-phep',true) }}</li>
 					</ul>

@@ -2,7 +2,7 @@
 	<div class="top-head">
 		<div class="container">
 			<p>Phòng khám đa khoa Thuận Đức</p>
-			<a href="tel:02343833888"><img src="{{assets}}/images/phone.svg" alt=""> 0234 3833 888</a>
+			<p><img src="{{assets}}/images/phone.svg" alt=""><a href="tel:02343833888"> 0234 3833 888</a><span>-</span><a href="tel:02343818184">0234 3818 184</a></p>
 		</div>
 	</div>
 	<div class="header">

@@ -1029,12 +1029,17 @@ header .top-head .container {
   display: flex;
   justify-content: space-between;
 }
-header .top-head .container a {
+header .top-head .container p {
   display: flex;
-  color: #ffffff;
   align-items: center;
 }
-header .top-head .container a img {
+header .top-head .container p a {
+  color: #ffffff;
+}
+header .top-head .container p span {
+  margin: 0 4px;
+}
+header .top-head .container p img {
   margin-right: 10px;
 }
 header .header {
@@ -1726,7 +1731,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin: 10px 0 20px;
 }
 .box-about-2 .box-body .inner .date .color {
   color: #00AE57;
@@ -1735,11 +1740,13 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   margin-bottom: 0;
 }
 .box-about-2 .box-body .inner .hot {
-  font-size: 35px;
+  margin-bottom: 20px;
+}
+.box-about-2 .box-body .inner .hot p {
+  font-size: 30px;
   display: flex;
   justify-content: center;
   color: #29332E;
-  margin-bottom: 30px;
 }
 .box-about-2 .box-body .inner p {
   text-align: center;

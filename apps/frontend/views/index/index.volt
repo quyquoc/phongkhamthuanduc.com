@@ -40,7 +40,7 @@
                 <div class="box-header">
                     <h1 class="box-title">Trường hợp khẩn cấp</h1>
                 </div>
-               <a class="hot" href="tel:02343833888"> <img src="{{assets}}/images/telephone-handle-silhouette.svg"> 0234 3833 888</a>
+               <div class="hot">{{ Ohi.sysConfig('hotline',false)}}</div>
                <p>{{ Ohi.sysConfig('truong-hop-khan-cap',true)}}</p>
             </div>
 		</div>

@@ -10,7 +10,7 @@ header {
     padding: 15px 0; 
     background: $color_page;
     color: $color_white;
-    .container {display: flex; justify-content: space-between; a{display: flex; color:$color_white; align-items: center; img{margin-right: 10px;}}}
+    .container {display: flex; justify-content: space-between; p{display: flex; a{color:$color_white;} span {margin: 0 4px} align-items: center; img{margin-right: 10px;}}}
   }
   .header {
     width: 100%;

@@ -24,7 +24,7 @@
   attribution=setup_tool
   color="blue"
   theme_color="#0062C4"
-  page_id="Pqt55g81hhebjw"
+  page_id="460404587404194"
   greeting_dialog_display="hide"
   logged_in_greeting="Tôi có thể giúp gì cho bạn?"
   logged_out_greeting="Tôi có thể giúp gì cho bạn?">

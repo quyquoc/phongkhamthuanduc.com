@@ -35,7 +35,7 @@
                 <div class="date">{{ Ohi.sysConfig('weekdays',false)}}</div>
                 <p class="left">{{ Ohi.sysConfig('weekend',true, 'description')}}:</p>
                 <div class="date">{{ Ohi.sysConfig('weekend',false)}}</div>
-                <a href="javasript:void(0);" onclick="popRegis()" class="button page-color margin-left">Đặt lịch tư vấn</a>
+                <a href="#element"  class="button page-color margin-left">Đặt lịch tư vấn</a>
             </div>
             <div class="inner">
                 <div class="box-header">

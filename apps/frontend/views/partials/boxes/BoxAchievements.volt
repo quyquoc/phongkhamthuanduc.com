@@ -14,21 +14,21 @@
 				</div>
 				<div class="item wow fadeInUp">
 					<div class="inner">
-						<span class="counterup" data-count="5186">0</span>
-						<h4><strong>Bệnh nhân</strong><br>hài lòng</h4>
+						<span class="counterup" data-count="10000">0</span>
+						<h4><strong>Lượt bệnh nhân</strong><br>hài lòng</h4>
 					</div>
 					
 				</div>
 				<div class="item wow fadeInUp">
 					<div class="inner">
-						<span class="counterup" data-count="10">0</span>
+						<span class="counterup" data-count="12">0</span>
 						<h4><strong>Phòng chức năng</strong><br>hiện đại</h4>
 					</div>
 					
 				</div>
 				<div class="item wow fadeInUp">
 					<div class="inner">
-						<span class="counterup" data-count="22">0</span>
+						<span class="counterup" data-count="18">0</span>
 						<h4><strong>Bác sĩ</strong><br>tay nghề cao</h4>
 					</div>
 					

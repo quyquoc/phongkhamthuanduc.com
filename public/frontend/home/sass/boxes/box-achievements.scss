@@ -19,6 +19,11 @@
 				font-size: 40px;
 				font-weight: 900;
 				position: relative;
+				width: fit-content;
+				justify-content: center;
+				display: flex;
+				align-items: center;
+				margin: auto;
 				&::after{
 					position: absolute;
 					bottom: 0px;

@@ -14,7 +14,7 @@
 				</div>
 				<div class="item wow fadeInUp">
 					<div class="inner">
-						<span class="counterup" data-count="10000">0</span>
+						<span><p class="counterup" data-count="10000">0</p>+</span> 
 						<h4><strong>Lượt bệnh nhân</strong><br>hài lòng</h4>
 					</div>
 					

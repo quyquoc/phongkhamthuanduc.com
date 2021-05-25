@@ -1811,6 +1811,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
   .box-about-2 .box-body .inner:first-child .box-title.text-left {
     margin-left: auto;
   }
+  .box-about-2 .box-body .inner .button.margin-left {
+    margin: auto;
+  }
 }
 @media only screen and (max-width: 500px) {
   .box-about-2 .box-header .box-title {

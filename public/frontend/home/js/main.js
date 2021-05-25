@@ -30,8 +30,8 @@ $(document).ready(function(){
 });
 
 function action_page() {
-	// $top_height = $('header').height();
-	$top_height = 0;
+	$top_height = $('.top-head').height();
+	// $top_height = 0;
 	if($(window).scrollTop() > $top_height){
 		$('header').addClass('stick');
 		$('.main_menu').addClass('stick');
@@ -135,6 +135,7 @@ function clear_book(form = '') {
 	$(form + ' input[name="fullname"]').val('');
 	$(form + ' input[name="from_email"]').val('');
 	$(form + ' input[name="phone"]').val('');
+	$(form + '#time option:selected').val('');
 }
 function clear_form(form = '') {
 	$(form + ' input[name="fullname"]').val('');

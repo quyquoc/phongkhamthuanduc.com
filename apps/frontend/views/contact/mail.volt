@@ -35,6 +35,9 @@
 		{% if data['from_date'] is defined and data['from_date'] is not empty %}
 			<p>Ngày: {{ data["from_date"] }}</p>
 		{% endif %}
+		{% if data['from_time'] is defined and data['from_time'] is not empty %}
+			<p>Giờ: {{ data["from_time"] }}</p>
+		{% endif %}
 		{% if data['content'] is defined and data['content'] is not empty %}
 			<p>Nội dung: {{ data["content"] }}</p>
 		{% endif %}

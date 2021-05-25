@@ -28,13 +28,14 @@
 	{{ stylesheet_link("/library/font-awesome-4.7.0/css/font-awesome.min.css") }}
 	{{ stylesheet_link("/library/fancybox-master/dist/jquery.fancybox.css") }}
 	{{ stylesheet_link("/library/bootstrap-4.3.1/css/bootstrap.min.css") }}
+	{{ stylesheet_link("/library/bootstrap/css/bootstrap-datetimepicker.min.css") }}
 	{{ stylesheet_link("/library/animate/animate.css") }}
 	{{ stylesheet_link(assets_dir ~ "/css/component.css") }}
 	{{ stylesheet_link(assets_dir ~ "/css/style.css") }}
 	<script type="text/javascript">var url = "{{ url() }}";</script>
 	{{ javascript_include("/library/jQuery/jquery-3.4.1.min.js") }}
 	{{ javascript_include("/library/datepicker/bootstrap-datepicker.js") }}
-	{{ javascript_include("/library/timepicker/bootstrap-timepicker.js") }}
+	{{ javascript_include("/library/bootstrap/js/bootstrap-datetimepicker.min.js") }}
 	{{ javascript_include("/library/fancybox-master/dist/jquery.fancybox.js") }}
 	{{ javascript_include("/library/bootstrap-4.3.1/js/bootstrap.min.js") }}
 	{{ javascript_include("/frontend/home/js/modernizr.custom.js") -}}

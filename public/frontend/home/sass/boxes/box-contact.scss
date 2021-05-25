@@ -23,6 +23,7 @@
                 #appForm{
                     display: flex;
                     flex-wrap: wrap;
+                    justify-content: space-between;
                     width: 100%;
                     .colum-2{
                         width:100%;
@@ -42,6 +43,9 @@
                         }
                         &.error {
                             border-color: $color_page_1;
+                        }
+                        &.date {
+                            width: calc(50% - 10px);
                         }
                     }
                     select {
@@ -64,6 +68,9 @@
                             color: $color_page;
                            
                         }
+                        &.date {
+                            width: calc(50% - 10px);
+                        }
                     }
                 }
                 a{margin-top: 20px;}
@@ -72,10 +79,6 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            .contact-form {
-                // width: calc(50% - 30px);
-                // margin-left: 0;
-            }   
         }
         .box-video {
             width: 50%;

@@ -30,8 +30,19 @@
 							<input type="text"  class="colum-2" name="fullname"  placeholder="Họ tên"/>
 							<input type="text"  class="colum-2" name="phone"  placeholder="Điện thoại">
 							<input type="text"  class="colum-2" name="from_email"  placeholder="Email"/>
-							<input type="text"  class="colum-2" name="date" data-provide="datepicker"  placeholder="Ngày hẹn"/>
-							<!-- <input type="text"  class="colum-2" name="time"  data-provide="timepicker"   placeholder="Giờ hẹn"/> -->
+							<input type="text"  class="colum-2 date" name="date" data-provide="datepicker"  placeholder="Ngày hẹn"/>
+							<select name="time" id="time" class=" date form-control" class=" btn-filter" >
+								<option value="">Chọn giờ hẹn</option>
+								<option value="7:00">7:00</option>
+								<option value="8:00">8:00</option>
+								<option value="9:00">9:00</option>
+								<option value="10:00">10:00</option>
+								<option value="11:00">11:00</option>
+								<option value="13:30">13:30</option>
+								<option value="14:30">14:30</option>
+								<option value="15:30">15:30</option>
+								<option value="16:30">16:30</option>
+							</select>
 							<a class="button sended" title="Gửi yêu cầu!" href="javascript:void(0)">Đặt lịch tư vấn!</a>
 						</form>
 					</div>
@@ -63,7 +74,7 @@
 			param.fullname  = $(form+ ' input[name="fullname"]').val();
 			param.phone 	= $(form+ ' input[name="phone"]').val();
 			param.date 	  = $(form+ ' input[name="date"]').val();
-			param.time 	  = $(form+ ' input[name="time"]').val();
+			param.time 	  = $(form+ '  #time option:selected').val();
 			param.from_email  = $(form+ ' input[name="from_email"]').val();
 			param.department_title = $(form+ ' #depart option:selected').val();
 			param.doctor_name = $(form+ ' #doctor option:selected').val();

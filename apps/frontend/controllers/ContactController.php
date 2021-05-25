@@ -81,6 +81,7 @@ class ContactController extends ControllerBase {
 				'phone'				=> $this->request->getPost('phone'),
 				'from_email'		=> $this->request->getPost('from_email'),
 				'from_date'			=> $this->request->getPost('date'),
+				'from_time'			=> $this->request->getPost('time'),
 				'department_title'	=> $this->request->getPost('department_title'),
 				'doctor_name'	=> $this->request->getPost('doctor_name'),
 			);
@@ -94,6 +95,7 @@ class ContactController extends ControllerBase {
 			$bookingModel->email = $form_data['from_email'];
 			$bookingModel->department_title = $form_data['department_title'];
 			$bookingModel->doctor_name = $form_data['doctor_name'];
+			$bookingModel->from_time = $form_data['from_time'];
 			$bookingModel->from_date = date ('Y-m-d', strtotime($form_data['from_date']));
 			$bookingModel->created = date('Y-m-d H:i:s');
 			if(!$bookingModel->save()){

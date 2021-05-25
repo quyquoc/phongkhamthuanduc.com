@@ -10,16 +10,16 @@
     <div class="inner-content ">
         <div class="container">
             <div class="container-wrapper home">
-                <div class="box-body" data-aos="fade-up">
+                <!-- <div class="box-body" data-aos="fade-up">
                     <h2 class="title">Bảo vệ sức khỏe</h2>
                     <div class="content">
                         <p>cho cả gia đình</p>
                         <div class="bottom">
                             <a href="{{url('/chuyen-khoa')}}" class="button">Chuyên khoa</a>
-                            <a href="javasript:void(0);" onclick="popRegis()" class="button page-color">Đặt lịch tư vấn</a>
+                            
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -35,6 +35,7 @@
                 <div class="date">{{ Ohi.sysConfig('weekdays',false)}}</div>
                 <p class="left">{{ Ohi.sysConfig('weekend',true, 'description')}}:</p>
                 <div class="date">{{ Ohi.sysConfig('weekend',false)}}</div>
+                <a href="javasript:void(0);" onclick="popRegis()" class="button page-color margin-left">Đặt lịch tư vấn</a>
             </div>
             <div class="inner">
                 <div class="box-header">

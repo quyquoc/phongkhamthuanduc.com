@@ -264,6 +264,10 @@ a.button.page-color:hover {
   background-color: #e53549;
   border-color: #E53549;
 }
+.button.margin-left,
+a.button.margin-left {
+  margin: 0;
+}
 
 .bg-page {
   background-color: #f7fafd;
@@ -1852,6 +1856,7 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .box-contact .box-body .inner .form #appForm {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
 }
 .box-contact .box-body .inner .form #appForm .colum-2 {
@@ -1874,6 +1879,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .box-contact .box-body .inner .form #appForm .colum-2.error {
   border-color: #E53549;
 }
+.box-contact .box-body .inner .form #appForm .colum-2.date {
+  width: calc(50% - 10px);
+}
 .box-contact .box-body .inner .form #appForm select {
   padding: 0px;
   border: none;
@@ -1893,6 +1901,9 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .box-contact .box-body .inner .form #appForm select option {
   background: #ffffff;
   color: #00AE57;
+}
+.box-contact .box-body .inner .form #appForm select.date {
+  width: calc(50% - 10px);
 }
 .box-contact .box-body .inner .form a {
   margin-top: 20px;

@@ -30,8 +30,8 @@ $(document).ready(function(){
 });
 
 function action_page() {
-	$top_height = $('.top-head').height();
-	// $top_height = 0;
+	// $top_height = $('.top-head').height();
+	$top_height = 54;
 	if($(window).scrollTop() > $top_height){
 		$('header').addClass('stick');
 		$('.main_menu').addClass('stick');

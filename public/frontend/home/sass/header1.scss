@@ -3,7 +3,6 @@ header {
   position: relative;
   top: 0;
   left: 0;
-  // height: 100px;
   z-index: 990;
   transition: all 0.3s ease-in-out;
   .top-head {
@@ -39,7 +38,7 @@ header {
     height: 100%;
   }
   &.home {
-    position: fixed;
+    position: absolute;
     .header {
       box-shadow: none;
     }

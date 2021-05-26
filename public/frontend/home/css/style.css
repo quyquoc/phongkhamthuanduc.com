@@ -1073,7 +1073,7 @@ header .main_menu {
   height: 100%;
 }
 header.home {
-  position: fixed;
+  position: absolute;
 }
 header.home .header {
   box-shadow: none;

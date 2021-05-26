@@ -19,7 +19,7 @@ class BookingForm extends Form {
 		$this->add(new Text("department_title"));
 		$this->add(new TextArea("content"));
 		$this->add(new Text("from_date", array('value'=>date('Y-m-d H:i:s'))));
-		$this->add(new Text("from_time", array('value'=>date('Y-m-d H:i:s'))));
+		$this->add(new Text("from_time"));
 		$this->add(new Text("created", array('value'=>date('Y-m-d H:i:s'))));
 		$this->add(new Select('status', array('0'=>$this->language->_('no'), '1'=>$this->language->_('yes')), array("value" =>'1')));
 	}

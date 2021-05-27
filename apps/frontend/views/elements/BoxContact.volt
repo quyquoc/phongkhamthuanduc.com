@@ -45,6 +45,7 @@
 							</select>
 							<a class="button sended" title="Gửi yêu cầu!" href="javascript:void(0)">Đặt lịch tư vấn!</a>
 						</form>
+						<div class="note">*Lịch hẹn có giá trị khi được xác nhận qua email hoặc điện thoại của quý khách</div>
 					</div>
 				</div>
 			</div>

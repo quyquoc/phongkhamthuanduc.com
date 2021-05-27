@@ -1917,6 +1917,12 @@ header.stick .header .menunav li:hover a::before, header.stick .header .menunav 
 .box-contact .box-body .inner .form a:hover {
   background: #3854DF;
 }
+.box-contact .box-body .inner .note {
+  margin: 20px 0 0;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+}
 .box-contact .box-body .box-video {
   width: 50%;
 }

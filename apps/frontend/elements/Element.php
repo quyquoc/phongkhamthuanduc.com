@@ -123,7 +123,7 @@ class Element extends Component{
 
 	public function BoxPartner() {
 
-		$album		= ImageAlbumModel::findFirstByCode('partner');
+		$album = ImageAlbumModel::findFirstByCode('partner');
 		if(!empty($album)) {
 			$list_partner		= ImageModel::find(array(
 				"conditions"	=> "album_id = {$album->id} AND status = 1",
@@ -157,6 +157,7 @@ class Element extends Component{
 		));
 		$this->view->partial("elements/BoxContact");		
 	}
+
 	public function PopupContact() {
 		$this->view->list_options= ServiceModel::find(array(
 			"conditions"	=> "status = 1",

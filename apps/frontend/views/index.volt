@@ -22,7 +22,7 @@
 	<meta name="author" content="ohi.vn" />
 	<base target='_self'/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{{ stylesheet_link(['/logo.svg','rel':'shortcut icon']) }}
 	{{ assets.outputCss() }}
 	{{ stylesheet_link("/library/font-awesome-4.7.0/css/font-awesome.min.css") }}

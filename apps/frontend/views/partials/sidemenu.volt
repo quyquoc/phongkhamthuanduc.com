@@ -19,6 +19,9 @@
 	
 		{{ element.LevelMenu('huong-dan') }}
 	</li>
+	<li class="{{ menu is defined and menu == 'goc-yeu-thuong' ? 'active' : '' }}"><a href="{{ url('/goc-yeu-thuong') }}">Tin tức <i class="fa fa-angle-down"></i> </a>
+		{{element.NewsMenuWithCategory('goc-yeu-thuong')}}	
+	</li>
 	<li class="{{ menu is defined and menu == 'tin-tuc' ? 'active' : '' }}"><a href="{{ url('/tin-tuc') }}">Tin tức <i class="fa fa-angle-down"></i> </a>
 		{{element.NewsMenuWithCategory('tin-tuc')}}	
 	</li>

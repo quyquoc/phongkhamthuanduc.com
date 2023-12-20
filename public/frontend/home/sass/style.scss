@@ -1200,30 +1200,7 @@ a.button {
 /*------------------------------------------------
 ** MEDIA ONLY SCREEN
 **------------------------------------------------*/
-@media only screen and (max-width: 1100px) {
-  .main_menu .plugin-search {
-    width: 240px;
-  }
-  .main-body {
-    .main-content {
-      #center {
-        margin: 0;
-      }
-      #sidebar {
-        float: initial !important;
-        max-width: 100%;
-        .sidebar__inner {
-          position: relative !important;
-          transform: initial !important;
-          top: initial !important;
-          left: initial !important;
-          width: initial !important;
-        }
-      }
-    }
-  }
-}
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   .page {
     padding-top: 56px;
     .rd-menu,
@@ -1265,6 +1242,31 @@ a.button {
       display: none;
     }
   }
+}
+@media only screen and (max-width: 1100px) {
+  .main_menu .plugin-search {
+    width: 240px;
+  }
+  .main-body {
+    .main-content {
+      #center {
+        margin: 0;
+      }
+      #sidebar {
+        float: initial !important;
+        max-width: 100%;
+        .sidebar__inner {
+          position: relative !important;
+          transform: initial !important;
+          top: initial !important;
+          left: initial !important;
+          width: initial !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
   .box-header {
     margin-bottom: 30px;
     .box-title {

@@ -33,7 +33,11 @@ class NewsController extends ControllerBase {
 	}
 
 	private function news($category_code = null, $code = null) {
-		$this->view->menu = 'tin-tuc';
+		if ($category_code == 'goc-yeu-thuong')
+			$this->view->menu = 'goc-yeu-thuong';
+		else
+			$this->view->menu = 'tin-tuc';
+
 		if(!empty($code)){// hien thi chi tiet
 			$this->detail($code);
 		}else{
